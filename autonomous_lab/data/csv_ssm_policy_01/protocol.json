@@ -1,0 +1,79 @@
+{
+  "goal": "choose_predefined_tests_for_black_box_csv_behavior",
+  "stage": "protocol_and_catalog_only",
+  "maximum_calls": 8,
+  "maximum_cells": 24,
+  "maximum_input_text_utf8_bytes": 512,
+  "byte_budget_excludes_transport_encoding": true,
+  "training_behaviors": {
+    "identity_included": true,
+    "individual_operations": [
+      "normalize_leading_zeros",
+      "unicode_NFC",
+      "casefold",
+      "rstrip",
+      "collapse_spaces",
+      "decimal_comma",
+      "boolean_normalization",
+      "truncate_16",
+      "sort_rows",
+      "remove_empty_rows",
+      "deduplicate_rows",
+      "drop_empty_columns"
+    ]
+  },
+  "reserved_behavior_compositions": [
+    [
+      "unicode_NFC",
+      "rstrip"
+    ],
+    [
+      "decimal_comma",
+      "sort_rows"
+    ],
+    [
+      "normalize_leading_zeros",
+      "drop_empty_columns"
+    ],
+    [
+      "casefold",
+      "deduplicate_rows"
+    ]
+  ],
+  "composition_order": "listed_order_before_csv_serialization",
+  "evaluation_scope": "new_compositions_of_familiar_operations",
+  "not_claimed": [
+    "invention_of_tests",
+    "discovery_of_new_primitives",
+    "learning_without_prior_training"
+  ],
+  "student": "SSM_test_selection_policy",
+  "training_reference": "symbolic_teacher_on_training_behaviors_only",
+  "verification": "same_exact_known_family_consistency_checker",
+  "evaluation_parameter_updates": 0,
+  "baseline_policies": [
+    "fixed_feasible_order",
+    "random_feasible_selection",
+    "symbolic_training_family_policy"
+  ],
+  "required_pretraining_audit": [
+    "which_behaviors_are_detectable_by_the_catalog",
+    "detection_possible_within_all_three_budgets",
+    "whether_distinct_training_behaviors_have_identical_observations"
+  ],
+  "primary_metrics": [
+    "unknown_behavior_detection",
+    "false_rejection_of_known_configurations",
+    "actual_calls_cells_and_bytes",
+    "wall_clock_time_including_policy_inference"
+  ],
+  "reserved_feedback_must_not_train_teacher_or_student": true,
+  "SSM_and_baselines_must_share_catalog_and_budgets": true,
+  "JEPA_not_in_first_comparison": true,
+  "catalog_sources_sha256": {
+    "autonomous_lab\\data\\csv_diversity_01\\probe_banks.json": "86f8f2ac0204a3c337b5207ce2db1eeb1c77c444dff950535d51f3533013d6ab",
+    "autonomous_lab\\data\\csv_contrasts_01\\probe_banks.json": "4968aae7c7bd3bcbead96ced258757403707621bbfdd995be42ed01f221a8539",
+    "autonomous_lab\\data\\csv_common_budget_01\\plans.json": "c3134677202089f4290f38e82ce06ac6b20254b0f14d267c10a517761a81614e"
+  },
+  "catalog_size": 44
+}
