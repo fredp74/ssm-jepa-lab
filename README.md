@@ -127,3 +127,8 @@ its results are not included here yet.
 ---
 
 A research project by [Algotradingresearch.com](https://algotradingresearch.com).
+
+## Research results
+
+See [V13 experiment: repeated-character training](docs/v13-results.md)
+for the three-seed comparison, final evaluation results, and limitations.
