@@ -79,3 +79,35 @@ The implementation is autonomous_lab/local_repair.py.
 Detailed local results remain under autonomous_lab/runs/local_repair_01/,
 excluded from Git. The companion JSON stores configuration, aggregate
 results, and a hash of the detailed source file.
+
+## Control: repair versus observation memory
+
+A retrospective matched control compares accepted repairs with the original
+rule overridden by every observed input-output pair. Both methods are
+evaluated on exactly the same unqueried inputs.
+
+For the 29 accepted near-miss repairs:
+
+| Method | Exact functions | Correct unqueried outputs |
+|---|---:|---:|
+| Original rule + observation memory | 22/29 | 348/373 |
+| Repaired rule | 29/29 | 373/373 |
+
+Observation memory alone fully corrects 22 functions.
+Rule search adds exact recovery for 7 functions
+and corrects 25 additional unqueried outputs.
+
+The accepted random outside-family repair remains at 6/15, identical
+to observation memory.
+
+This narrows the interpretation of the earlier result: not all successful
+repairs require generalization beyond stored observations.
+
+Limitations:
+- Retrospective analysis of the same cases.
+- Accepted repairs are selected outcomes, not all attempted repairs.
+- No additional environment queries.
+- The repair family was designed for single-output exceptions.
+- Exactness is determined by the evaluator, not certified by the agent.
+
+The companion summary is repair-memory-control.json.

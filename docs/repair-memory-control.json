@@ -1,0 +1,67 @@
+{
+  "source_sha256": "e22bdbd6b35dd741587baab81d9ab3dac6210f0a1284412b0fdd91844f4ea1aa",
+  "config": {
+    "new_environment_queries": 0,
+    "control": "original_rule_overridden_on_all_observed_inputs",
+    "evaluation": "same_unqueried_inputs_for_each_case",
+    "analysis": "retrospective",
+    "rejected_repairs_are_not_used_for_prediction": true
+  },
+  "summaries": {
+    "known / unchanged_provisional": {
+      "cases": 137,
+      "unqueried_inputs": 1761,
+      "original_correct": 1761,
+      "memory_correct": 1761,
+      "memory_exact_functions": 137,
+      "accepted_repair_cases": 137,
+      "repair_evaluated_inputs": 1761,
+      "repair_correct": 1761,
+      "repair_exact_functions": 137
+    },
+    "near_miss / repair_provisional": {
+      "cases": 29,
+      "unqueried_inputs": 373,
+      "original_correct": 348,
+      "memory_correct": 348,
+      "memory_exact_functions": 22,
+      "accepted_repair_cases": 29,
+      "repair_evaluated_inputs": 373,
+      "repair_correct": 373,
+      "repair_exact_functions": 29
+    },
+    "near_miss / unchanged_provisional": {
+      "cases": 42,
+      "unqueried_inputs": 545,
+      "original_correct": 503,
+      "memory_correct": 503,
+      "memory_exact_functions": 0,
+      "accepted_repair_cases": 42,
+      "repair_evaluated_inputs": 545,
+      "repair_correct": 503,
+      "repair_exact_functions": 0
+    },
+    "random_outside / repair_revoked": {
+      "cases": 6,
+      "unqueried_inputs": 100,
+      "original_correct": 55,
+      "memory_correct": 55,
+      "memory_exact_functions": 0,
+      "accepted_repair_cases": 0,
+      "repair_evaluated_inputs": 0,
+      "repair_correct": 0,
+      "repair_exact_functions": 0
+    },
+    "random_outside / repair_provisional": {
+      "cases": 1,
+      "unqueried_inputs": 15,
+      "original_correct": 6,
+      "memory_correct": 6,
+      "memory_exact_functions": 0,
+      "accepted_repair_cases": 1,
+      "repair_evaluated_inputs": 15,
+      "repair_correct": 6,
+      "repair_exact_functions": 0
+    }
+  }
+}
