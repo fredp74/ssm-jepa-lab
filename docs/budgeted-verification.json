@@ -1,0 +1,175 @@
+{
+  "budgeted_acquisition": {
+    "source_sha256": "ddded39ad9f6e5830d9b0e7d477cc098e9e8cab76cd5e8b00724f9b304523281",
+    "config": {
+      "input_bits": 5,
+      "domain_size": 32,
+      "family_size": 137,
+      "family": "XOR of at most two degree-at-most-two monomials",
+      "discovery_budget": 12,
+      "verification_budget": 4,
+      "verification": "random_unqueried_inputs",
+      "proposal_frozen_before_verification": true,
+      "seed": 81001,
+      "noise": false
+    },
+    "summaries": {
+      "known": {
+        "functions": 137,
+        "statuses": {
+          "provisional": 137
+        },
+        "false_acceptances": 0,
+        "questions": 1527,
+        "correct_unqueried": 2857,
+        "evaluated_unqueried": 2857
+      },
+      "near_miss": {
+        "functions": 100,
+        "statuses": {
+          "provisional": 71,
+          "contradiction": 29
+        },
+        "false_acceptances": 71,
+        "questions": 1068,
+        "correct_unqueried": 1370,
+        "evaluated_unqueried": 1483
+      },
+      "random_outside": {
+        "functions": 100,
+        "statuses": {
+          "contradiction": 93,
+          "provisional": 7
+        },
+        "false_acceptances": 7,
+        "questions": 890,
+        "correct_unqueried": 79,
+        "evaluated_unqueried": 146
+      }
+    }
+  },
+  "continuous_verification": {
+    "source_sha256": "dc97f997c107bf76bab4120227668de2b5ead8a1b599db514bc4ec8d81433211",
+    "config": {
+      "source": "autonomous_lab\\runs\\budgeted_five_bits_01\\results.json",
+      "accepted_functions": 215,
+      "repetitions_per_function": 5,
+      "maximum_additional_questions": 64,
+      "revocation": "first_observed_counterexample",
+      "repair_after_revocation": false,
+      "noise": false
+    },
+    "summaries": [
+      {
+        "group": "known",
+        "policy": "random_usage",
+        "trials": 685,
+        "statuses": {
+          "provisional": 657,
+          "fully_verified": 28
+        },
+        "mean_questions_until_stop": 63.8,
+        "mean_detection_delay_among_revoked": null,
+        "detected_by_budget": {
+          "1": 0,
+          "4": 0,
+          "8": 0,
+          "16": 0,
+          "32": 0,
+          "64": 0
+        }
+      },
+      {
+        "group": "known",
+        "policy": "unseen_audit",
+        "trials": 685,
+        "statuses": {
+          "fully_verified": 685
+        },
+        "mean_questions_until_stop": 20.854014598540147,
+        "mean_detection_delay_among_revoked": null,
+        "detected_by_budget": {
+          "1": 0,
+          "4": 0,
+          "8": 0,
+          "16": 0,
+          "32": 0,
+          "64": 0
+        }
+      },
+      {
+        "group": "near_miss",
+        "policy": "random_usage",
+        "trials": 355,
+        "statuses": {
+          "provisional": 39,
+          "revoked": 316
+        },
+        "mean_questions_until_stop": 25.68169014084507,
+        "mean_detection_delay_among_revoked": 20.95253164556962,
+        "detected_by_budget": {
+          "1": 17,
+          "4": 57,
+          "8": 90,
+          "16": 159,
+          "32": 245,
+          "64": 316
+        }
+      },
+      {
+        "group": "near_miss",
+        "policy": "unseen_audit",
+        "trials": 355,
+        "statuses": {
+          "revoked": 355
+        },
+        "mean_questions_until_stop": 10.35492957746479,
+        "mean_detection_delay_among_revoked": 10.35492957746479,
+        "detected_by_budget": {
+          "1": 33,
+          "4": 79,
+          "8": 147,
+          "16": 284,
+          "32": 355,
+          "64": 355
+        }
+      },
+      {
+        "group": "random_outside",
+        "policy": "random_usage",
+        "trials": 35,
+        "statuses": {
+          "revoked": 35
+        },
+        "mean_questions_until_stop": 4.428571428571429,
+        "mean_detection_delay_among_revoked": 4.428571428571429,
+        "detected_by_budget": {
+          "1": 6,
+          "4": 22,
+          "8": 33,
+          "16": 34,
+          "32": 35,
+          "64": 35
+        }
+      },
+      {
+        "group": "random_outside",
+        "policy": "unseen_audit",
+        "trials": 35,
+        "statuses": {
+          "revoked": 35
+        },
+        "mean_questions_until_stop": 2.5142857142857142,
+        "mean_detection_delay_among_revoked": 2.5142857142857142,
+        "detected_by_budget": {
+          "1": 15,
+          "4": 30,
+          "8": 34,
+          "16": 35,
+          "32": 35,
+          "64": 35
+        }
+      }
+    ]
+  }
+}
