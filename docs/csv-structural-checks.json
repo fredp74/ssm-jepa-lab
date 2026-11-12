@@ -1,0 +1,116 @@
+{
+  "frozen_bank_evaluation": {
+    "source_sha256": "bb39275763236567a360f404d6177c28aa93fcfc8d67a2bae657f0414028b01f",
+    "config": {
+      "frozen_bank_file_sha256": "4968aae7c7bd3bcbead96ced258757403707621bbfdd995be42ed01f221a8539",
+      "bank_metadata": {
+        "fixed": {
+          "calls": 8,
+          "cells": 24,
+          "input_text_utf8_bytes": 205,
+          "sha256": "8e299c61adda538fc40159583a8d35a5b889d0c10bbeb7023c8a82fe1a00461e"
+        },
+        "contrasts": {
+          "calls": 8,
+          "cells": 24,
+          "input_text_utf8_bytes": 166,
+          "sha256": "e71e5c2b14b88f06621f92a02b9243c8f12add8e416a5c95b90c5c7ea2ffa218"
+        }
+      },
+      "additional_variants": [
+        "reverse_rows",
+        "reverse_columns",
+        "transpose",
+        "sort_rows",
+        "generated_header",
+        "remove_empty_rows",
+        "omit_final_line_ending",
+        "expand_tabs"
+      ],
+      "outside_base_configurations": [
+        2,
+        14,
+        28,
+        42
+      ],
+      "new_evaluation_cases": 100,
+      "maximum_calls": 8,
+      "probe_changes": false,
+      "variants_hand_designed": true,
+      "independent_blind_evaluation": false,
+      "seed": 113001
+    },
+    "summaries": [
+      {
+        "bank": "fixed",
+        "group": "known",
+        "environments": 48,
+        "detected_unknown": 0,
+        "fully_correct": 48,
+        "incorrect_survivors": 0,
+        "mean_calls": 8.0
+      },
+      {
+        "bank": "fixed",
+        "group": "additional",
+        "environments": 32,
+        "detected_unknown": 24,
+        "fully_correct": 0,
+        "incorrect_survivors": 8,
+        "mean_calls": 3.375
+      },
+      {
+        "bank": "contrasts",
+        "group": "known",
+        "environments": 48,
+        "detected_unknown": 0,
+        "fully_correct": 48,
+        "incorrect_survivors": 0,
+        "mean_calls": 8.0
+      },
+      {
+        "bank": "contrasts",
+        "group": "additional",
+        "environments": 32,
+        "detected_unknown": 24,
+        "fully_correct": 0,
+        "incorrect_survivors": 8,
+        "mean_calls": 4.5
+      }
+    ]
+  },
+  "relational_checks": {
+    "source_sha256": "733af105271b7174ef684960b123eb7138b08f0f2c32094df796f0c3418aa2c0",
+    "config": {
+      "maximum_calls": 8,
+      "relations": [
+        "reverse_rows",
+        "reverse_columns",
+        "duplicate_rows",
+        "append_empty_row",
+        "prepend_empty_row",
+        "transpose"
+      ],
+      "comparison": "decoded_output_relation",
+      "same_cell_budget_as_previous_banks": false,
+      "previously_inspected_behaviors": true,
+      "neural_training": false
+    },
+    "summaries": [
+      {
+        "group": "known",
+        "environments": 48,
+        "detected_violation": 0,
+        "mean_calls": 8.0,
+        "mean_cells": 44.0
+      },
+      {
+        "group": "additional",
+        "environments": 32,
+        "detected_violation": 32,
+        "mean_calls": 2.75,
+        "mean_cells": 17.0
+      }
+    ]
+  }
+}
