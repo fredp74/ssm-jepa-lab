@@ -1,0 +1,32 @@
+[
+  {
+    "id": 4791,
+    "title": "Voyage au centre de la Terre",
+    "split": "train",
+    "url": "https://www.gutenberg.org/cache/epub/4791/pg4791.txt",
+    "offset": 0,
+    "bytes": 430924,
+    "raw_sha256": "cc2c572afc2b2965e252ed8626c4e023b54e272f3a83594f10bc8d7bc6a9f5d6",
+    "clean_sha256": "8272d31a2039090d8a1a47215a8e50f4322fc7106106ab0d7aa968fdbf1a9bed"
+  },
+  {
+    "id": 5097,
+    "title": "Vingt mille lieues sous les mers",
+    "split": "train",
+    "url": "https://www.gutenberg.org/cache/epub/5097/pg5097.txt",
+    "offset": 430924,
+    "bytes": 904603,
+    "raw_sha256": "53507b025cd3580f4fbfa546baabb36f25adfb48b581c5b5016d91ad69d36c68",
+    "clean_sha256": "fd846d162037d2c99e82302115e4959004943ebab9f32313965360a05e66cd37"
+  },
+  {
+    "id": 800,
+    "title": "Le Tour du monde en quatre-vingts jours",
+    "split": "test",
+    "url": "https://www.gutenberg.org/cache/epub/800/pg800.txt",
+    "offset": 0,
+    "bytes": 433029,
+    "raw_sha256": "bd89ef4c406ae063a1eeba2ec0689532e8c83ecfb1fce742cdd22bc47cb888da",
+    "clean_sha256": "ad21d214119ce40a6e99173c0289fa626bf5a7b7179e2989ab719ae9b4e13129"
+  }
+]

@@ -1,0 +1,35 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Secrets et configuration locale
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Sauvegardes et donnees binaires
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+*.zip
+
+# Donnees telechargees et sorties d'experiences
+text8
+corpus_C_gutenberg/
+lm_*/
+runs/
+*.log
+
+# Systeme et editeurs
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+*.b64

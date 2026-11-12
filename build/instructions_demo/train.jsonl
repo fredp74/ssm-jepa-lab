@@ -1,0 +1,80 @@
+{"messages": [{"role": "user", "content": "Calcule 0 + 2. Reponds uniquement avec le nombre."}, {"role": "assistant", "content": "2"}]}
+{"messages": [{"role": "user", "content": "Recopie uniquement le texte entre crochets : [bonjour 0]."}, {"role": "assistant", "content": "bonjour 0"}]}
+{"messages": [{"role": "user", "content": "Extrais uniquement le nombre : objet numero 0."}, {"role": "assistant", "content": "0"}]}
+{"messages": [{"role": "user", "content": "Le nombre 0 est-il pair ? Reponds par oui ou non."}, {"role": "assistant", "content": "oui"}]}
+{"messages": [{"role": "user", "content": "Retiens ce code : 0. Reponds seulement OK."}, {"role": "assistant", "content": "OK"}, {"role": "user", "content": "Quel code viens-je de donner ? Reponds seulement avec ce code."}, {"role": "assistant", "content": "0"}]}
+{"messages": [{"role": "user", "content": "Calcule 1 + 2. Reponds uniquement avec le nombre."}, {"role": "assistant", "content": "3"}]}
+{"messages": [{"role": "user", "content": "Recopie uniquement le texte entre crochets : [bonjour 1]."}, {"role": "assistant", "content": "bonjour 1"}]}
+{"messages": [{"role": "user", "content": "Extrais uniquement le nombre : objet numero 1."}, {"role": "assistant", "content": "1"}]}
+{"messages": [{"role": "user", "content": "Le nombre 1 est-il pair ? Reponds par oui ou non."}, {"role": "assistant", "content": "non"}]}
+{"messages": [{"role": "user", "content": "Retiens ce code : 1. Reponds seulement OK."}, {"role": "assistant", "content": "OK"}, {"role": "user", "content": "Quel code viens-je de donner ? Reponds seulement avec ce code."}, {"role": "assistant", "content": "1"}]}
+{"messages": [{"role": "user", "content": "Calcule 2 + 2. Reponds uniquement avec le nombre."}, {"role": "assistant", "content": "4"}]}
+{"messages": [{"role": "user", "content": "Recopie uniquement le texte entre crochets : [bonjour 2]."}, {"role": "assistant", "content": "bonjour 2"}]}
+{"messages": [{"role": "user", "content": "Extrais uniquement le nombre : objet numero 2."}, {"role": "assistant", "content": "2"}]}
+{"messages": [{"role": "user", "content": "Le nombre 2 est-il pair ? Reponds par oui ou non."}, {"role": "assistant", "content": "oui"}]}
+{"messages": [{"role": "user", "content": "Retiens ce code : 2. Reponds seulement OK."}, {"role": "assistant", "content": "OK"}, {"role": "user", "content": "Quel code viens-je de donner ? Reponds seulement avec ce code."}, {"role": "assistant", "content": "2"}]}
+{"messages": [{"role": "user", "content": "Calcule 3 + 2. Reponds uniquement avec le nombre."}, {"role": "assistant", "content": "5"}]}
+{"messages": [{"role": "user", "content": "Recopie uniquement le texte entre crochets : [bonjour 3]."}, {"role": "assistant", "content": "bonjour 3"}]}
+{"messages": [{"role": "user", "content": "Extrais uniquement le nombre : objet numero 3."}, {"role": "assistant", "content": "3"}]}
+{"messages": [{"role": "user", "content": "Le nombre 3 est-il pair ? Reponds par oui ou non."}, {"role": "assistant", "content": "non"}]}
+{"messages": [{"role": "user", "content": "Retiens ce code : 3. Reponds seulement OK."}, {"role": "assistant", "content": "OK"}, {"role": "user", "content": "Quel code viens-je de donner ? Reponds seulement avec ce code."}, {"role": "assistant", "content": "3"}]}
+{"messages": [{"role": "user", "content": "Calcule 4 + 2. Reponds uniquement avec le nombre."}, {"role": "assistant", "content": "6"}]}
+{"messages": [{"role": "user", "content": "Recopie uniquement le texte entre crochets : [bonjour 4]."}, {"role": "assistant", "content": "bonjour 4"}]}
+{"messages": [{"role": "user", "content": "Extrais uniquement le nombre : objet numero 4."}, {"role": "assistant", "content": "4"}]}
+{"messages": [{"role": "user", "content": "Le nombre 4 est-il pair ? Reponds par oui ou non."}, {"role": "assistant", "content": "oui"}]}
+{"messages": [{"role": "user", "content": "Retiens ce code : 4. Reponds seulement OK."}, {"role": "assistant", "content": "OK"}, {"role": "user", "content": "Quel code viens-je de donner ? Reponds seulement avec ce code."}, {"role": "assistant", "content": "4"}]}
+{"messages": [{"role": "user", "content": "Calcule 5 + 2. Reponds uniquement avec le nombre."}, {"role": "assistant", "content": "7"}]}
+{"messages": [{"role": "user", "content": "Recopie uniquement le texte entre crochets : [bonjour 5]."}, {"role": "assistant", "content": "bonjour 5"}]}
+{"messages": [{"role": "user", "content": "Extrais uniquement le nombre : objet numero 5."}, {"role": "assistant", "content": "5"}]}
+{"messages": [{"role": "user", "content": "Le nombre 5 est-il pair ? Reponds par oui ou non."}, {"role": "assistant", "content": "non"}]}
+{"messages": [{"role": "user", "content": "Retiens ce code : 5. Reponds seulement OK."}, {"role": "assistant", "content": "OK"}, {"role": "user", "content": "Quel code viens-je de donner ? Reponds seulement avec ce code."}, {"role": "assistant", "content": "5"}]}
+{"messages": [{"role": "user", "content": "Calcule 6 + 2. Reponds uniquement avec le nombre."}, {"role": "assistant", "content": "8"}]}
+{"messages": [{"role": "user", "content": "Recopie uniquement le texte entre crochets : [bonjour 6]."}, {"role": "assistant", "content": "bonjour 6"}]}
+{"messages": [{"role": "user", "content": "Extrais uniquement le nombre : objet numero 6."}, {"role": "assistant", "content": "6"}]}
+{"messages": [{"role": "user", "content": "Le nombre 6 est-il pair ? Reponds par oui ou non."}, {"role": "assistant", "content": "oui"}]}
+{"messages": [{"role": "user", "content": "Retiens ce code : 6. Reponds seulement OK."}, {"role": "assistant", "content": "OK"}, {"role": "user", "content": "Quel code viens-je de donner ? Reponds seulement avec ce code."}, {"role": "assistant", "content": "6"}]}
+{"messages": [{"role": "user", "content": "Calcule 7 + 2. Reponds uniquement avec le nombre."}, {"role": "assistant", "content": "9"}]}
+{"messages": [{"role": "user", "content": "Recopie uniquement le texte entre crochets : [bonjour 7]."}, {"role": "assistant", "content": "bonjour 7"}]}
+{"messages": [{"role": "user", "content": "Extrais uniquement le nombre : objet numero 7."}, {"role": "assistant", "content": "7"}]}
+{"messages": [{"role": "user", "content": "Le nombre 7 est-il pair ? Reponds par oui ou non."}, {"role": "assistant", "content": "non"}]}
+{"messages": [{"role": "user", "content": "Retiens ce code : 7. Reponds seulement OK."}, {"role": "assistant", "content": "OK"}, {"role": "user", "content": "Quel code viens-je de donner ? Reponds seulement avec ce code."}, {"role": "assistant", "content": "7"}]}
+{"messages": [{"role": "user", "content": "Calcule 8 + 2. Reponds uniquement avec le nombre."}, {"role": "assistant", "content": "10"}]}
+{"messages": [{"role": "user", "content": "Recopie uniquement le texte entre crochets : [bonjour 8]."}, {"role": "assistant", "content": "bonjour 8"}]}
+{"messages": [{"role": "user", "content": "Extrais uniquement le nombre : objet numero 8."}, {"role": "assistant", "content": "8"}]}
+{"messages": [{"role": "user", "content": "Le nombre 8 est-il pair ? Reponds par oui ou non."}, {"role": "assistant", "content": "oui"}]}
+{"messages": [{"role": "user", "content": "Retiens ce code : 8. Reponds seulement OK."}, {"role": "assistant", "content": "OK"}, {"role": "user", "content": "Quel code viens-je de donner ? Reponds seulement avec ce code."}, {"role": "assistant", "content": "8"}]}
+{"messages": [{"role": "user", "content": "Calcule 9 + 2. Reponds uniquement avec le nombre."}, {"role": "assistant", "content": "11"}]}
+{"messages": [{"role": "user", "content": "Recopie uniquement le texte entre crochets : [bonjour 9]."}, {"role": "assistant", "content": "bonjour 9"}]}
+{"messages": [{"role": "user", "content": "Extrais uniquement le nombre : objet numero 9."}, {"role": "assistant", "content": "9"}]}
+{"messages": [{"role": "user", "content": "Le nombre 9 est-il pair ? Reponds par oui ou non."}, {"role": "assistant", "content": "non"}]}
+{"messages": [{"role": "user", "content": "Retiens ce code : 9. Reponds seulement OK."}, {"role": "assistant", "content": "OK"}, {"role": "user", "content": "Quel code viens-je de donner ? Reponds seulement avec ce code."}, {"role": "assistant", "content": "9"}]}
+{"messages": [{"role": "user", "content": "Calcule 10 + 2. Reponds uniquement avec le nombre."}, {"role": "assistant", "content": "12"}]}
+{"messages": [{"role": "user", "content": "Recopie uniquement le texte entre crochets : [bonjour 10]."}, {"role": "assistant", "content": "bonjour 10"}]}
+{"messages": [{"role": "user", "content": "Extrais uniquement le nombre : objet numero 10."}, {"role": "assistant", "content": "10"}]}
+{"messages": [{"role": "user", "content": "Le nombre 10 est-il pair ? Reponds par oui ou non."}, {"role": "assistant", "content": "oui"}]}
+{"messages": [{"role": "user", "content": "Retiens ce code : 10. Reponds seulement OK."}, {"role": "assistant", "content": "OK"}, {"role": "user", "content": "Quel code viens-je de donner ? Reponds seulement avec ce code."}, {"role": "assistant", "content": "10"}]}
+{"messages": [{"role": "user", "content": "Calcule 11 + 2. Reponds uniquement avec le nombre."}, {"role": "assistant", "content": "13"}]}
+{"messages": [{"role": "user", "content": "Recopie uniquement le texte entre crochets : [bonjour 11]."}, {"role": "assistant", "content": "bonjour 11"}]}
+{"messages": [{"role": "user", "content": "Extrais uniquement le nombre : objet numero 11."}, {"role": "assistant", "content": "11"}]}
+{"messages": [{"role": "user", "content": "Le nombre 11 est-il pair ? Reponds par oui ou non."}, {"role": "assistant", "content": "non"}]}
+{"messages": [{"role": "user", "content": "Retiens ce code : 11. Reponds seulement OK."}, {"role": "assistant", "content": "OK"}, {"role": "user", "content": "Quel code viens-je de donner ? Reponds seulement avec ce code."}, {"role": "assistant", "content": "11"}]}
+{"messages": [{"role": "user", "content": "Calcule 12 + 2. Reponds uniquement avec le nombre."}, {"role": "assistant", "content": "14"}]}
+{"messages": [{"role": "user", "content": "Recopie uniquement le texte entre crochets : [bonjour 12]."}, {"role": "assistant", "content": "bonjour 12"}]}
+{"messages": [{"role": "user", "content": "Extrais uniquement le nombre : objet numero 12."}, {"role": "assistant", "content": "12"}]}
+{"messages": [{"role": "user", "content": "Le nombre 12 est-il pair ? Reponds par oui ou non."}, {"role": "assistant", "content": "oui"}]}
+{"messages": [{"role": "user", "content": "Retiens ce code : 12. Reponds seulement OK."}, {"role": "assistant", "content": "OK"}, {"role": "user", "content": "Quel code viens-je de donner ? Reponds seulement avec ce code."}, {"role": "assistant", "content": "12"}]}
+{"messages": [{"role": "user", "content": "Calcule 13 + 2. Reponds uniquement avec le nombre."}, {"role": "assistant", "content": "15"}]}
+{"messages": [{"role": "user", "content": "Recopie uniquement le texte entre crochets : [bonjour 13]."}, {"role": "assistant", "content": "bonjour 13"}]}
+{"messages": [{"role": "user", "content": "Extrais uniquement le nombre : objet numero 13."}, {"role": "assistant", "content": "13"}]}
+{"messages": [{"role": "user", "content": "Le nombre 13 est-il pair ? Reponds par oui ou non."}, {"role": "assistant", "content": "non"}]}
+{"messages": [{"role": "user", "content": "Retiens ce code : 13. Reponds seulement OK."}, {"role": "assistant", "content": "OK"}, {"role": "user", "content": "Quel code viens-je de donner ? Reponds seulement avec ce code."}, {"role": "assistant", "content": "13"}]}
+{"messages": [{"role": "user", "content": "Calcule 14 + 2. Reponds uniquement avec le nombre."}, {"role": "assistant", "content": "16"}]}
+{"messages": [{"role": "user", "content": "Recopie uniquement le texte entre crochets : [bonjour 14]."}, {"role": "assistant", "content": "bonjour 14"}]}
+{"messages": [{"role": "user", "content": "Extrais uniquement le nombre : objet numero 14."}, {"role": "assistant", "content": "14"}]}
+{"messages": [{"role": "user", "content": "Le nombre 14 est-il pair ? Reponds par oui ou non."}, {"role": "assistant", "content": "oui"}]}
+{"messages": [{"role": "user", "content": "Retiens ce code : 14. Reponds seulement OK."}, {"role": "assistant", "content": "OK"}, {"role": "user", "content": "Quel code viens-je de donner ? Reponds seulement avec ce code."}, {"role": "assistant", "content": "14"}]}
+{"messages": [{"role": "user", "content": "Calcule 15 + 2. Reponds uniquement avec le nombre."}, {"role": "assistant", "content": "17"}]}
+{"messages": [{"role": "user", "content": "Recopie uniquement le texte entre crochets : [bonjour 15]."}, {"role": "assistant", "content": "bonjour 15"}]}
+{"messages": [{"role": "user", "content": "Extrais uniquement le nombre : objet numero 15."}, {"role": "assistant", "content": "15"}]}
+{"messages": [{"role": "user", "content": "Le nombre 15 est-il pair ? Reponds par oui ou non."}, {"role": "assistant", "content": "non"}]}
+{"messages": [{"role": "user", "content": "Retiens ce code : 15. Reponds seulement OK."}, {"role": "assistant", "content": "OK"}, {"role": "user", "content": "Quel code viens-je de donner ? Reponds seulement avec ce code."}, {"role": "assistant", "content": "15"}]}
