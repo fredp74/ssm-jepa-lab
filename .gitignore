@@ -33,3 +33,6 @@ Thumbs.db
 .idea/
 
 *.b64
+
+# Generated rule-ranking datasets
+/autonomous_lab/data/rule_ranking_01/*.jsonl
