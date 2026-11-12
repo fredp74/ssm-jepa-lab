@@ -1,0 +1,48 @@
+{
+  "source_sha256": "10b78b67615081ab82d0b06a41549544dd35dbcfabdddbc2d2e6ae5a678f0129",
+  "config": {
+    "source": "autonomous_lab\\runs\\budgeted_five_bits_01\\results.json",
+    "repair_family": "known_rule_plus_at_most_one_flipped_output",
+    "repair_family_size": 4521,
+    "maximum_total_queried_inputs": 24,
+    "maximum_monitoring_questions": 8,
+    "required_final_checks": 4,
+    "minimum_evaluator_only_inputs": 8,
+    "noise": false,
+    "seed": 83001
+  },
+  "summaries": {
+    "known": {
+      "functions": 137,
+      "statuses": {
+        "unchanged_provisional": 137
+      },
+      "false_acceptances": 0,
+      "questions": 2623,
+      "correct_unqueried": 1761,
+      "evaluated_unqueried": 1761
+    },
+    "near_miss": {
+      "functions": 71,
+      "statuses": {
+        "repair_provisional": 29,
+        "unchanged_provisional": 42
+      },
+      "false_acceptances": 42,
+      "questions": 1354,
+      "correct_unqueried": 876,
+      "evaluated_unqueried": 918
+    },
+    "random_outside": {
+      "functions": 7,
+      "statuses": {
+        "repair_revoked": 6,
+        "repair_provisional": 1
+      },
+      "false_acceptances": 1,
+      "questions": 109,
+      "correct_unqueried": 6,
+      "evaluated_unqueried": 15
+    }
+  }
+}
