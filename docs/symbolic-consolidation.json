@@ -1,0 +1,187 @@
+{
+  "stationary": {
+    "source_sha256": "79097437809e459314f98f93bf04c768bf75fe657fdd23458d946526ebbcf832",
+    "config": {
+      "episodes": 60,
+      "seed": 71001,
+      "frequent_rule_probability": 0.8,
+      "frequent_rule_count": 3,
+      "grammar_size": 28,
+      "stop_condition": "unique_compatible_rule",
+      "library_weight": "one_plus_previous_identifications"
+    },
+    "summary": {
+      "cold": {
+        "total_questions": 296,
+        "correct_unqueried": 184,
+        "total_unqueried": 184
+      },
+      "persistent": {
+        "total_questions": 252,
+        "correct_unqueried": 228,
+        "total_unqueried": 228
+      }
+    }
+  },
+  "changing": {
+    "source_sha256": "3f33c00e47183b91f5d1bc9ab055914d1d5a38af25f98bda3dc6465d16325c84",
+    "config": {
+      "seeds": [
+        72001,
+        72002,
+        72003,
+        72004,
+        72005
+      ],
+      "episodes_per_sequence": 60,
+      "switch_after_episode": 30,
+      "switch_announced_to_agent": false,
+      "frequent_rule_probability": 0.8,
+      "discount_per_episode": 0.95,
+      "grammar_size": 28,
+      "stop_condition": "unique_compatible_rule"
+    },
+    "summary": [
+      {
+        "period": "phase_1",
+        "strategy": "cold",
+        "episodes": 150,
+        "questions": 740,
+        "mean_questions": 4.933333333333334,
+        "correct_unqueried": 460,
+        "total_unqueried": 460
+      },
+      {
+        "period": "phase_1",
+        "strategy": "cumulative",
+        "episodes": 150,
+        "questions": 671,
+        "mean_questions": 4.473333333333334,
+        "correct_unqueried": 529,
+        "total_unqueried": 529
+      },
+      {
+        "period": "phase_1",
+        "strategy": "discounted",
+        "episodes": 150,
+        "questions": 664,
+        "mean_questions": 4.426666666666667,
+        "correct_unqueried": 536,
+        "total_unqueried": 536
+      },
+      {
+        "period": "debut_phase_2",
+        "strategy": "cold",
+        "episodes": 50,
+        "questions": 247,
+        "mean_questions": 4.94,
+        "correct_unqueried": 153,
+        "total_unqueried": 153
+      },
+      {
+        "period": "debut_phase_2",
+        "strategy": "cumulative",
+        "episodes": 50,
+        "questions": 238,
+        "mean_questions": 4.76,
+        "correct_unqueried": 162,
+        "total_unqueried": 162
+      },
+      {
+        "period": "debut_phase_2",
+        "strategy": "discounted",
+        "episodes": 50,
+        "questions": 236,
+        "mean_questions": 4.72,
+        "correct_unqueried": 164,
+        "total_unqueried": 164
+      },
+      {
+        "period": "fin_phase_2",
+        "strategy": "cold",
+        "episodes": 100,
+        "questions": 490,
+        "mean_questions": 4.9,
+        "correct_unqueried": 310,
+        "total_unqueried": 310
+      },
+      {
+        "period": "fin_phase_2",
+        "strategy": "cumulative",
+        "episodes": 100,
+        "questions": 446,
+        "mean_questions": 4.46,
+        "correct_unqueried": 354,
+        "total_unqueried": 354
+      },
+      {
+        "period": "fin_phase_2",
+        "strategy": "discounted",
+        "episodes": 100,
+        "questions": 444,
+        "mean_questions": 4.44,
+        "correct_unqueried": 356,
+        "total_unqueried": 356
+      },
+      {
+        "period": "total",
+        "strategy": "cold",
+        "episodes": 300,
+        "questions": 1477,
+        "mean_questions": 4.923333333333333,
+        "correct_unqueried": 923,
+        "total_unqueried": 923
+      },
+      {
+        "period": "total",
+        "strategy": "cumulative",
+        "episodes": 300,
+        "questions": 1355,
+        "mean_questions": 4.516666666666667,
+        "correct_unqueried": 1045,
+        "total_unqueried": 1045
+      },
+      {
+        "period": "total",
+        "strategy": "discounted",
+        "episodes": 300,
+        "questions": 1344,
+        "mean_questions": 4.48,
+        "correct_unqueried": 1056,
+        "total_unqueried": 1056
+      }
+    ],
+    "per_seed_questions": [
+      {
+        "seed": 72001,
+        "cold": 297,
+        "cumulative": 284,
+        "discounted": 278
+      },
+      {
+        "seed": 72002,
+        "cold": 290,
+        "cumulative": 267,
+        "discounted": 266
+      },
+      {
+        "seed": 72003,
+        "cold": 299,
+        "cumulative": 266,
+        "discounted": 263
+      },
+      {
+        "seed": 72004,
+        "cold": 299,
+        "cumulative": 273,
+        "discounted": 278
+      },
+      {
+        "seed": 72005,
+        "cold": 292,
+        "cumulative": 265,
+        "discounted": 259
+      }
+    ]
+  }
+}
