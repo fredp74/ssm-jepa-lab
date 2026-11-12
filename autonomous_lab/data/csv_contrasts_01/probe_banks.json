@@ -1,0 +1,146 @@
+{
+  "protocol": {
+    "purpose": "deterministic_contrast_regression",
+    "maximum_calls": 8,
+    "cells_per_bank": 24,
+    "not_an_independent_evaluation": true
+  },
+  "metadata": {
+    "fixed": {
+      "calls": 8,
+      "cells": 24,
+      "input_text_utf8_bytes": 205,
+      "sha256": "8e299c61adda538fc40159583a8d35a5b889d0c10bbeb7023c8a82fe1a00461e"
+    },
+    "contrasts": {
+      "calls": 8,
+      "cells": 24,
+      "input_text_utf8_bytes": 166,
+      "sha256": "e71e5c2b14b88f06621f92a02b9243c8f12add8e416a5c95b90c5c7ea2ffa218"
+    }
+  },
+  "banks": {
+    "fixed": [
+      [
+        [
+          "probe_A"
+        ]
+      ],
+      [
+        [
+          "probe_B",
+          "probe_C"
+        ],
+        [
+          "probe_D",
+          "probe_E"
+        ]
+      ],
+      [
+        [
+          "  padded_F  ",
+          "\tspaced_G\t"
+        ]
+      ],
+      [
+        [
+          "quoted_\"H\"",
+          "another_\"I\""
+        ]
+      ],
+      [
+        [
+          "slash\\J",
+          "slash\\\"K"
+        ]
+      ],
+      [
+        [
+          "line_L\nline_M",
+          "line_N\r\nline_O"
+        ]
+      ],
+      [
+        [
+          "comma,P",
+          "semi;Q",
+          "tab\tR"
+        ]
+      ],
+      [
+        [
+          "  mix,S;T\tU  ",
+          "quote\"V",
+          "slash\\W",
+          ""
+        ],
+        [
+          "line_X\nline_Y",
+          "line_Z\r\nline_AA",
+          "été_BB",
+          " CC "
+        ]
+      ]
+    ],
+    "contrasts": [
+      [
+        [
+          "7",
+          "0007"
+        ]
+      ],
+      [
+        [
+          "1.25",
+          "1,25"
+        ]
+      ],
+      [
+        [
+          "a b",
+          "a  b "
+        ]
+      ],
+      [
+        [
+          "é_X",
+          "é_X",
+          "AB_Y",
+          "ＡＢ_Y"
+        ]
+      ],
+      [
+        [
+          "yes",
+          "TRUE"
+        ]
+      ],
+      [
+        [
+          "length_Z",
+          "length_Zlength_Zlength_Zlength_Z"
+        ]
+      ],
+      [
+        [
+          "a|b_W",
+          "a:b_W"
+        ]
+      ],
+      [
+        [
+          "  mix,S;T\tU  ",
+          "quote\"V",
+          "slash\\W",
+          ""
+        ],
+        [
+          "line_X\nline_Y",
+          "line_Z\r\nline_AA",
+          "été_BB",
+          " CC "
+        ]
+      ]
+    ]
+  }
+}
