@@ -1,0 +1,22 @@
+{
+  "purpose": "Replicate frozen question-selection experiment",
+  "changes": "Model initialization and training sampling seeds only",
+  "replications": [
+    {
+      "number": "02",
+      "seeds": [
+        62101,
+        62102,
+        62103
+      ]
+    },
+    {
+      "number": "03",
+      "seeds": [
+        62201,
+        62202,
+        62203
+      ]
+    }
+  ]
+}
