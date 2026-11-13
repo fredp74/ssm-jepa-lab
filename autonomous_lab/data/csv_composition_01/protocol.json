@@ -1,0 +1,822 @@
+{
+  "experiment": "symbolic_composition_acquisition",
+  "development_benchmark": true,
+  "previously_explored_compositions_may_be_present": true,
+  "claim_of_unseen_behavior_generalization": false,
+  "primitive_operations": [
+    "boolean_normalization",
+    "casefold",
+    "collapse_spaces",
+    "decimal_comma",
+    "deduplicate_rows",
+    "drop_empty_columns",
+    "normalize_leading_zeros",
+    "remove_empty_rows",
+    "rstrip",
+    "sort_rows",
+    "truncate_16",
+    "unicode_NFC"
+  ],
+  "candidate_operation_sequences": [
+    [],
+    [
+      "boolean_normalization"
+    ],
+    [
+      "casefold"
+    ],
+    [
+      "collapse_spaces"
+    ],
+    [
+      "decimal_comma"
+    ],
+    [
+      "deduplicate_rows"
+    ],
+    [
+      "drop_empty_columns"
+    ],
+    [
+      "normalize_leading_zeros"
+    ],
+    [
+      "remove_empty_rows"
+    ],
+    [
+      "rstrip"
+    ],
+    [
+      "sort_rows"
+    ],
+    [
+      "truncate_16"
+    ],
+    [
+      "unicode_NFC"
+    ],
+    [
+      "boolean_normalization",
+      "casefold"
+    ],
+    [
+      "boolean_normalization",
+      "collapse_spaces"
+    ],
+    [
+      "boolean_normalization",
+      "decimal_comma"
+    ],
+    [
+      "boolean_normalization",
+      "deduplicate_rows"
+    ],
+    [
+      "boolean_normalization",
+      "drop_empty_columns"
+    ],
+    [
+      "boolean_normalization",
+      "normalize_leading_zeros"
+    ],
+    [
+      "boolean_normalization",
+      "remove_empty_rows"
+    ],
+    [
+      "boolean_normalization",
+      "rstrip"
+    ],
+    [
+      "boolean_normalization",
+      "sort_rows"
+    ],
+    [
+      "boolean_normalization",
+      "truncate_16"
+    ],
+    [
+      "boolean_normalization",
+      "unicode_NFC"
+    ],
+    [
+      "casefold",
+      "boolean_normalization"
+    ],
+    [
+      "casefold",
+      "collapse_spaces"
+    ],
+    [
+      "casefold",
+      "decimal_comma"
+    ],
+    [
+      "casefold",
+      "deduplicate_rows"
+    ],
+    [
+      "casefold",
+      "drop_empty_columns"
+    ],
+    [
+      "casefold",
+      "normalize_leading_zeros"
+    ],
+    [
+      "casefold",
+      "remove_empty_rows"
+    ],
+    [
+      "casefold",
+      "rstrip"
+    ],
+    [
+      "casefold",
+      "sort_rows"
+    ],
+    [
+      "casefold",
+      "truncate_16"
+    ],
+    [
+      "casefold",
+      "unicode_NFC"
+    ],
+    [
+      "collapse_spaces",
+      "boolean_normalization"
+    ],
+    [
+      "collapse_spaces",
+      "casefold"
+    ],
+    [
+      "collapse_spaces",
+      "decimal_comma"
+    ],
+    [
+      "collapse_spaces",
+      "deduplicate_rows"
+    ],
+    [
+      "collapse_spaces",
+      "drop_empty_columns"
+    ],
+    [
+      "collapse_spaces",
+      "normalize_leading_zeros"
+    ],
+    [
+      "collapse_spaces",
+      "remove_empty_rows"
+    ],
+    [
+      "collapse_spaces",
+      "rstrip"
+    ],
+    [
+      "collapse_spaces",
+      "sort_rows"
+    ],
+    [
+      "collapse_spaces",
+      "truncate_16"
+    ],
+    [
+      "collapse_spaces",
+      "unicode_NFC"
+    ],
+    [
+      "decimal_comma",
+      "boolean_normalization"
+    ],
+    [
+      "decimal_comma",
+      "casefold"
+    ],
+    [
+      "decimal_comma",
+      "collapse_spaces"
+    ],
+    [
+      "decimal_comma",
+      "deduplicate_rows"
+    ],
+    [
+      "decimal_comma",
+      "drop_empty_columns"
+    ],
+    [
+      "decimal_comma",
+      "normalize_leading_zeros"
+    ],
+    [
+      "decimal_comma",
+      "remove_empty_rows"
+    ],
+    [
+      "decimal_comma",
+      "rstrip"
+    ],
+    [
+      "decimal_comma",
+      "sort_rows"
+    ],
+    [
+      "decimal_comma",
+      "truncate_16"
+    ],
+    [
+      "decimal_comma",
+      "unicode_NFC"
+    ],
+    [
+      "deduplicate_rows",
+      "boolean_normalization"
+    ],
+    [
+      "deduplicate_rows",
+      "casefold"
+    ],
+    [
+      "deduplicate_rows",
+      "collapse_spaces"
+    ],
+    [
+      "deduplicate_rows",
+      "decimal_comma"
+    ],
+    [
+      "deduplicate_rows",
+      "drop_empty_columns"
+    ],
+    [
+      "deduplicate_rows",
+      "normalize_leading_zeros"
+    ],
+    [
+      "deduplicate_rows",
+      "remove_empty_rows"
+    ],
+    [
+      "deduplicate_rows",
+      "rstrip"
+    ],
+    [
+      "deduplicate_rows",
+      "sort_rows"
+    ],
+    [
+      "deduplicate_rows",
+      "truncate_16"
+    ],
+    [
+      "deduplicate_rows",
+      "unicode_NFC"
+    ],
+    [
+      "drop_empty_columns",
+      "boolean_normalization"
+    ],
+    [
+      "drop_empty_columns",
+      "casefold"
+    ],
+    [
+      "drop_empty_columns",
+      "collapse_spaces"
+    ],
+    [
+      "drop_empty_columns",
+      "decimal_comma"
+    ],
+    [
+      "drop_empty_columns",
+      "deduplicate_rows"
+    ],
+    [
+      "drop_empty_columns",
+      "normalize_leading_zeros"
+    ],
+    [
+      "drop_empty_columns",
+      "remove_empty_rows"
+    ],
+    [
+      "drop_empty_columns",
+      "rstrip"
+    ],
+    [
+      "drop_empty_columns",
+      "sort_rows"
+    ],
+    [
+      "drop_empty_columns",
+      "truncate_16"
+    ],
+    [
+      "drop_empty_columns",
+      "unicode_NFC"
+    ],
+    [
+      "normalize_leading_zeros",
+      "boolean_normalization"
+    ],
+    [
+      "normalize_leading_zeros",
+      "casefold"
+    ],
+    [
+      "normalize_leading_zeros",
+      "collapse_spaces"
+    ],
+    [
+      "normalize_leading_zeros",
+      "decimal_comma"
+    ],
+    [
+      "normalize_leading_zeros",
+      "deduplicate_rows"
+    ],
+    [
+      "normalize_leading_zeros",
+      "drop_empty_columns"
+    ],
+    [
+      "normalize_leading_zeros",
+      "remove_empty_rows"
+    ],
+    [
+      "normalize_leading_zeros",
+      "rstrip"
+    ],
+    [
+      "normalize_leading_zeros",
+      "sort_rows"
+    ],
+    [
+      "normalize_leading_zeros",
+      "truncate_16"
+    ],
+    [
+      "normalize_leading_zeros",
+      "unicode_NFC"
+    ],
+    [
+      "remove_empty_rows",
+      "boolean_normalization"
+    ],
+    [
+      "remove_empty_rows",
+      "casefold"
+    ],
+    [
+      "remove_empty_rows",
+      "collapse_spaces"
+    ],
+    [
+      "remove_empty_rows",
+      "decimal_comma"
+    ],
+    [
+      "remove_empty_rows",
+      "deduplicate_rows"
+    ],
+    [
+      "remove_empty_rows",
+      "drop_empty_columns"
+    ],
+    [
+      "remove_empty_rows",
+      "normalize_leading_zeros"
+    ],
+    [
+      "remove_empty_rows",
+      "rstrip"
+    ],
+    [
+      "remove_empty_rows",
+      "sort_rows"
+    ],
+    [
+      "remove_empty_rows",
+      "truncate_16"
+    ],
+    [
+      "remove_empty_rows",
+      "unicode_NFC"
+    ],
+    [
+      "rstrip",
+      "boolean_normalization"
+    ],
+    [
+      "rstrip",
+      "casefold"
+    ],
+    [
+      "rstrip",
+      "collapse_spaces"
+    ],
+    [
+      "rstrip",
+      "decimal_comma"
+    ],
+    [
+      "rstrip",
+      "deduplicate_rows"
+    ],
+    [
+      "rstrip",
+      "drop_empty_columns"
+    ],
+    [
+      "rstrip",
+      "normalize_leading_zeros"
+    ],
+    [
+      "rstrip",
+      "remove_empty_rows"
+    ],
+    [
+      "rstrip",
+      "sort_rows"
+    ],
+    [
+      "rstrip",
+      "truncate_16"
+    ],
+    [
+      "rstrip",
+      "unicode_NFC"
+    ],
+    [
+      "sort_rows",
+      "boolean_normalization"
+    ],
+    [
+      "sort_rows",
+      "casefold"
+    ],
+    [
+      "sort_rows",
+      "collapse_spaces"
+    ],
+    [
+      "sort_rows",
+      "decimal_comma"
+    ],
+    [
+      "sort_rows",
+      "deduplicate_rows"
+    ],
+    [
+      "sort_rows",
+      "drop_empty_columns"
+    ],
+    [
+      "sort_rows",
+      "normalize_leading_zeros"
+    ],
+    [
+      "sort_rows",
+      "remove_empty_rows"
+    ],
+    [
+      "sort_rows",
+      "rstrip"
+    ],
+    [
+      "sort_rows",
+      "truncate_16"
+    ],
+    [
+      "sort_rows",
+      "unicode_NFC"
+    ],
+    [
+      "truncate_16",
+      "boolean_normalization"
+    ],
+    [
+      "truncate_16",
+      "casefold"
+    ],
+    [
+      "truncate_16",
+      "collapse_spaces"
+    ],
+    [
+      "truncate_16",
+      "decimal_comma"
+    ],
+    [
+      "truncate_16",
+      "deduplicate_rows"
+    ],
+    [
+      "truncate_16",
+      "drop_empty_columns"
+    ],
+    [
+      "truncate_16",
+      "normalize_leading_zeros"
+    ],
+    [
+      "truncate_16",
+      "remove_empty_rows"
+    ],
+    [
+      "truncate_16",
+      "rstrip"
+    ],
+    [
+      "truncate_16",
+      "sort_rows"
+    ],
+    [
+      "truncate_16",
+      "unicode_NFC"
+    ],
+    [
+      "unicode_NFC",
+      "boolean_normalization"
+    ],
+    [
+      "unicode_NFC",
+      "casefold"
+    ],
+    [
+      "unicode_NFC",
+      "collapse_spaces"
+    ],
+    [
+      "unicode_NFC",
+      "decimal_comma"
+    ],
+    [
+      "unicode_NFC",
+      "deduplicate_rows"
+    ],
+    [
+      "unicode_NFC",
+      "drop_empty_columns"
+    ],
+    [
+      "unicode_NFC",
+      "normalize_leading_zeros"
+    ],
+    [
+      "unicode_NFC",
+      "remove_empty_rows"
+    ],
+    [
+      "unicode_NFC",
+      "rstrip"
+    ],
+    [
+      "unicode_NFC",
+      "sort_rows"
+    ],
+    [
+      "unicode_NFC",
+      "truncate_16"
+    ]
+  ],
+  "configuration_count": 48,
+  "candidate_program_count": 6960,
+  "maximum_operations_per_program": 2,
+  "repeated_identical_operations_included": false,
+  "candidate_generation": "exhaustive_enumeration",
+  "grammar_written_by_humans": true,
+  "neural_training": false,
+  "environments": [
+    {
+      "environment_id": 0,
+      "configuration_id": 0,
+      "operations": [
+        "casefold",
+        "deduplicate_rows"
+      ]
+    },
+    {
+      "environment_id": 1,
+      "configuration_id": 7,
+      "operations": [
+        "casefold",
+        "deduplicate_rows"
+      ]
+    },
+    {
+      "environment_id": 2,
+      "configuration_id": 23,
+      "operations": [
+        "casefold",
+        "deduplicate_rows"
+      ]
+    },
+    {
+      "environment_id": 3,
+      "configuration_id": 47,
+      "operations": [
+        "casefold",
+        "deduplicate_rows"
+      ]
+    },
+    {
+      "environment_id": 4,
+      "configuration_id": 0,
+      "operations": [
+        "rstrip",
+        "remove_empty_rows"
+      ]
+    },
+    {
+      "environment_id": 5,
+      "configuration_id": 7,
+      "operations": [
+        "rstrip",
+        "remove_empty_rows"
+      ]
+    },
+    {
+      "environment_id": 6,
+      "configuration_id": 23,
+      "operations": [
+        "rstrip",
+        "remove_empty_rows"
+      ]
+    },
+    {
+      "environment_id": 7,
+      "configuration_id": 47,
+      "operations": [
+        "rstrip",
+        "remove_empty_rows"
+      ]
+    },
+    {
+      "environment_id": 8,
+      "configuration_id": 0,
+      "operations": [
+        "truncate_16",
+        "deduplicate_rows"
+      ]
+    },
+    {
+      "environment_id": 9,
+      "configuration_id": 7,
+      "operations": [
+        "truncate_16",
+        "deduplicate_rows"
+      ]
+    },
+    {
+      "environment_id": 10,
+      "configuration_id": 23,
+      "operations": [
+        "truncate_16",
+        "deduplicate_rows"
+      ]
+    },
+    {
+      "environment_id": 11,
+      "configuration_id": 47,
+      "operations": [
+        "truncate_16",
+        "deduplicate_rows"
+      ]
+    },
+    {
+      "environment_id": 12,
+      "configuration_id": 0,
+      "operations": [
+        "normalize_leading_zeros",
+        "sort_rows"
+      ]
+    },
+    {
+      "environment_id": 13,
+      "configuration_id": 7,
+      "operations": [
+        "normalize_leading_zeros",
+        "sort_rows"
+      ]
+    },
+    {
+      "environment_id": 14,
+      "configuration_id": 23,
+      "operations": [
+        "normalize_leading_zeros",
+        "sort_rows"
+      ]
+    },
+    {
+      "environment_id": 15,
+      "configuration_id": 47,
+      "operations": [
+        "normalize_leading_zeros",
+        "sort_rows"
+      ]
+    },
+    {
+      "environment_id": 16,
+      "configuration_id": 0,
+      "operations": [
+        "unicode_NFC",
+        "rstrip"
+      ]
+    },
+    {
+      "environment_id": 17,
+      "configuration_id": 7,
+      "operations": [
+        "unicode_NFC",
+        "rstrip"
+      ]
+    },
+    {
+      "environment_id": 18,
+      "configuration_id": 23,
+      "operations": [
+        "unicode_NFC",
+        "rstrip"
+      ]
+    },
+    {
+      "environment_id": 19,
+      "configuration_id": 47,
+      "operations": [
+        "unicode_NFC",
+        "rstrip"
+      ]
+    },
+    {
+      "environment_id": 20,
+      "configuration_id": 0,
+      "operations": [
+        "decimal_comma",
+        "sort_rows"
+      ]
+    },
+    {
+      "environment_id": 21,
+      "configuration_id": 7,
+      "operations": [
+        "decimal_comma",
+        "sort_rows"
+      ]
+    },
+    {
+      "environment_id": 22,
+      "configuration_id": 23,
+      "operations": [
+        "decimal_comma",
+        "sort_rows"
+      ]
+    },
+    {
+      "environment_id": 23,
+      "configuration_id": 47,
+      "operations": [
+        "decimal_comma",
+        "sort_rows"
+      ]
+    }
+  ],
+  "budget": {
+    "maximum_calls": 8,
+    "maximum_cells": 24,
+    "maximum_input_text_utf8_bytes": 512,
+    "maximum_discovery_calls": 6,
+    "discovery_cells": 16,
+    "discovery_input_text_utf8_bytes": 384,
+    "verification_calls_reserved": 2,
+    "verification_cells_reserved": 8,
+    "verification_input_text_utf8_bytes_reserved": 128
+  },
+  "acceptance": {
+    "proposal_frozen_before_verification": true,
+    "require_all_survivors_to_agree_on_verification": true,
+    "verification_failure": "revoke",
+    "success_status": "provisional",
+    "independent_evaluation_feedback_used_for_selection": false
+  },
+  "comparisons": [
+    "single_operation_candidate_family",
+    "up_to_two_operations_candidate_family"
+  ],
+  "required_measurements": [
+    "coverage",
+    "accuracy_among_answered_queries",
+    "verification_failures",
+    "remaining_candidates",
+    "tool_calls_cells_and_bytes",
+    "offline_search_time",
+    "prediction_after_save_and_reload"
+  ],
+  "source_programs_sha256": "e53dda1f3ef22528d8f7efdc9cb011a1ddf48d931ca4e485c71d60468fea325a",
+  "order_sensitivity_plumbing_check_passed": true,
+  "agent_acquisition_tested": false
+}
