@@ -1,0 +1,451 @@
+{
+  "conclusion": "The optimized fixed pair outperformed the current adaptive heuristic. An advantage of adaptation was not established.",
+  "paired_environment_comparison": {
+    "fixed": 15,
+    "adaptive": 7,
+    "ties": 4
+  },
+  "sources": {
+    "ambiguity": {
+      "path": "autonomous_lab\\runs\\csv_ambiguity_diagnostic_01\\results.json",
+      "sha256": "5dad5781aea401803c2c5022bbc5f52b21d4d3375ef5a8fa0daea0eec9cc1465",
+      "protocol": {
+        "retrospective_diagnostic": true,
+        "evaluation_cases_reused": true,
+        "all_program_aliases_checked": true,
+        "evaluation_feedback_used_for_selection": false,
+        "new_tool_calls": 0,
+        "scope": "programmed_candidate_family",
+        "neural_training": false
+      },
+      "summary": {
+        "ambiguous_environments": 26,
+        "evaluation_cases": 2600,
+        "consensus_answered": 658,
+        "consensus_correct": 658,
+        "consensus_errors": 0,
+        "abstentions": 1942,
+        "coverage": 0.2530769230769231,
+        "accuracy_when_answered": 1.0
+      }
+    },
+    "targeted": {
+      "path": "autonomous_lab\\runs\\csv_targeted_probe_01\\results.json",
+      "sha256": "ef01fc53796255d0ef8cd95f729399b451d822231b709951307ce8a76eacda70",
+      "protocol": {
+        "retrospective_diagnostic": true,
+        "evaluation_cases_reused": true,
+        "maximum_additional_calls_per_environment": 1,
+        "total_budget": {
+          "calls": 8,
+          "cells": 24,
+          "text_bytes": 512
+        },
+        "selection": "minimum_expected_remaining_catalog_classes",
+        "class_prior": "uniform",
+        "evaluation_feedback_used_for_selection": false,
+        "all_surviving_program_aliases_checked": true,
+        "reserved_compositions_used": false,
+        "neural_training": false
+      },
+      "summary": {
+        "environments": 26,
+        "evaluation_cases": 2600,
+        "additional_calls": 26,
+        "answered_before": 658,
+        "answered_after": 998,
+        "additional_answers": 340,
+        "correct_after": 998,
+        "errors_after": 0,
+        "coverage_before": 0.2530769230769231,
+        "coverage_after": 0.38384615384615384,
+        "additional_answers_per_call": 13.076923076923077
+      }
+    },
+    "comparison": {
+      "path": "autonomous_lab\\runs\\csv_exploration_comparison_01\\results.json",
+      "sha256": "4603fbebaa4c5b26a5b1fd08c1f0582c4ab53f222516deb9a5d53f8025140a74",
+      "protocol": {
+        "development_environments_reused": true,
+        "evaluation": "new_tables_in_known_program_family",
+        "additional_calls_per_environment": 2,
+        "total_budget": {
+          "calls": 8,
+          "cells": 24,
+          "text_bytes": 512
+        },
+        "fixed_order": [
+          11,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43
+        ],
+        "fixed_order_informed_by_previous_diagnostic": true,
+        "random_seeds": [
+          117101,
+          117102,
+          117103,
+          117104,
+          117105,
+          117106,
+          117107,
+          117108,
+          117109,
+          117110,
+          117111,
+          117112,
+          117113,
+          117114,
+          117115,
+          117116,
+          117117,
+          117118,
+          117119,
+          117120
+        ],
+        "evaluation_seed": 117001,
+        "evaluation_tables": 200,
+        "evaluation_feedback_used_for_selection": false,
+        "all_program_aliases_checked": true,
+        "neural_training": false,
+        "source_sha256": {
+          "autonomous_lab\\runs\\csv_ambiguity_diagnostic_01\\results.json": "5dad5781aea401803c2c5022bbc5f52b21d4d3375ef5a8fa0daea0eec9cc1465",
+          "autonomous_lab\\data\\csv_skill_acquisition_01\\programs.json": "e53dda1f3ef22528d8f7efdc9cb011a1ddf48d931ca4e485c71d60468fea325a",
+          "autonomous_lab\\data\\csv_ssm_policy_01\\catalog.json": "707a8c2d3ba6f74d1f64ba63a8db1097842c7e7ee90627886ab60a1990ac8b3c",
+          "C:\\Users\\m7\\ssm_jepa\\autonomous_lab\\compare_csv_exploration.py": "6eff00773d4690669b193f86a8f18910d6340e2e79ccd5769cbc8c3d1463702a"
+        }
+      },
+      "summary": [
+        {
+          "strategy": "adaptive",
+          "seed": null,
+          "environments": 26,
+          "answered": 3415,
+          "correct": 3415,
+          "evaluation_cases": 5200,
+          "additional_calls": 52,
+          "coverage": 0.6567307692307692,
+          "errors": 0
+        },
+        {
+          "strategy": "fixed",
+          "seed": null,
+          "environments": 26,
+          "answered": 1886,
+          "correct": 1886,
+          "evaluation_cases": 5200,
+          "additional_calls": 52,
+          "coverage": 0.3626923076923077,
+          "errors": 0
+        },
+        {
+          "strategy": "random",
+          "seed": 117101,
+          "environments": 26,
+          "answered": 1930,
+          "correct": 1930,
+          "evaluation_cases": 5200,
+          "additional_calls": 52,
+          "coverage": 0.37115384615384617,
+          "errors": 0
+        },
+        {
+          "strategy": "random",
+          "seed": 117102,
+          "environments": 26,
+          "answered": 1858,
+          "correct": 1858,
+          "evaluation_cases": 5200,
+          "additional_calls": 52,
+          "coverage": 0.3573076923076923,
+          "errors": 0
+        },
+        {
+          "strategy": "random",
+          "seed": 117103,
+          "environments": 26,
+          "answered": 1851,
+          "correct": 1851,
+          "evaluation_cases": 5200,
+          "additional_calls": 52,
+          "coverage": 0.35596153846153844,
+          "errors": 0
+        },
+        {
+          "strategy": "random",
+          "seed": 117104,
+          "environments": 26,
+          "answered": 2050,
+          "correct": 2050,
+          "evaluation_cases": 5200,
+          "additional_calls": 52,
+          "coverage": 0.3942307692307692,
+          "errors": 0
+        },
+        {
+          "strategy": "random",
+          "seed": 117105,
+          "environments": 26,
+          "answered": 1638,
+          "correct": 1638,
+          "evaluation_cases": 5200,
+          "additional_calls": 52,
+          "coverage": 0.315,
+          "errors": 0
+        },
+        {
+          "strategy": "random",
+          "seed": 117106,
+          "environments": 26,
+          "answered": 1558,
+          "correct": 1558,
+          "evaluation_cases": 5200,
+          "additional_calls": 52,
+          "coverage": 0.2996153846153846,
+          "errors": 0
+        },
+        {
+          "strategy": "random",
+          "seed": 117107,
+          "environments": 26,
+          "answered": 1713,
+          "correct": 1713,
+          "evaluation_cases": 5200,
+          "additional_calls": 52,
+          "coverage": 0.32942307692307693,
+          "errors": 0
+        },
+        {
+          "strategy": "random",
+          "seed": 117108,
+          "environments": 26,
+          "answered": 1614,
+          "correct": 1614,
+          "evaluation_cases": 5200,
+          "additional_calls": 52,
+          "coverage": 0.31038461538461537,
+          "errors": 0
+        },
+        {
+          "strategy": "random",
+          "seed": 117109,
+          "environments": 26,
+          "answered": 1423,
+          "correct": 1423,
+          "evaluation_cases": 5200,
+          "additional_calls": 52,
+          "coverage": 0.27365384615384614,
+          "errors": 0
+        },
+        {
+          "strategy": "random",
+          "seed": 117110,
+          "environments": 26,
+          "answered": 2097,
+          "correct": 2097,
+          "evaluation_cases": 5200,
+          "additional_calls": 52,
+          "coverage": 0.40326923076923077,
+          "errors": 0
+        },
+        {
+          "strategy": "random",
+          "seed": 117111,
+          "environments": 26,
+          "answered": 1626,
+          "correct": 1626,
+          "evaluation_cases": 5200,
+          "additional_calls": 52,
+          "coverage": 0.3126923076923077,
+          "errors": 0
+        },
+        {
+          "strategy": "random",
+          "seed": 117112,
+          "environments": 26,
+          "answered": 1793,
+          "correct": 1793,
+          "evaluation_cases": 5200,
+          "additional_calls": 52,
+          "coverage": 0.3448076923076923,
+          "errors": 0
+        },
+        {
+          "strategy": "random",
+          "seed": 117113,
+          "environments": 26,
+          "answered": 2008,
+          "correct": 2008,
+          "evaluation_cases": 5200,
+          "additional_calls": 52,
+          "coverage": 0.3861538461538462,
+          "errors": 0
+        },
+        {
+          "strategy": "random",
+          "seed": 117114,
+          "environments": 26,
+          "answered": 1710,
+          "correct": 1710,
+          "evaluation_cases": 5200,
+          "additional_calls": 52,
+          "coverage": 0.32884615384615384,
+          "errors": 0
+        },
+        {
+          "strategy": "random",
+          "seed": 117115,
+          "environments": 26,
+          "answered": 1678,
+          "correct": 1678,
+          "evaluation_cases": 5200,
+          "additional_calls": 52,
+          "coverage": 0.32269230769230767,
+          "errors": 0
+        },
+        {
+          "strategy": "random",
+          "seed": 117116,
+          "environments": 26,
+          "answered": 1634,
+          "correct": 1634,
+          "evaluation_cases": 5200,
+          "additional_calls": 52,
+          "coverage": 0.31423076923076926,
+          "errors": 0
+        },
+        {
+          "strategy": "random",
+          "seed": 117117,
+          "environments": 26,
+          "answered": 1827,
+          "correct": 1827,
+          "evaluation_cases": 5200,
+          "additional_calls": 52,
+          "coverage": 0.35134615384615386,
+          "errors": 0
+        },
+        {
+          "strategy": "random",
+          "seed": 117118,
+          "environments": 26,
+          "answered": 1454,
+          "correct": 1454,
+          "evaluation_cases": 5200,
+          "additional_calls": 52,
+          "coverage": 0.2796153846153846,
+          "errors": 0
+        },
+        {
+          "strategy": "random",
+          "seed": 117119,
+          "environments": 26,
+          "answered": 2016,
+          "correct": 2016,
+          "evaluation_cases": 5200,
+          "additional_calls": 52,
+          "coverage": 0.38769230769230767,
+          "errors": 0
+        },
+        {
+          "strategy": "random",
+          "seed": 117120,
+          "environments": 26,
+          "answered": 1458,
+          "correct": 1458,
+          "evaluation_cases": 5200,
+          "additional_calls": 52,
+          "coverage": 0.2803846153846154,
+          "errors": 0
+        }
+      ]
+    },
+    "optimized": {
+      "path": "autonomous_lab\\runs\\csv_optimized_fixed_01\\results.json",
+      "sha256": "b68a7b256f025ab925d708bbb01f82e0545b1eaba046f989bdd59d80af81dd98",
+      "protocol": {
+        "development_environments_reused": true,
+        "fixed_pair": [
+          10,
+          31
+        ],
+        "pair_selected_using_old_100_tables_only": true,
+        "development_consensus_answers": 2030,
+        "searched_ordered_pairs": 1892,
+        "maximum_additional_calls": 2,
+        "total_budget": {
+          "calls": 8,
+          "cells": 24,
+          "text_bytes": 512
+        },
+        "fresh_evaluation_seed": 118001,
+        "fresh_evaluation_tables": 200,
+        "scope": "new_tables_in_known_program_family"
+      },
+      "summary": [
+        {
+          "strategy": "optimized_fixed",
+          "answered": 3889,
+          "correct": 3889,
+          "evaluation_cases": 5200,
+          "additional_calls": 52,
+          "total_cells": 520,
+          "total_text_bytes": 3562,
+          "coverage": 0.7478846153846154,
+          "errors": 0
+        },
+        {
+          "strategy": "adaptive",
+          "answered": 3535,
+          "correct": 3535,
+          "evaluation_cases": 5200,
+          "additional_calls": 52,
+          "total_cells": 516,
+          "total_text_bytes": 3424,
+          "coverage": 0.6798076923076923,
+          "errors": 0
+        }
+      ]
+    }
+  }
+}
