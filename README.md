@@ -79,3 +79,7 @@ in the reference code; functional tests have been run on CPU.
 - [Development roadmap](docs/ROADMAP.md)
 
 Weights, corpora and local training outputs stay outside Git.
+
+---
+
+A research project by [Algotradingresearch.com](https://algotradingresearch.com).
