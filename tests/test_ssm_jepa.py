@@ -114,8 +114,8 @@ class SystemTests(unittest.TestCase):
             run = self.fixture(Path(temporary))
             real_construct = system.construct
 
-            def interrupted_construct(state):
-                result = real_construct(state)
+            def interrupted_construct(state, device="cpu"):
+                result = real_construct(state, device)
                 optimizer = result[3]
                 original_step = optimizer.step
 

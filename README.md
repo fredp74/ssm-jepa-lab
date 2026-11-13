@@ -1,143 +1,81 @@
-﻿# SSM-JEPA Language Model
+﻿# SSM-JEPA Finance
 
-A small, runnable language model built with selective state-space layers
-and a JEPA-inspired latent prediction objective.
+**A financial language model built to connect quantitative evidence, business value and macroeconomic risk.**
 
-The project focuses on one implementation: training, checkpoint recovery,
-recurrent text generation and continued learning from new text.
+## The ambition
 
-## Status
+Build a financial research model that can examine an investment through
+three complementary lenses and explain how they fit together.
 
-The current model has approximately 1.8 million language-model parameters,
-plus a training-time latent predictor and EMA teacher.
+The project draws inspiration from three investment traditions:
 
-It generates text, but the current locally trained checkpoint does not
-yet produce consistently coherent language. This is an experimental
-foundation for a larger language model, not a finished conversational
-assistant.
+- **Jim Simons:** quantitative research, probability and empirical validation.
+- **Warren Buffett:** business quality, intrinsic value and long-term capital allocation.
+- **Ray Dalio:** economic cycles, diversification and portfolio risk.
 
-## Architecture
+The goal is to combine these perspectives in one model: understand the
+business, examine the data, and place both in their economic and risk context.
 
-- Byte vocabulary: 256 values, without an external tokenizer.
-- Width: 256.
-- Six selective SSM blocks with state dimension four.
-- Next-byte language-model head.
-- Predictor for representations of future 32-byte blocks.
-- Teacher updated by exponential moving average.
-- Combined loss: next-byte cross-entropy plus 0.1 times latent loss.
+These references express the research direction. They do not imply an
+association with these investors or replication of their proprietary methods.
 
-The latent objective is inspired by JEPA; this is not a reproduction of
-a canonical JEPA architecture.
+## What the model should deliver
 
-Training uses parallel sequence processing. Generation carries the SSM
-states forward one byte at a time.
+Given financial documents, market evidence and an analysis date, the intended
+system should produce a research view that answers:
 
-## Requirements
+- What does the quantitative evidence support, and how reliable is it?
+- What drives the business, its cash generation and its valuation?
+- Which macroeconomic conditions and portfolio exposures matter?
+- Where do these perspectives agree or conflict?
+- What assumptions, missing information or risks could change the conclusion?
 
-Python 3.10 or newer and PyTorch 2.6 or newer.
+Sources, dates, calculations and uncertainty should remain visible in the
+answer. Financial conclusions must be evaluated against evidence available
+at the stated date.
 
-Development has been exercised on CPU, including Windows PowerShell.
+## Why SSM and JEPA?
 
-Install dependencies:
+**Selective state-space models** provide the sequence-processing backbone,
+with recurrent inference and a persistent internal state during generation.
 
-    python -m pip install -r requirements.txt
+**JEPA-inspired latent prediction** adds an objective for learning future
+representations alongside ordinary language prediction.
 
-For a CPU-only PyTorch installation, use the appropriate official PyTorch
-installation command for your platform.
+The research question is whether this combination can support useful,
+efficient financial language modeling and continued learning. Its value
+must be demonstrated through language quality and financial accuracy.
 
-## Train from scratch
+## Where the project stands
 
-Provide a UTF-8 plain-text corpus, for example data/train.txt.
-The file must be large enough for training and a reserved evaluation
-partition; at least 1,285 bytes are needed with the current context length.
-Useful language learning requires substantially more data and training.
+An English language-model prototype is running, with a configurable SSM
+backbone, feed-forward sublayers, an EMA teacher and recurrent text generation.
+The current English configuration has approximately **4.47 million parameters**
+in the language model.
 
-    python ssm_jepa.py init --from-scratch --data data/train.txt --run runs/model.pt --lr 0.0001
-    python ssm_jepa.py train --run runs/model.pt --steps 500
-    python ssm_jepa.py eval --run runs/model.pt
+Training currently uses TinyStories to establish basic English generation.
+Financial specialization and the integrated research workflow are the next
+stages. The present model still makes language errors; financial competence
+and investment performance have not been established.
 
-The learning rate is configurable at initialization. It is stored with
-the optimizer in the checkpoint.
+## Development priorities
 
-## Initialize from compatible pretrained weights
+1. Build coherent, reliable English generation.
+2. Specialize on sourced, dated financial documents.
+3. Support verifiable quantitative and fundamental calculations.
+4. Integrate macroeconomic scenarios and portfolio risk.
+5. Evaluate combined financial research and retention after model updates.
 
-For users who already have the original SSM language-model weights:
+See the [roadmap](docs/ROADMAP.md).
 
-    python ssm_jepa.py init --checkpoint lm_SSM-n4_A.pt --data dataA.pt --run runs/model.pt --lr 0.00001
+## Run and contribute
 
-Initialization requires an exact architecture match. Existing destination
-checkpoints are not overwritten.
+The implementation supports CPU training, resumable checkpoints, recurrent
+generation and continued training on new text. CUDA execution is available
+in the reference code; functional tests have been run on CPU.
 
-Weights and corpora are not distributed in this repository.
+- [Installation, training and generation](docs/TRAINING.md)
+- [Contribution guide](CONTRIBUTING.md)
+- [Development roadmap](docs/ROADMAP.md)
 
-## Generate text
-
-    python ssm_jepa.py generate --run runs/model.pt --prompt "The man looked at " --bytes 500 --temperature 0.7
-
-Use temperature 0 for greedy generation. Generation continues the prompt;
-the model has not been trained as an instruction-following assistant.
-
-## Resume training
-
-    python ssm_jepa.py train --run runs/model.pt --steps 500
-
-The checkpoint contains model weights, teacher, predictor, optimizer,
-sampling-generator state, replay memory and training history.
-
-Training saves every 100 steps and at the end. Ctrl+C requests a stop
-after the current step and saves. A crash or forced process termination
-can lose work since the last completed save.
-
-## Learn from new text
-
-    python ssm_jepa.py train --run runs/model.pt --data data/new_text.txt --steps 500
-
-This updates model parameters using self-supervised prediction.
-It does not automatically train on generated answers.
-
-Each batch combines four incoming windows and two replay windows.
-Half of the 256-window memory remains anchored to the initial corpus;
-the other half is updated as a reservoir of sampled incoming windows.
-
-Replay mitigates forgetting; it does not guarantee retention.
-
-## Data and evaluation
-
-Input can be a raw text file or a .pt file containing a one-dimensional
-integer tensor with values in [0,255].
-
-For corpora of at least one million bytes, the final 500,000 bytes are
-reserved for evaluation. Smaller corpora reserve the final fifth.
-
-The context length is 256 bytes. Evaluation reports bits per byte
-on fixed windows in the reserved partition; lower is better.
-
-    python ssm_jepa.py eval --run runs/model.pt --samples 256
-    python ssm_jepa.py eval --run runs/model.pt --data data/another_corpus.txt --samples 256
-
-Different corpora or evaluation settings must not be compared as if they
-were the same benchmark. Evaluation loss alone does not establish coherent
-generation or comprehension.
-
-## Tests
-
-    python -m unittest discover -s tests -v
-
-Tests cover recurrent/parallel agreement, causality, exact continuation,
-protected replay memory, new-data training, checkpoint persistence,
-interruption handling and initialization without pretrained weights.
-
-## Files
-
-- ssm_jepa.py: model, training, evaluation and generation.
-- ssm_par.py: selective SSM layers and parallel scan.
-- tests/test_ssm_jepa.py: functional tests.
-- requirements.txt: dependencies.
-
-Local datasets and checkpoints are excluded from Git.
-Earlier experiments remain available in Git history.
-
-## Contributing
-
-See CONTRIBUTING.md. Contributions should directly improve the language
-model, its training system, data pipeline or evaluation.
+Weights, corpora and local training outputs stay outside Git.

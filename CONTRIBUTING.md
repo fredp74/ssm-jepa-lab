@@ -1,29 +1,28 @@
 ﻿# Contributing
 
-This repository develops a language model based on selective SSM layers
-and a JEPA-inspired latent objective.
+SSM-JEPA Finance develops a language model for quantitative, fundamental and
+macroeconomic research.
 
-Contributions should focus on the model, training and recovery,
-language-data preparation, recurrent inference, continual learning
-or meaningful language evaluation.
+Useful contributions include SSM architecture, latent objectives, training
+reliability, recurrent inference, financial data preparation, grounded
+numerical analysis and financial evaluation.
 
 Before submitting a change:
 
 1. Run python -m unittest discover -s tests -v.
-2. Describe the problem, implementation and validation.
-3. Include reproduction commands and seeds for experimental results.
-4. Report actual data, compute and checkpoint requirements.
-5. Distinguish improved prediction loss from coherent generation.
-6. Document failures and limitations.
+2. Explain the problem, implementation and validation.
+3. Include reproduction commands, seeds, data requirements and compute costs.
+4. Distinguish language quality, financial accuracy and investment outcomes.
+5. Report limitations and unsuccessful results.
 
-Keep changes focused. Discuss substantial architectural changes in an
-issue before investing in a large experiment.
+Financial examples need sources, dates, units and assumptions. Respect
+information-availability dates and separate development from evaluation data.
+Market evaluations should account for transaction costs and selection effects.
 
-Do not commit model weights, downloaded corpora, generated datasets,
-local runs or credentials. Use only data you are entitled to use.
+Keep changes focused on the financial language model. Discuss substantial
+architecture or dataset changes in an issue first. Use English for shared
+documentation. Record data provenance and redistribution terms.
 
-Use English for shared code documentation and reports.
-Do not add unrelated benchmark families or symbolic-agent experiments.
-
-Check the repository's current license before reuse or redistribution.
-This guide does not grant additional license rights.
+Do not commit weights, downloaded corpora, credentials or local runs.
+Check the repository's current license before reuse or redistribution;
+this guide does not grant additional license rights.
