@@ -1,0 +1,196 @@
+{
+  "source_sha256": "435f6d62fb9b5144a424716d9e496c2ac64167e54875abf94c1c6408be950092",
+  "recorded_config": {
+    "source_protocol_sha256": "b4bccbb5b95ed0d0db70752e97be0344425d6d74e23276d822e6e396c8eb6ba3",
+    "policies": [
+      "fixed",
+      "random",
+      "lookup",
+      "symbolic",
+      "ssm_97001",
+      "ssm_97002",
+      "ssm_97003"
+    ],
+    "known_environments": 48,
+    "reserved_composition_environments": 192,
+    "reserved_compositions": [
+      [
+        "rstrip",
+        "collapse_spaces",
+        "truncate_16"
+      ],
+      [
+        "normalize_leading_zeros",
+        "collapse_spaces",
+        "remove_empty_rows"
+      ],
+      [
+        "casefold",
+        "decimal_comma",
+        "remove_empty_rows"
+      ],
+      [
+        "boolean_normalization",
+        "remove_empty_rows",
+        "decimal_comma"
+      ],
+      [
+        "drop_empty_columns",
+        "remove_empty_rows",
+        "decimal_comma"
+      ],
+      [
+        "normalize_leading_zeros",
+        "casefold",
+        "drop_empty_columns"
+      ],
+      [
+        "sort_rows",
+        "decimal_comma",
+        "remove_empty_rows"
+      ],
+      [
+        "unicode_NFC",
+        "rstrip",
+        "boolean_normalization"
+      ],
+      [
+        "remove_empty_rows",
+        "boolean_normalization",
+        "decimal_comma"
+      ],
+      [
+        "casefold",
+        "boolean_normalization",
+        "unicode_NFC"
+      ],
+      [
+        "unicode_NFC",
+        "remove_empty_rows",
+        "decimal_comma"
+      ],
+      [
+        "normalize_leading_zeros",
+        "deduplicate_rows",
+        "drop_empty_columns"
+      ]
+    ],
+    "evaluation_updates": 0,
+    "prospective_protocol_sha256": "0e0d4158f98315a9ba42db4868fdbc2010f7daaefe5c199c35eb9a611fb96ce4",
+    "frozen_artifact_checks_passed": true,
+    "equivalence_scope": "100_evaluation_tables_only",
+    "no_evaluation_cases_removed": true,
+    "student_version": "branched_trajectories_v2",
+    "lookup_version": "branched_training_states",
+    "evaluation_status": "prospectively_frozen_composition_test",
+    "random_repetitions": 5,
+    "maximum_calls": 8,
+    "maximum_cells": 24,
+    "maximum_text_bytes": 512,
+    "teacher_uses_training_behaviors_only": true,
+    "timing_includes_selection_and_known_family_verification": true,
+    "timing_excludes_loading_simulator_precomputation_and_final_scoring": true,
+    "reserved_compositions_become_consulted_after_this_run": true
+  },
+  "metadata_erratum": {
+    "field": "config.reserved_composition_environments",
+    "recorded_value": 192,
+    "correct_value": 576,
+    "raw_result_modified": false,
+    "effect_on_scores": "none",
+    "future_evaluator_counter_corrected": true
+  },
+  "summaries": [
+    {
+      "policy": "fixed",
+      "composed_episodes": 576,
+      "detected": 216,
+      "incorrect_survivors": 360,
+      "known_control_episodes": 48,
+      "known_false_rejections": 0,
+      "known_fully_correct": 48,
+      "mean_calls": 5.625,
+      "mean_cells": 16.125,
+      "mean_rollout_microseconds": 123.23142361111111,
+      "unfamiliar_state_decisions": 2664
+    },
+    {
+      "policy": "random",
+      "composed_episodes": 2880,
+      "detected": 2406,
+      "incorrect_survivors": 474,
+      "known_control_episodes": 240,
+      "known_false_rejections": 0,
+      "known_fully_correct": 118,
+      "mean_calls": 3.6649305555555554,
+      "mean_cells": 9.058333333333334,
+      "mean_rollout_microseconds": 75.531875,
+      "unfamiliar_state_decisions": 7638
+    },
+    {
+      "policy": "lookup",
+      "composed_episodes": 576,
+      "detected": 576,
+      "incorrect_survivors": 0,
+      "known_control_episodes": 48,
+      "known_false_rejections": 0,
+      "known_fully_correct": 48,
+      "mean_calls": 1.5833333333333333,
+      "mean_cells": 5.583333333333333,
+      "mean_rollout_microseconds": 49.154687499999994,
+      "unfamiliar_state_decisions": 0
+    },
+    {
+      "policy": "symbolic",
+      "composed_episodes": 576,
+      "detected": 576,
+      "incorrect_survivors": 0,
+      "known_control_episodes": 48,
+      "known_false_rejections": 0,
+      "known_fully_correct": 48,
+      "mean_calls": 1.5833333333333333,
+      "mean_cells": 5.583333333333333,
+      "mean_rollout_microseconds": 5120.801909722222,
+      "unfamiliar_state_decisions": 0
+    },
+    {
+      "policy": "ssm_97001",
+      "composed_episodes": 576,
+      "detected": 576,
+      "incorrect_survivors": 0,
+      "known_control_episodes": 48,
+      "known_false_rejections": 0,
+      "known_fully_correct": 48,
+      "mean_calls": 1.5833333333333333,
+      "mean_cells": 5.583333333333333,
+      "mean_rollout_microseconds": 779.1277777777777,
+      "unfamiliar_state_decisions": 0
+    },
+    {
+      "policy": "ssm_97002",
+      "composed_episodes": 576,
+      "detected": 576,
+      "incorrect_survivors": 0,
+      "known_control_episodes": 48,
+      "known_false_rejections": 0,
+      "known_fully_correct": 48,
+      "mean_calls": 1.5833333333333333,
+      "mean_cells": 5.583333333333333,
+      "mean_rollout_microseconds": 676.0241319444444,
+      "unfamiliar_state_decisions": 0
+    },
+    {
+      "policy": "ssm_97003",
+      "composed_episodes": 576,
+      "detected": 576,
+      "incorrect_survivors": 0,
+      "known_control_episodes": 48,
+      "known_false_rejections": 0,
+      "known_fully_correct": 48,
+      "mean_calls": 1.5833333333333333,
+      "mean_cells": 5.583333333333333,
+      "mean_rollout_microseconds": 660.1651041666667,
+      "unfamiliar_state_decisions": 0
+    }
+  ]
+}
