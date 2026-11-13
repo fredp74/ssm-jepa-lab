@@ -1,0 +1,838 @@
+[
+  {
+    "environment_id": 0,
+    "group": "simple_control",
+    "configuration_id": 0,
+    "operations": [],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 1,
+    "group": "simple_control",
+    "configuration_id": 7,
+    "operations": [],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 2,
+    "group": "simple_control",
+    "configuration_id": 23,
+    "operations": [],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 3,
+    "group": "simple_control",
+    "configuration_id": 47,
+    "operations": [],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 4,
+    "group": "simple_control",
+    "configuration_id": 0,
+    "operations": [
+      "casefold"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 5,
+    "group": "simple_control",
+    "configuration_id": 7,
+    "operations": [
+      "casefold"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 6,
+    "group": "simple_control",
+    "configuration_id": 23,
+    "operations": [
+      "casefold"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 7,
+    "group": "simple_control",
+    "configuration_id": 47,
+    "operations": [
+      "casefold"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 8,
+    "group": "heldout_development_pair",
+    "configuration_id": 0,
+    "operations": [
+      "decimal_comma",
+      "rstrip"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 9,
+    "group": "heldout_development_pair",
+    "configuration_id": 7,
+    "operations": [
+      "decimal_comma",
+      "rstrip"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 10,
+    "group": "heldout_development_pair",
+    "configuration_id": 23,
+    "operations": [
+      "decimal_comma",
+      "rstrip"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 11,
+    "group": "heldout_development_pair",
+    "configuration_id": 47,
+    "operations": [
+      "decimal_comma",
+      "rstrip"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 12,
+    "group": "heldout_development_pair",
+    "configuration_id": 0,
+    "operations": [
+      "collapse_spaces",
+      "remove_empty_rows"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 13,
+    "group": "heldout_development_pair",
+    "configuration_id": 7,
+    "operations": [
+      "collapse_spaces",
+      "remove_empty_rows"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 14,
+    "group": "heldout_development_pair",
+    "configuration_id": 23,
+    "operations": [
+      "collapse_spaces",
+      "remove_empty_rows"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 15,
+    "group": "heldout_development_pair",
+    "configuration_id": 47,
+    "operations": [
+      "collapse_spaces",
+      "remove_empty_rows"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 16,
+    "group": "heldout_development_pair",
+    "configuration_id": 0,
+    "operations": [
+      "deduplicate_rows",
+      "unicode_NFC"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 17,
+    "group": "heldout_development_pair",
+    "configuration_id": 7,
+    "operations": [
+      "deduplicate_rows",
+      "unicode_NFC"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 18,
+    "group": "heldout_development_pair",
+    "configuration_id": 23,
+    "operations": [
+      "deduplicate_rows",
+      "unicode_NFC"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 19,
+    "group": "heldout_development_pair",
+    "configuration_id": 47,
+    "operations": [
+      "deduplicate_rows",
+      "unicode_NFC"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 20,
+    "group": "heldout_development_pair",
+    "configuration_id": 0,
+    "operations": [
+      "unicode_NFC",
+      "deduplicate_rows"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 21,
+    "group": "heldout_development_pair",
+    "configuration_id": 7,
+    "operations": [
+      "unicode_NFC",
+      "deduplicate_rows"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 22,
+    "group": "heldout_development_pair",
+    "configuration_id": 23,
+    "operations": [
+      "unicode_NFC",
+      "deduplicate_rows"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 23,
+    "group": "heldout_development_pair",
+    "configuration_id": 47,
+    "operations": [
+      "unicode_NFC",
+      "deduplicate_rows"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 24,
+    "group": "heldout_development_pair",
+    "configuration_id": 0,
+    "operations": [
+      "collapse_spaces",
+      "casefold"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 25,
+    "group": "heldout_development_pair",
+    "configuration_id": 7,
+    "operations": [
+      "collapse_spaces",
+      "casefold"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 26,
+    "group": "heldout_development_pair",
+    "configuration_id": 23,
+    "operations": [
+      "collapse_spaces",
+      "casefold"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 27,
+    "group": "heldout_development_pair",
+    "configuration_id": 47,
+    "operations": [
+      "collapse_spaces",
+      "casefold"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 28,
+    "group": "heldout_development_pair",
+    "configuration_id": 0,
+    "operations": [
+      "casefold",
+      "collapse_spaces"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 29,
+    "group": "heldout_development_pair",
+    "configuration_id": 7,
+    "operations": [
+      "casefold",
+      "collapse_spaces"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 30,
+    "group": "heldout_development_pair",
+    "configuration_id": 23,
+    "operations": [
+      "casefold",
+      "collapse_spaces"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 31,
+    "group": "heldout_development_pair",
+    "configuration_id": 47,
+    "operations": [
+      "casefold",
+      "collapse_spaces"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 32,
+    "group": "heldout_development_pair",
+    "configuration_id": 0,
+    "operations": [
+      "remove_empty_rows",
+      "normalize_leading_zeros"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 33,
+    "group": "heldout_development_pair",
+    "configuration_id": 7,
+    "operations": [
+      "remove_empty_rows",
+      "normalize_leading_zeros"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 34,
+    "group": "heldout_development_pair",
+    "configuration_id": 23,
+    "operations": [
+      "remove_empty_rows",
+      "normalize_leading_zeros"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 35,
+    "group": "heldout_development_pair",
+    "configuration_id": 47,
+    "operations": [
+      "remove_empty_rows",
+      "normalize_leading_zeros"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 36,
+    "group": "heldout_development_pair",
+    "configuration_id": 0,
+    "operations": [
+      "sort_rows",
+      "normalize_leading_zeros"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 37,
+    "group": "heldout_development_pair",
+    "configuration_id": 7,
+    "operations": [
+      "sort_rows",
+      "normalize_leading_zeros"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 38,
+    "group": "heldout_development_pair",
+    "configuration_id": 23,
+    "operations": [
+      "sort_rows",
+      "normalize_leading_zeros"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 39,
+    "group": "heldout_development_pair",
+    "configuration_id": 47,
+    "operations": [
+      "sort_rows",
+      "normalize_leading_zeros"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 40,
+    "group": "heldout_development_pair",
+    "configuration_id": 0,
+    "operations": [
+      "drop_empty_columns",
+      "deduplicate_rows"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 41,
+    "group": "heldout_development_pair",
+    "configuration_id": 7,
+    "operations": [
+      "drop_empty_columns",
+      "deduplicate_rows"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 42,
+    "group": "heldout_development_pair",
+    "configuration_id": 23,
+    "operations": [
+      "drop_empty_columns",
+      "deduplicate_rows"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 43,
+    "group": "heldout_development_pair",
+    "configuration_id": 47,
+    "operations": [
+      "drop_empty_columns",
+      "deduplicate_rows"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 44,
+    "group": "heldout_development_pair",
+    "configuration_id": 0,
+    "operations": [
+      "boolean_normalization",
+      "unicode_NFC"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 45,
+    "group": "heldout_development_pair",
+    "configuration_id": 7,
+    "operations": [
+      "boolean_normalization",
+      "unicode_NFC"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 46,
+    "group": "heldout_development_pair",
+    "configuration_id": 23,
+    "operations": [
+      "boolean_normalization",
+      "unicode_NFC"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 47,
+    "group": "heldout_development_pair",
+    "configuration_id": 47,
+    "operations": [
+      "boolean_normalization",
+      "unicode_NFC"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 48,
+    "group": "heldout_development_pair",
+    "configuration_id": 0,
+    "operations": [
+      "sort_rows",
+      "rstrip"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 49,
+    "group": "heldout_development_pair",
+    "configuration_id": 7,
+    "operations": [
+      "sort_rows",
+      "rstrip"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 50,
+    "group": "heldout_development_pair",
+    "configuration_id": 23,
+    "operations": [
+      "sort_rows",
+      "rstrip"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 51,
+    "group": "heldout_development_pair",
+    "configuration_id": 47,
+    "operations": [
+      "sort_rows",
+      "rstrip"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 52,
+    "group": "heldout_development_pair",
+    "configuration_id": 0,
+    "operations": [
+      "boolean_normalization",
+      "collapse_spaces"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 53,
+    "group": "heldout_development_pair",
+    "configuration_id": 7,
+    "operations": [
+      "boolean_normalization",
+      "collapse_spaces"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 54,
+    "group": "heldout_development_pair",
+    "configuration_id": 23,
+    "operations": [
+      "boolean_normalization",
+      "collapse_spaces"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 55,
+    "group": "heldout_development_pair",
+    "configuration_id": 47,
+    "operations": [
+      "boolean_normalization",
+      "collapse_spaces"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 56,
+    "group": "three_operations",
+    "configuration_id": 0,
+    "operations": [
+      "rstrip",
+      "sort_rows",
+      "drop_empty_columns"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 57,
+    "group": "three_operations",
+    "configuration_id": 7,
+    "operations": [
+      "rstrip",
+      "sort_rows",
+      "drop_empty_columns"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 58,
+    "group": "three_operations",
+    "configuration_id": 23,
+    "operations": [
+      "rstrip",
+      "sort_rows",
+      "drop_empty_columns"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 59,
+    "group": "three_operations",
+    "configuration_id": 47,
+    "operations": [
+      "rstrip",
+      "sort_rows",
+      "drop_empty_columns"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 60,
+    "group": "three_operations",
+    "configuration_id": 0,
+    "operations": [
+      "sort_rows",
+      "casefold",
+      "remove_empty_rows"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 61,
+    "group": "three_operations",
+    "configuration_id": 7,
+    "operations": [
+      "sort_rows",
+      "casefold",
+      "remove_empty_rows"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 62,
+    "group": "three_operations",
+    "configuration_id": 23,
+    "operations": [
+      "sort_rows",
+      "casefold",
+      "remove_empty_rows"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 63,
+    "group": "three_operations",
+    "configuration_id": 47,
+    "operations": [
+      "sort_rows",
+      "casefold",
+      "remove_empty_rows"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 64,
+    "group": "three_operations",
+    "configuration_id": 0,
+    "operations": [
+      "rstrip",
+      "normalize_leading_zeros",
+      "drop_empty_columns"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 65,
+    "group": "three_operations",
+    "configuration_id": 7,
+    "operations": [
+      "rstrip",
+      "normalize_leading_zeros",
+      "drop_empty_columns"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 66,
+    "group": "three_operations",
+    "configuration_id": 23,
+    "operations": [
+      "rstrip",
+      "normalize_leading_zeros",
+      "drop_empty_columns"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 67,
+    "group": "three_operations",
+    "configuration_id": 47,
+    "operations": [
+      "rstrip",
+      "normalize_leading_zeros",
+      "drop_empty_columns"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 68,
+    "group": "three_operations",
+    "configuration_id": 0,
+    "operations": [
+      "deduplicate_rows",
+      "boolean_normalization",
+      "sort_rows"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 69,
+    "group": "three_operations",
+    "configuration_id": 7,
+    "operations": [
+      "deduplicate_rows",
+      "boolean_normalization",
+      "sort_rows"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 70,
+    "group": "three_operations",
+    "configuration_id": 23,
+    "operations": [
+      "deduplicate_rows",
+      "boolean_normalization",
+      "sort_rows"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 71,
+    "group": "three_operations",
+    "configuration_id": 47,
+    "operations": [
+      "deduplicate_rows",
+      "boolean_normalization",
+      "sort_rows"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 72,
+    "group": "three_operations",
+    "configuration_id": 0,
+    "operations": [
+      "sort_rows",
+      "boolean_normalization",
+      "drop_empty_columns"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 73,
+    "group": "three_operations",
+    "configuration_id": 7,
+    "operations": [
+      "sort_rows",
+      "boolean_normalization",
+      "drop_empty_columns"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 74,
+    "group": "three_operations",
+    "configuration_id": 23,
+    "operations": [
+      "sort_rows",
+      "boolean_normalization",
+      "drop_empty_columns"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 75,
+    "group": "three_operations",
+    "configuration_id": 47,
+    "operations": [
+      "sort_rows",
+      "boolean_normalization",
+      "drop_empty_columns"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 76,
+    "group": "three_operations",
+    "configuration_id": 0,
+    "operations": [
+      "drop_empty_columns",
+      "sort_rows",
+      "boolean_normalization"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 77,
+    "group": "three_operations",
+    "configuration_id": 7,
+    "operations": [
+      "drop_empty_columns",
+      "sort_rows",
+      "boolean_normalization"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 78,
+    "group": "three_operations",
+    "configuration_id": 23,
+    "operations": [
+      "drop_empty_columns",
+      "sort_rows",
+      "boolean_normalization"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 79,
+    "group": "three_operations",
+    "configuration_id": 47,
+    "operations": [
+      "drop_empty_columns",
+      "sort_rows",
+      "boolean_normalization"
+    ],
+    "extra_operation_after_sequence": null
+  },
+  {
+    "environment_id": 80,
+    "group": "unrepresented_primitive",
+    "configuration_id": 0,
+    "operations": [],
+    "extra_operation_after_sequence": "reverse_columns"
+  },
+  {
+    "environment_id": 81,
+    "group": "unrepresented_primitive",
+    "configuration_id": 7,
+    "operations": [],
+    "extra_operation_after_sequence": "reverse_columns"
+  },
+  {
+    "environment_id": 82,
+    "group": "unrepresented_primitive",
+    "configuration_id": 23,
+    "operations": [],
+    "extra_operation_after_sequence": "reverse_columns"
+  },
+  {
+    "environment_id": 83,
+    "group": "unrepresented_primitive",
+    "configuration_id": 47,
+    "operations": [],
+    "extra_operation_after_sequence": "reverse_columns"
+  }
+]

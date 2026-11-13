@@ -1,0 +1,1989 @@
+{
+  "source": "autonomous_lab\\runs\\csv_transfer_01\\results.json",
+  "source_sha256": "24989b818de365d6ef37c61a72801b9674b42d447a1e90c11da0bca22e9f2d34",
+  "protocol": {
+    "source_protocol": {
+      "experiment": "symbolic_composition_acquisition",
+      "development_benchmark": true,
+      "previously_explored_compositions_may_be_present": true,
+      "claim_of_unseen_behavior_generalization": false,
+      "primitive_operations": [
+        "boolean_normalization",
+        "casefold",
+        "collapse_spaces",
+        "decimal_comma",
+        "deduplicate_rows",
+        "drop_empty_columns",
+        "normalize_leading_zeros",
+        "remove_empty_rows",
+        "rstrip",
+        "sort_rows",
+        "truncate_16",
+        "unicode_NFC"
+      ],
+      "candidate_operation_sequences": [
+        [],
+        [
+          "boolean_normalization"
+        ],
+        [
+          "casefold"
+        ],
+        [
+          "collapse_spaces"
+        ],
+        [
+          "decimal_comma"
+        ],
+        [
+          "deduplicate_rows"
+        ],
+        [
+          "drop_empty_columns"
+        ],
+        [
+          "normalize_leading_zeros"
+        ],
+        [
+          "remove_empty_rows"
+        ],
+        [
+          "rstrip"
+        ],
+        [
+          "sort_rows"
+        ],
+        [
+          "truncate_16"
+        ],
+        [
+          "unicode_NFC"
+        ],
+        [
+          "boolean_normalization",
+          "casefold"
+        ],
+        [
+          "boolean_normalization",
+          "collapse_spaces"
+        ],
+        [
+          "boolean_normalization",
+          "decimal_comma"
+        ],
+        [
+          "boolean_normalization",
+          "deduplicate_rows"
+        ],
+        [
+          "boolean_normalization",
+          "drop_empty_columns"
+        ],
+        [
+          "boolean_normalization",
+          "normalize_leading_zeros"
+        ],
+        [
+          "boolean_normalization",
+          "remove_empty_rows"
+        ],
+        [
+          "boolean_normalization",
+          "rstrip"
+        ],
+        [
+          "boolean_normalization",
+          "sort_rows"
+        ],
+        [
+          "boolean_normalization",
+          "truncate_16"
+        ],
+        [
+          "boolean_normalization",
+          "unicode_NFC"
+        ],
+        [
+          "casefold",
+          "boolean_normalization"
+        ],
+        [
+          "casefold",
+          "collapse_spaces"
+        ],
+        [
+          "casefold",
+          "decimal_comma"
+        ],
+        [
+          "casefold",
+          "deduplicate_rows"
+        ],
+        [
+          "casefold",
+          "drop_empty_columns"
+        ],
+        [
+          "casefold",
+          "normalize_leading_zeros"
+        ],
+        [
+          "casefold",
+          "remove_empty_rows"
+        ],
+        [
+          "casefold",
+          "rstrip"
+        ],
+        [
+          "casefold",
+          "sort_rows"
+        ],
+        [
+          "casefold",
+          "truncate_16"
+        ],
+        [
+          "casefold",
+          "unicode_NFC"
+        ],
+        [
+          "collapse_spaces",
+          "boolean_normalization"
+        ],
+        [
+          "collapse_spaces",
+          "casefold"
+        ],
+        [
+          "collapse_spaces",
+          "decimal_comma"
+        ],
+        [
+          "collapse_spaces",
+          "deduplicate_rows"
+        ],
+        [
+          "collapse_spaces",
+          "drop_empty_columns"
+        ],
+        [
+          "collapse_spaces",
+          "normalize_leading_zeros"
+        ],
+        [
+          "collapse_spaces",
+          "remove_empty_rows"
+        ],
+        [
+          "collapse_spaces",
+          "rstrip"
+        ],
+        [
+          "collapse_spaces",
+          "sort_rows"
+        ],
+        [
+          "collapse_spaces",
+          "truncate_16"
+        ],
+        [
+          "collapse_spaces",
+          "unicode_NFC"
+        ],
+        [
+          "decimal_comma",
+          "boolean_normalization"
+        ],
+        [
+          "decimal_comma",
+          "casefold"
+        ],
+        [
+          "decimal_comma",
+          "collapse_spaces"
+        ],
+        [
+          "decimal_comma",
+          "deduplicate_rows"
+        ],
+        [
+          "decimal_comma",
+          "drop_empty_columns"
+        ],
+        [
+          "decimal_comma",
+          "normalize_leading_zeros"
+        ],
+        [
+          "decimal_comma",
+          "remove_empty_rows"
+        ],
+        [
+          "decimal_comma",
+          "rstrip"
+        ],
+        [
+          "decimal_comma",
+          "sort_rows"
+        ],
+        [
+          "decimal_comma",
+          "truncate_16"
+        ],
+        [
+          "decimal_comma",
+          "unicode_NFC"
+        ],
+        [
+          "deduplicate_rows",
+          "boolean_normalization"
+        ],
+        [
+          "deduplicate_rows",
+          "casefold"
+        ],
+        [
+          "deduplicate_rows",
+          "collapse_spaces"
+        ],
+        [
+          "deduplicate_rows",
+          "decimal_comma"
+        ],
+        [
+          "deduplicate_rows",
+          "drop_empty_columns"
+        ],
+        [
+          "deduplicate_rows",
+          "normalize_leading_zeros"
+        ],
+        [
+          "deduplicate_rows",
+          "remove_empty_rows"
+        ],
+        [
+          "deduplicate_rows",
+          "rstrip"
+        ],
+        [
+          "deduplicate_rows",
+          "sort_rows"
+        ],
+        [
+          "deduplicate_rows",
+          "truncate_16"
+        ],
+        [
+          "deduplicate_rows",
+          "unicode_NFC"
+        ],
+        [
+          "drop_empty_columns",
+          "boolean_normalization"
+        ],
+        [
+          "drop_empty_columns",
+          "casefold"
+        ],
+        [
+          "drop_empty_columns",
+          "collapse_spaces"
+        ],
+        [
+          "drop_empty_columns",
+          "decimal_comma"
+        ],
+        [
+          "drop_empty_columns",
+          "deduplicate_rows"
+        ],
+        [
+          "drop_empty_columns",
+          "normalize_leading_zeros"
+        ],
+        [
+          "drop_empty_columns",
+          "remove_empty_rows"
+        ],
+        [
+          "drop_empty_columns",
+          "rstrip"
+        ],
+        [
+          "drop_empty_columns",
+          "sort_rows"
+        ],
+        [
+          "drop_empty_columns",
+          "truncate_16"
+        ],
+        [
+          "drop_empty_columns",
+          "unicode_NFC"
+        ],
+        [
+          "normalize_leading_zeros",
+          "boolean_normalization"
+        ],
+        [
+          "normalize_leading_zeros",
+          "casefold"
+        ],
+        [
+          "normalize_leading_zeros",
+          "collapse_spaces"
+        ],
+        [
+          "normalize_leading_zeros",
+          "decimal_comma"
+        ],
+        [
+          "normalize_leading_zeros",
+          "deduplicate_rows"
+        ],
+        [
+          "normalize_leading_zeros",
+          "drop_empty_columns"
+        ],
+        [
+          "normalize_leading_zeros",
+          "remove_empty_rows"
+        ],
+        [
+          "normalize_leading_zeros",
+          "rstrip"
+        ],
+        [
+          "normalize_leading_zeros",
+          "sort_rows"
+        ],
+        [
+          "normalize_leading_zeros",
+          "truncate_16"
+        ],
+        [
+          "normalize_leading_zeros",
+          "unicode_NFC"
+        ],
+        [
+          "remove_empty_rows",
+          "boolean_normalization"
+        ],
+        [
+          "remove_empty_rows",
+          "casefold"
+        ],
+        [
+          "remove_empty_rows",
+          "collapse_spaces"
+        ],
+        [
+          "remove_empty_rows",
+          "decimal_comma"
+        ],
+        [
+          "remove_empty_rows",
+          "deduplicate_rows"
+        ],
+        [
+          "remove_empty_rows",
+          "drop_empty_columns"
+        ],
+        [
+          "remove_empty_rows",
+          "normalize_leading_zeros"
+        ],
+        [
+          "remove_empty_rows",
+          "rstrip"
+        ],
+        [
+          "remove_empty_rows",
+          "sort_rows"
+        ],
+        [
+          "remove_empty_rows",
+          "truncate_16"
+        ],
+        [
+          "remove_empty_rows",
+          "unicode_NFC"
+        ],
+        [
+          "rstrip",
+          "boolean_normalization"
+        ],
+        [
+          "rstrip",
+          "casefold"
+        ],
+        [
+          "rstrip",
+          "collapse_spaces"
+        ],
+        [
+          "rstrip",
+          "decimal_comma"
+        ],
+        [
+          "rstrip",
+          "deduplicate_rows"
+        ],
+        [
+          "rstrip",
+          "drop_empty_columns"
+        ],
+        [
+          "rstrip",
+          "normalize_leading_zeros"
+        ],
+        [
+          "rstrip",
+          "remove_empty_rows"
+        ],
+        [
+          "rstrip",
+          "sort_rows"
+        ],
+        [
+          "rstrip",
+          "truncate_16"
+        ],
+        [
+          "rstrip",
+          "unicode_NFC"
+        ],
+        [
+          "sort_rows",
+          "boolean_normalization"
+        ],
+        [
+          "sort_rows",
+          "casefold"
+        ],
+        [
+          "sort_rows",
+          "collapse_spaces"
+        ],
+        [
+          "sort_rows",
+          "decimal_comma"
+        ],
+        [
+          "sort_rows",
+          "deduplicate_rows"
+        ],
+        [
+          "sort_rows",
+          "drop_empty_columns"
+        ],
+        [
+          "sort_rows",
+          "normalize_leading_zeros"
+        ],
+        [
+          "sort_rows",
+          "remove_empty_rows"
+        ],
+        [
+          "sort_rows",
+          "rstrip"
+        ],
+        [
+          "sort_rows",
+          "truncate_16"
+        ],
+        [
+          "sort_rows",
+          "unicode_NFC"
+        ],
+        [
+          "truncate_16",
+          "boolean_normalization"
+        ],
+        [
+          "truncate_16",
+          "casefold"
+        ],
+        [
+          "truncate_16",
+          "collapse_spaces"
+        ],
+        [
+          "truncate_16",
+          "decimal_comma"
+        ],
+        [
+          "truncate_16",
+          "deduplicate_rows"
+        ],
+        [
+          "truncate_16",
+          "drop_empty_columns"
+        ],
+        [
+          "truncate_16",
+          "normalize_leading_zeros"
+        ],
+        [
+          "truncate_16",
+          "remove_empty_rows"
+        ],
+        [
+          "truncate_16",
+          "rstrip"
+        ],
+        [
+          "truncate_16",
+          "sort_rows"
+        ],
+        [
+          "truncate_16",
+          "unicode_NFC"
+        ],
+        [
+          "unicode_NFC",
+          "boolean_normalization"
+        ],
+        [
+          "unicode_NFC",
+          "casefold"
+        ],
+        [
+          "unicode_NFC",
+          "collapse_spaces"
+        ],
+        [
+          "unicode_NFC",
+          "decimal_comma"
+        ],
+        [
+          "unicode_NFC",
+          "deduplicate_rows"
+        ],
+        [
+          "unicode_NFC",
+          "drop_empty_columns"
+        ],
+        [
+          "unicode_NFC",
+          "normalize_leading_zeros"
+        ],
+        [
+          "unicode_NFC",
+          "remove_empty_rows"
+        ],
+        [
+          "unicode_NFC",
+          "rstrip"
+        ],
+        [
+          "unicode_NFC",
+          "sort_rows"
+        ],
+        [
+          "unicode_NFC",
+          "truncate_16"
+        ]
+      ],
+      "configuration_count": 48,
+      "candidate_program_count": 6960,
+      "maximum_operations_per_program": 2,
+      "repeated_identical_operations_included": false,
+      "candidate_generation": "exhaustive_enumeration",
+      "grammar_written_by_humans": true,
+      "neural_training": false,
+      "environments": [
+        {
+          "environment_id": 0,
+          "group": "simple_control",
+          "configuration_id": 0,
+          "operations": [],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 1,
+          "group": "simple_control",
+          "configuration_id": 7,
+          "operations": [],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 2,
+          "group": "simple_control",
+          "configuration_id": 23,
+          "operations": [],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 3,
+          "group": "simple_control",
+          "configuration_id": 47,
+          "operations": [],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 4,
+          "group": "simple_control",
+          "configuration_id": 0,
+          "operations": [
+            "casefold"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 5,
+          "group": "simple_control",
+          "configuration_id": 7,
+          "operations": [
+            "casefold"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 6,
+          "group": "simple_control",
+          "configuration_id": 23,
+          "operations": [
+            "casefold"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 7,
+          "group": "simple_control",
+          "configuration_id": 47,
+          "operations": [
+            "casefold"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 8,
+          "group": "heldout_development_pair",
+          "configuration_id": 0,
+          "operations": [
+            "decimal_comma",
+            "rstrip"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 9,
+          "group": "heldout_development_pair",
+          "configuration_id": 7,
+          "operations": [
+            "decimal_comma",
+            "rstrip"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 10,
+          "group": "heldout_development_pair",
+          "configuration_id": 23,
+          "operations": [
+            "decimal_comma",
+            "rstrip"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 11,
+          "group": "heldout_development_pair",
+          "configuration_id": 47,
+          "operations": [
+            "decimal_comma",
+            "rstrip"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 12,
+          "group": "heldout_development_pair",
+          "configuration_id": 0,
+          "operations": [
+            "collapse_spaces",
+            "remove_empty_rows"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 13,
+          "group": "heldout_development_pair",
+          "configuration_id": 7,
+          "operations": [
+            "collapse_spaces",
+            "remove_empty_rows"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 14,
+          "group": "heldout_development_pair",
+          "configuration_id": 23,
+          "operations": [
+            "collapse_spaces",
+            "remove_empty_rows"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 15,
+          "group": "heldout_development_pair",
+          "configuration_id": 47,
+          "operations": [
+            "collapse_spaces",
+            "remove_empty_rows"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 16,
+          "group": "heldout_development_pair",
+          "configuration_id": 0,
+          "operations": [
+            "deduplicate_rows",
+            "unicode_NFC"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 17,
+          "group": "heldout_development_pair",
+          "configuration_id": 7,
+          "operations": [
+            "deduplicate_rows",
+            "unicode_NFC"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 18,
+          "group": "heldout_development_pair",
+          "configuration_id": 23,
+          "operations": [
+            "deduplicate_rows",
+            "unicode_NFC"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 19,
+          "group": "heldout_development_pair",
+          "configuration_id": 47,
+          "operations": [
+            "deduplicate_rows",
+            "unicode_NFC"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 20,
+          "group": "heldout_development_pair",
+          "configuration_id": 0,
+          "operations": [
+            "unicode_NFC",
+            "deduplicate_rows"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 21,
+          "group": "heldout_development_pair",
+          "configuration_id": 7,
+          "operations": [
+            "unicode_NFC",
+            "deduplicate_rows"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 22,
+          "group": "heldout_development_pair",
+          "configuration_id": 23,
+          "operations": [
+            "unicode_NFC",
+            "deduplicate_rows"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 23,
+          "group": "heldout_development_pair",
+          "configuration_id": 47,
+          "operations": [
+            "unicode_NFC",
+            "deduplicate_rows"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 24,
+          "group": "heldout_development_pair",
+          "configuration_id": 0,
+          "operations": [
+            "collapse_spaces",
+            "casefold"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 25,
+          "group": "heldout_development_pair",
+          "configuration_id": 7,
+          "operations": [
+            "collapse_spaces",
+            "casefold"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 26,
+          "group": "heldout_development_pair",
+          "configuration_id": 23,
+          "operations": [
+            "collapse_spaces",
+            "casefold"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 27,
+          "group": "heldout_development_pair",
+          "configuration_id": 47,
+          "operations": [
+            "collapse_spaces",
+            "casefold"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 28,
+          "group": "heldout_development_pair",
+          "configuration_id": 0,
+          "operations": [
+            "casefold",
+            "collapse_spaces"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 29,
+          "group": "heldout_development_pair",
+          "configuration_id": 7,
+          "operations": [
+            "casefold",
+            "collapse_spaces"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 30,
+          "group": "heldout_development_pair",
+          "configuration_id": 23,
+          "operations": [
+            "casefold",
+            "collapse_spaces"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 31,
+          "group": "heldout_development_pair",
+          "configuration_id": 47,
+          "operations": [
+            "casefold",
+            "collapse_spaces"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 32,
+          "group": "heldout_development_pair",
+          "configuration_id": 0,
+          "operations": [
+            "remove_empty_rows",
+            "normalize_leading_zeros"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 33,
+          "group": "heldout_development_pair",
+          "configuration_id": 7,
+          "operations": [
+            "remove_empty_rows",
+            "normalize_leading_zeros"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 34,
+          "group": "heldout_development_pair",
+          "configuration_id": 23,
+          "operations": [
+            "remove_empty_rows",
+            "normalize_leading_zeros"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 35,
+          "group": "heldout_development_pair",
+          "configuration_id": 47,
+          "operations": [
+            "remove_empty_rows",
+            "normalize_leading_zeros"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 36,
+          "group": "heldout_development_pair",
+          "configuration_id": 0,
+          "operations": [
+            "sort_rows",
+            "normalize_leading_zeros"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 37,
+          "group": "heldout_development_pair",
+          "configuration_id": 7,
+          "operations": [
+            "sort_rows",
+            "normalize_leading_zeros"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 38,
+          "group": "heldout_development_pair",
+          "configuration_id": 23,
+          "operations": [
+            "sort_rows",
+            "normalize_leading_zeros"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 39,
+          "group": "heldout_development_pair",
+          "configuration_id": 47,
+          "operations": [
+            "sort_rows",
+            "normalize_leading_zeros"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 40,
+          "group": "heldout_development_pair",
+          "configuration_id": 0,
+          "operations": [
+            "drop_empty_columns",
+            "deduplicate_rows"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 41,
+          "group": "heldout_development_pair",
+          "configuration_id": 7,
+          "operations": [
+            "drop_empty_columns",
+            "deduplicate_rows"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 42,
+          "group": "heldout_development_pair",
+          "configuration_id": 23,
+          "operations": [
+            "drop_empty_columns",
+            "deduplicate_rows"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 43,
+          "group": "heldout_development_pair",
+          "configuration_id": 47,
+          "operations": [
+            "drop_empty_columns",
+            "deduplicate_rows"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 44,
+          "group": "heldout_development_pair",
+          "configuration_id": 0,
+          "operations": [
+            "boolean_normalization",
+            "unicode_NFC"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 45,
+          "group": "heldout_development_pair",
+          "configuration_id": 7,
+          "operations": [
+            "boolean_normalization",
+            "unicode_NFC"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 46,
+          "group": "heldout_development_pair",
+          "configuration_id": 23,
+          "operations": [
+            "boolean_normalization",
+            "unicode_NFC"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 47,
+          "group": "heldout_development_pair",
+          "configuration_id": 47,
+          "operations": [
+            "boolean_normalization",
+            "unicode_NFC"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 48,
+          "group": "heldout_development_pair",
+          "configuration_id": 0,
+          "operations": [
+            "sort_rows",
+            "rstrip"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 49,
+          "group": "heldout_development_pair",
+          "configuration_id": 7,
+          "operations": [
+            "sort_rows",
+            "rstrip"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 50,
+          "group": "heldout_development_pair",
+          "configuration_id": 23,
+          "operations": [
+            "sort_rows",
+            "rstrip"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 51,
+          "group": "heldout_development_pair",
+          "configuration_id": 47,
+          "operations": [
+            "sort_rows",
+            "rstrip"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 52,
+          "group": "heldout_development_pair",
+          "configuration_id": 0,
+          "operations": [
+            "boolean_normalization",
+            "collapse_spaces"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 53,
+          "group": "heldout_development_pair",
+          "configuration_id": 7,
+          "operations": [
+            "boolean_normalization",
+            "collapse_spaces"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 54,
+          "group": "heldout_development_pair",
+          "configuration_id": 23,
+          "operations": [
+            "boolean_normalization",
+            "collapse_spaces"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 55,
+          "group": "heldout_development_pair",
+          "configuration_id": 47,
+          "operations": [
+            "boolean_normalization",
+            "collapse_spaces"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 56,
+          "group": "three_operations",
+          "configuration_id": 0,
+          "operations": [
+            "rstrip",
+            "sort_rows",
+            "drop_empty_columns"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 57,
+          "group": "three_operations",
+          "configuration_id": 7,
+          "operations": [
+            "rstrip",
+            "sort_rows",
+            "drop_empty_columns"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 58,
+          "group": "three_operations",
+          "configuration_id": 23,
+          "operations": [
+            "rstrip",
+            "sort_rows",
+            "drop_empty_columns"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 59,
+          "group": "three_operations",
+          "configuration_id": 47,
+          "operations": [
+            "rstrip",
+            "sort_rows",
+            "drop_empty_columns"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 60,
+          "group": "three_operations",
+          "configuration_id": 0,
+          "operations": [
+            "sort_rows",
+            "casefold",
+            "remove_empty_rows"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 61,
+          "group": "three_operations",
+          "configuration_id": 7,
+          "operations": [
+            "sort_rows",
+            "casefold",
+            "remove_empty_rows"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 62,
+          "group": "three_operations",
+          "configuration_id": 23,
+          "operations": [
+            "sort_rows",
+            "casefold",
+            "remove_empty_rows"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 63,
+          "group": "three_operations",
+          "configuration_id": 47,
+          "operations": [
+            "sort_rows",
+            "casefold",
+            "remove_empty_rows"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 64,
+          "group": "three_operations",
+          "configuration_id": 0,
+          "operations": [
+            "rstrip",
+            "normalize_leading_zeros",
+            "drop_empty_columns"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 65,
+          "group": "three_operations",
+          "configuration_id": 7,
+          "operations": [
+            "rstrip",
+            "normalize_leading_zeros",
+            "drop_empty_columns"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 66,
+          "group": "three_operations",
+          "configuration_id": 23,
+          "operations": [
+            "rstrip",
+            "normalize_leading_zeros",
+            "drop_empty_columns"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 67,
+          "group": "three_operations",
+          "configuration_id": 47,
+          "operations": [
+            "rstrip",
+            "normalize_leading_zeros",
+            "drop_empty_columns"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 68,
+          "group": "three_operations",
+          "configuration_id": 0,
+          "operations": [
+            "deduplicate_rows",
+            "boolean_normalization",
+            "sort_rows"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 69,
+          "group": "three_operations",
+          "configuration_id": 7,
+          "operations": [
+            "deduplicate_rows",
+            "boolean_normalization",
+            "sort_rows"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 70,
+          "group": "three_operations",
+          "configuration_id": 23,
+          "operations": [
+            "deduplicate_rows",
+            "boolean_normalization",
+            "sort_rows"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 71,
+          "group": "three_operations",
+          "configuration_id": 47,
+          "operations": [
+            "deduplicate_rows",
+            "boolean_normalization",
+            "sort_rows"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 72,
+          "group": "three_operations",
+          "configuration_id": 0,
+          "operations": [
+            "sort_rows",
+            "boolean_normalization",
+            "drop_empty_columns"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 73,
+          "group": "three_operations",
+          "configuration_id": 7,
+          "operations": [
+            "sort_rows",
+            "boolean_normalization",
+            "drop_empty_columns"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 74,
+          "group": "three_operations",
+          "configuration_id": 23,
+          "operations": [
+            "sort_rows",
+            "boolean_normalization",
+            "drop_empty_columns"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 75,
+          "group": "three_operations",
+          "configuration_id": 47,
+          "operations": [
+            "sort_rows",
+            "boolean_normalization",
+            "drop_empty_columns"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 76,
+          "group": "three_operations",
+          "configuration_id": 0,
+          "operations": [
+            "drop_empty_columns",
+            "sort_rows",
+            "boolean_normalization"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 77,
+          "group": "three_operations",
+          "configuration_id": 7,
+          "operations": [
+            "drop_empty_columns",
+            "sort_rows",
+            "boolean_normalization"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 78,
+          "group": "three_operations",
+          "configuration_id": 23,
+          "operations": [
+            "drop_empty_columns",
+            "sort_rows",
+            "boolean_normalization"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 79,
+          "group": "three_operations",
+          "configuration_id": 47,
+          "operations": [
+            "drop_empty_columns",
+            "sort_rows",
+            "boolean_normalization"
+          ],
+          "extra_operation_after_sequence": null
+        },
+        {
+          "environment_id": 80,
+          "group": "unrepresented_primitive",
+          "configuration_id": 0,
+          "operations": [],
+          "extra_operation_after_sequence": "reverse_columns"
+        },
+        {
+          "environment_id": 81,
+          "group": "unrepresented_primitive",
+          "configuration_id": 7,
+          "operations": [],
+          "extra_operation_after_sequence": "reverse_columns"
+        },
+        {
+          "environment_id": 82,
+          "group": "unrepresented_primitive",
+          "configuration_id": 23,
+          "operations": [],
+          "extra_operation_after_sequence": "reverse_columns"
+        },
+        {
+          "environment_id": 83,
+          "group": "unrepresented_primitive",
+          "configuration_id": 47,
+          "operations": [],
+          "extra_operation_after_sequence": "reverse_columns"
+        }
+      ],
+      "budget": {
+        "maximum_calls": 8,
+        "maximum_cells": 24,
+        "maximum_input_text_utf8_bytes": 512,
+        "maximum_discovery_calls": 6,
+        "discovery_cells": 16,
+        "discovery_input_text_utf8_bytes": 384,
+        "verification_calls_reserved": 2,
+        "verification_cells_reserved": 8,
+        "verification_input_text_utf8_bytes_reserved": 128
+      },
+      "acceptance": {
+        "proposal_frozen_before_verification": true,
+        "require_all_survivors_to_agree_on_verification": true,
+        "verification_failure": "revoke",
+        "success_status": "provisional",
+        "independent_evaluation_feedback_used_for_selection": false
+      },
+      "comparisons": [
+        "single_operation_candidate_family",
+        "up_to_two_operations_candidate_family"
+      ],
+      "required_measurements": [
+        "coverage",
+        "accuracy_among_answered_queries",
+        "verification_failures",
+        "remaining_candidates",
+        "tool_calls_cells_and_bytes",
+        "offline_search_time",
+        "prediction_after_save_and_reload"
+      ],
+      "source_programs_sha256": "e53dda1f3ef22528d8f7efdc9cb011a1ddf48d931ca4e485c71d60468fea325a",
+      "order_sensitivity_plumbing_check_passed": true,
+      "agent_acquisition_tested": false
+    },
+    "frozen_transfer_protocol": {
+      "experiment": "frozen_composition_transfer",
+      "preparation_only": true,
+      "evaluation_executed": false,
+      "agent_version": "acquire_csv_compositions_v3",
+      "agent_and_dependencies_sha256": {
+        "autonomous_lab\\acquire_csv_compositions_v3.py": "1cca609815becdc946f337afc381d1d7558a3ca535344d033d33c472ef5d69f3",
+        "autonomous_lab\\csv_environment.py": "e2ff17fd45020087476a22ef6c07236313f5507166198ad6302e60acc5c786fa",
+        "autonomous_lab\\csv_policy_behaviors.py": "dc83a241ce6121dd300ca9e73a9d4be789ebda80b308103ae561a5456cec6cf9",
+        "autonomous_lab\\data\\csv_ssm_policy_01\\catalog.json": "707a8c2d3ba6f74d1f64ba63a8db1097842c7e7ee90627886ab60a1990ac8b3c",
+        "autonomous_lab\\data\\csv_composition_01\\protocol.json": "77d975781bbb3ada6a753129d65f6530849e94340fa40a91ba1328c780d4a320",
+        "autonomous_lab\\runs\\csv_composition_01\\evaluation_cases.json": "1037700f881657f8a5399b5382ad83d69eae4fae6d8d1236dcca15af3ce2e6a6",
+        "autonomous_lab\\runs\\csv_composition_02\\evaluation_cases.json": "22b6bbcc160e6ff25fd407d887ea838a8b870dc86bae3751580deef8d0d6aecd",
+        "autonomous_lab\\runs\\csv_composition_03\\evaluation_cases.json": "2fbcdc18b32f82701e1fa123a4721bad79cf6b492f71df48baf1c9efbe4b221f",
+        "autonomous_lab\\runs\\csv_exploration_comparison_01\\evaluation_cases.json": "45ecd83bece58ba68a6ed1c44c652b406d22a710e190adbace7cbc196a17336e",
+        "autonomous_lab\\runs\\csv_optimized_fixed_01\\evaluation_cases.json": "0634cc3b6ff42c4a0a26e34e1d1abb54a5171034b7e0b22cdae2b9d99e2e6ac9",
+        "autonomous_lab\\runs\\csv_policy_rollout_01\\evaluation_cases.json": "7a3047b217d567cecfc9a9ae5fa6bcee7fad551c00a3ed7e9d7617b9eb42dd8f",
+        "autonomous_lab\\runs\\csv_policy_rollout_02\\evaluation_cases.json": "7a3047b217d567cecfc9a9ae5fa6bcee7fad551c00a3ed7e9d7617b9eb42dd8f",
+        "autonomous_lab\\runs\\csv_prospective_01\\evaluation_cases.json": "bce90bf3ebe4c39b463fb821abcfa0178bc33a1609293d7f775a87d20abdb22c",
+        "autonomous_lab\\runs\\csv_skill_acquisition_01\\evaluation_cases.json": "d4df94c3f4cf93851b19382fc9c3624bae99d4ab01b7d3745d03ec38d111885a",
+        "autonomous_lab\\runs\\csv_teacher_branch_01\\evaluation_cases.json": "7a3047b217d567cecfc9a9ae5fa6bcee7fad551c00a3ed7e9d7617b9eb42dd8f"
+      },
+      "environment_seed": 122001,
+      "evaluation_seed": 122002,
+      "evaluation_tables": 200,
+      "configuration_ids": [
+        0,
+        7,
+        23,
+        47
+      ],
+      "environment_count": 84,
+      "two_operation_pairs": [
+        [
+          "decimal_comma",
+          "rstrip"
+        ],
+        [
+          "collapse_spaces",
+          "remove_empty_rows"
+        ],
+        [
+          "deduplicate_rows",
+          "unicode_NFC"
+        ],
+        [
+          "unicode_NFC",
+          "deduplicate_rows"
+        ],
+        [
+          "collapse_spaces",
+          "casefold"
+        ],
+        [
+          "casefold",
+          "collapse_spaces"
+        ],
+        [
+          "remove_empty_rows",
+          "normalize_leading_zeros"
+        ],
+        [
+          "sort_rows",
+          "normalize_leading_zeros"
+        ],
+        [
+          "drop_empty_columns",
+          "deduplicate_rows"
+        ],
+        [
+          "boolean_normalization",
+          "unicode_NFC"
+        ],
+        [
+          "sort_rows",
+          "rstrip"
+        ],
+        [
+          "boolean_normalization",
+          "collapse_spaces"
+        ]
+      ],
+      "excluded_development_pairs": [
+        [
+          "casefold",
+          "deduplicate_rows"
+        ],
+        [
+          "decimal_comma",
+          "sort_rows"
+        ],
+        [
+          "normalize_leading_zeros",
+          "sort_rows"
+        ],
+        [
+          "rstrip",
+          "remove_empty_rows"
+        ],
+        [
+          "truncate_16",
+          "deduplicate_rows"
+        ],
+        [
+          "unicode_NFC",
+          "rstrip"
+        ]
+      ],
+      "three_operation_sequences": [
+        [
+          "rstrip",
+          "sort_rows",
+          "drop_empty_columns"
+        ],
+        [
+          "sort_rows",
+          "casefold",
+          "remove_empty_rows"
+        ],
+        [
+          "rstrip",
+          "normalize_leading_zeros",
+          "drop_empty_columns"
+        ],
+        [
+          "deduplicate_rows",
+          "boolean_normalization",
+          "sort_rows"
+        ],
+        [
+          "sort_rows",
+          "boolean_normalization",
+          "drop_empty_columns"
+        ],
+        [
+          "drop_empty_columns",
+          "sort_rows",
+          "boolean_normalization"
+        ]
+      ],
+      "two_operation_pairs_absent_from_six_development_cases": true,
+      "absence_from_all_historical_experiments_verified": false,
+      "extra_operation_definition": "reverse_columns reverses each row before CSV rendering; it is not included in the agent candidate language",
+      "out_of_family_label_requires_behavioral_witness": true,
+      "three_operations_may_be_equivalent_to_shorter_programs": true,
+      "agent_receives_environment_group_or_program": false,
+      "learning_inputs": [
+        [
+          [
+            "A",
+            "00042"
+          ],
+          [
+            "a",
+            "00042"
+          ]
+        ],
+        [
+          [
+            "  ",
+            ""
+          ],
+          [
+            "é_verify ",
+            "7.25"
+          ]
+        ]
+      ],
+      "verification_inputs": [
+        [
+          [
+            "z_verify"
+          ],
+          [
+            "a_verify"
+          ],
+          [
+            "abcdefghijklmnop_X"
+          ],
+          [
+            "abcdefghijklmnop_Y"
+          ]
+        ],
+        [
+          [
+            "é_check "
+          ],
+          [
+            "é_check "
+          ],
+          [
+            "   "
+          ],
+          [
+            "00048"
+          ]
+        ]
+      ],
+      "budget": {
+        "calls": 8,
+        "cells": 24,
+        "input_text_utf8_bytes": 512
+      },
+      "allocation": {
+        "catalogue": {
+          "calls": 4,
+          "cells": 8,
+          "bytes": 256
+        },
+        "learning": {
+          "calls": 2,
+          "cells": 8,
+          "bytes": 128
+        },
+        "verification": {
+          "calls": 2,
+          "cells": 8,
+          "bytes": 128
+        }
+      },
+      "required_metrics": [
+        "coverage_and_errors_by_group",
+        "acceptance_rejection_and_abstention",
+        "tool_and_computation_cost",
+        "prediction_persistence",
+        "behavioral_distinguishability_from_candidate_family"
+      ],
+      "evaluation_feedback_used_for_selection": false,
+      "neural_training": false,
+      "prepared_files_sha256": {
+        "environments.json": "bac0567e9b820ff1008e8e565664af75d8ceeb98acf20440e4a6b5b28bd8daf4",
+        "evaluation_cases.json": "87533765e22f90e5fd21f3bf1728a06a4a0b72ed9a6d66c99e14f78c43e26fe3"
+      }
+    },
+    "agent_policy_changed": false,
+    "learning_inputs": [
+      [
+        [
+          "A",
+          "00042"
+        ],
+        [
+          "a",
+          "00042"
+        ]
+      ],
+      [
+        [
+          "  ",
+          ""
+        ],
+        [
+          "é_verify ",
+          "7.25"
+        ]
+      ]
+    ],
+    "verification_inputs": [
+      [
+        [
+          "z_verify"
+        ],
+        [
+          "a_verify"
+        ],
+        [
+          "abcdefghijklmnop_X"
+        ],
+        [
+          "abcdefghijklmnop_Y"
+        ]
+      ],
+      [
+        [
+          "é_check "
+        ],
+        [
+          "é_check "
+        ],
+        [
+          "   "
+        ],
+        [
+          "00048"
+        ]
+      ]
+    ],
+    "allocation": {
+      "catalogue": {
+        "calls": 4,
+        "cells": 8,
+        "bytes": 256
+      },
+      "learning": {
+        "calls": 2,
+        "cells": 8,
+        "bytes": 128
+      },
+      "verification": {
+        "calls": 2,
+        "cells": 8,
+        "bytes": 128
+      }
+    },
+    "development_environments_reused": true,
+    "verification_inputs_redesigned_after_v2": true,
+    "verification_targets": [
+      "row_order",
+      "collision_after_truncation",
+      "unicode_normalization",
+      "whitespace_and_empty_rows",
+      "leading_zeros"
+    ],
+    "evaluation_seed": 122002,
+    "evaluation_tables": 200,
+    "memory": "surviving_programs_and_observations",
+    "evaluation_feedback_used_for_selection": false,
+    "candidate_prior": "uniform_full_catalog_response_classes"
+  },
+  "summary": [
+    {
+      "arm": "single",
+      "environments": 84,
+      "statuses": {
+        "verification_ambiguous": 32,
+        "provisional": 30,
+        "outside_candidate_family": 8,
+        "revoked": 14
+      },
+      "answered": 6000,
+      "correct": 4960,
+      "errors": 1040,
+      "evaluation_cases": 16800,
+      "coverage": 0.35714285714285715,
+      "total_calls": 391,
+      "total_cells": 1900,
+      "total_text_bytes": 13877,
+      "search_and_verification_seconds": 0.65882219998457
+    },
+    {
+      "arm": "composed",
+      "environments": 84,
+      "statuses": {
+        "verification_ambiguous": 76,
+        "provisional": 4,
+        "outside_candidate_family": 4
+      },
+      "answered": 800,
+      "correct": 786,
+      "errors": 14,
+      "evaluation_cases": 16800,
+      "coverage": 0.047619047619047616,
+      "total_calls": 404,
+      "total_cells": 1952,
+      "total_text_bytes": 14268,
+      "search_and_verification_seconds": 4.613930399966193
+    }
+  ],
+  "group_summary": [
+    {
+      "arm": "single",
+      "group": "heldout_development_pair",
+      "environments": 48,
+      "statuses": {
+        "outside_candidate_family": 3,
+        "provisional": 23,
+        "verification_ambiguous": 13,
+        "revoked": 9
+      },
+      "answered": 4600,
+      "correct": 3602,
+      "errors": 998,
+      "evaluation_cases": 9600,
+      "coverage": 0.4791666666666667,
+      "accuracy_when_answered": 0.7830434782608696,
+      "total_calls": 230,
+      "total_cells": 1112,
+      "total_text_bytes": 8105,
+      "no_expanded_candidate_matches_all_evaluation_tables": 0
+    },
+    {
+      "arm": "single",
+      "group": "simple_control",
+      "environments": 8,
+      "statuses": {
+        "verification_ambiguous": 4,
+        "provisional": 4
+      },
+      "answered": 800,
+      "correct": 800,
+      "errors": 0,
+      "evaluation_cases": 1600,
+      "coverage": 0.5,
+      "accuracy_when_answered": 1.0,
+      "total_calls": 40,
+      "total_cells": 192,
+      "total_text_bytes": 1400,
+      "no_expanded_candidate_matches_all_evaluation_tables": 0
+    },
+    {
+      "arm": "single",
+      "group": "three_operations",
+      "environments": 24,
+      "statuses": {
+        "revoked": 5,
+        "verification_ambiguous": 15,
+        "outside_candidate_family": 1,
+        "provisional": 3
+      },
+      "answered": 600,
+      "correct": 558,
+      "errors": 42,
+      "evaluation_cases": 4800,
+      "coverage": 0.125,
+      "accuracy_when_answered": 0.93,
+      "total_calls": 117,
+      "total_cells": 564,
+      "total_text_bytes": 4104,
+      "no_expanded_candidate_matches_all_evaluation_tables": 24
+    },
+    {
+      "arm": "single",
+      "group": "unrepresented_primitive",
+      "environments": 4,
+      "statuses": {
+        "outside_candidate_family": 4
+      },
+      "answered": 0,
+      "correct": 0,
+      "errors": 0,
+      "evaluation_cases": 800,
+      "coverage": 0.0,
+      "accuracy_when_answered": null,
+      "total_calls": 4,
+      "total_cells": 32,
+      "total_text_bytes": 268,
+      "no_expanded_candidate_matches_all_evaluation_tables": 4
+    },
+    {
+      "arm": "composed",
+      "group": "heldout_development_pair",
+      "environments": 48,
+      "statuses": {
+        "provisional": 3,
+        "verification_ambiguous": 45
+      },
+      "answered": 600,
+      "correct": 600,
+      "errors": 0,
+      "evaluation_cases": 9600,
+      "coverage": 0.0625,
+      "accuracy_when_answered": 1.0,
+      "total_calls": 240,
+      "total_cells": 1152,
+      "total_text_bytes": 8400,
+      "no_expanded_candidate_matches_all_evaluation_tables": 0
+    },
+    {
+      "arm": "composed",
+      "group": "simple_control",
+      "environments": 8,
+      "statuses": {
+        "verification_ambiguous": 8
+      },
+      "answered": 0,
+      "correct": 0,
+      "errors": 0,
+      "evaluation_cases": 1600,
+      "coverage": 0.0,
+      "accuracy_when_answered": null,
+      "total_calls": 40,
+      "total_cells": 192,
+      "total_text_bytes": 1400,
+      "no_expanded_candidate_matches_all_evaluation_tables": 0
+    },
+    {
+      "arm": "composed",
+      "group": "three_operations",
+      "environments": 24,
+      "statuses": {
+        "verification_ambiguous": 23,
+        "provisional": 1
+      },
+      "answered": 200,
+      "correct": 186,
+      "errors": 14,
+      "evaluation_cases": 4800,
+      "coverage": 0.041666666666666664,
+      "accuracy_when_answered": 0.93,
+      "total_calls": 120,
+      "total_cells": 576,
+      "total_text_bytes": 4200,
+      "no_expanded_candidate_matches_all_evaluation_tables": 24
+    },
+    {
+      "arm": "composed",
+      "group": "unrepresented_primitive",
+      "environments": 4,
+      "statuses": {
+        "outside_candidate_family": 4
+      },
+      "answered": 0,
+      "correct": 0,
+      "errors": 0,
+      "evaluation_cases": 800,
+      "coverage": 0.0,
+      "accuracy_when_answered": null,
+      "total_calls": 4,
+      "total_cells": 32,
+      "total_text_bytes": 268,
+      "no_expanded_candidate_matches_all_evaluation_tables": 4
+    }
+  ],
+  "persistence": {
+    "checked": 168,
+    "passed": 168
+  },
+  "conclusion": "The frozen v3 procedure transferred poorly. Low in-family coverage and out-of-family errors prevent a claim of robust autonomous learning."
+}
