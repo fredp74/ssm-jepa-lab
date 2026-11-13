@@ -36,3 +36,7 @@ Thumbs.db
 
 # Generated rule-ranking datasets
 /autonomous_lab/data/rule_ranking_01/*.jsonl
+# Generated CSV candidate artifacts
+/autonomous_lab/data/csv_skill_acquisition_01/programs.json
+/autonomous_lab/data/csv_skill_acquisition_01/observable_classes.json
+/autonomous_lab/data/csv_skill_acquisition_01/persistence_check.json

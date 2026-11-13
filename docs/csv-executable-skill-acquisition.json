@@ -1,0 +1,1134 @@
+{
+  "source_sha256": "8e6a1b9442171ec2ea39811eb11714d392dd1a89dec5468254538ee389194faf",
+  "config": {
+    "maximum_calls": 8,
+    "maximum_cells": 24,
+    "maximum_text_bytes": 512,
+    "maximum_discovery_calls": 4,
+    "discovery_cell_budget": 16,
+    "discovery_text_byte_budget": 384,
+    "verification_calls_required": 4,
+    "proposal_frozen_before_verification": true,
+    "status_after_checks": "provisional",
+    "hypothesis_language": "programmed_individual_transformations_plus_csv",
+    "reserved_compositions_used": false,
+    "neural_training": false,
+    "environments": 52,
+    "seed": 116001
+  },
+  "summary": {
+    "environments": 52,
+    "statuses": {
+      "ambiguous": 26,
+      "provisional": 26
+    },
+    "baseline_exact": 3538,
+    "acquired_exact": 2600,
+    "acquired_answered": 2600,
+    "evaluation_cases": 5200,
+    "fully_correct_acquired_environments": 26,
+    "mean_calls": 5.1923076923076925
+  },
+  "matched_accepted_cases": {
+    "accepted_environments": 26,
+    "baseline_exact": 1369,
+    "acquired_exact": 2600,
+    "evaluation_cases": 2600
+  },
+  "per_environment_results": [
+    {
+      "environment_program_id": 0,
+      "operations": [],
+      "configuration": 0,
+      "status": "ambiguous",
+      "remaining_observable_classes": 5,
+      "calls": 4,
+      "cells": 16,
+      "text_bytes": 122,
+      "baseline_exact": 100,
+      "acquired_exact": 0,
+      "acquired_answered": 0,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42,
+        43
+      ]
+    },
+    {
+      "environment_program_id": 7,
+      "operations": [],
+      "configuration": 7,
+      "status": "ambiguous",
+      "remaining_observable_classes": 6,
+      "calls": 4,
+      "cells": 16,
+      "text_bytes": 122,
+      "baseline_exact": 100,
+      "acquired_exact": 0,
+      "acquired_answered": 0,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42,
+        43
+      ]
+    },
+    {
+      "environment_program_id": 23,
+      "operations": [],
+      "configuration": 23,
+      "status": "ambiguous",
+      "remaining_observable_classes": 6,
+      "calls": 4,
+      "cells": 16,
+      "text_bytes": 122,
+      "baseline_exact": 100,
+      "acquired_exact": 0,
+      "acquired_answered": 0,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42,
+        43
+      ]
+    },
+    {
+      "environment_program_id": 47,
+      "operations": [],
+      "configuration": 47,
+      "status": "ambiguous",
+      "remaining_observable_classes": 6,
+      "calls": 4,
+      "cells": 16,
+      "text_bytes": 122,
+      "baseline_exact": 100,
+      "acquired_exact": 0,
+      "acquired_answered": 0,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42,
+        43
+      ]
+    },
+    {
+      "environment_program_id": 48,
+      "operations": [
+        "normalize_leading_zeros"
+      ],
+      "configuration": 0,
+      "status": "provisional",
+      "remaining_observable_classes": 1,
+      "calls": 7,
+      "cells": 23,
+      "text_bytes": 144,
+      "baseline_exact": 50,
+      "acquired_exact": 100,
+      "acquired_answered": 100,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42
+      ]
+    },
+    {
+      "environment_program_id": 55,
+      "operations": [
+        "normalize_leading_zeros"
+      ],
+      "configuration": 7,
+      "status": "provisional",
+      "remaining_observable_classes": 1,
+      "calls": 7,
+      "cells": 23,
+      "text_bytes": 144,
+      "baseline_exact": 50,
+      "acquired_exact": 100,
+      "acquired_answered": 100,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42
+      ]
+    },
+    {
+      "environment_program_id": 71,
+      "operations": [
+        "normalize_leading_zeros"
+      ],
+      "configuration": 23,
+      "status": "provisional",
+      "remaining_observable_classes": 1,
+      "calls": 7,
+      "cells": 23,
+      "text_bytes": 144,
+      "baseline_exact": 50,
+      "acquired_exact": 100,
+      "acquired_answered": 100,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42
+      ]
+    },
+    {
+      "environment_program_id": 95,
+      "operations": [
+        "normalize_leading_zeros"
+      ],
+      "configuration": 47,
+      "status": "provisional",
+      "remaining_observable_classes": 1,
+      "calls": 7,
+      "cells": 23,
+      "text_bytes": 144,
+      "baseline_exact": 50,
+      "acquired_exact": 100,
+      "acquired_answered": 100,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42
+      ]
+    },
+    {
+      "environment_program_id": 96,
+      "operations": [
+        "unicode_NFC"
+      ],
+      "configuration": 0,
+      "status": "ambiguous",
+      "remaining_observable_classes": 5,
+      "calls": 4,
+      "cells": 16,
+      "text_bytes": 122,
+      "baseline_exact": 76,
+      "acquired_exact": 0,
+      "acquired_answered": 0,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42,
+        43
+      ]
+    },
+    {
+      "environment_program_id": 103,
+      "operations": [
+        "unicode_NFC"
+      ],
+      "configuration": 7,
+      "status": "ambiguous",
+      "remaining_observable_classes": 6,
+      "calls": 4,
+      "cells": 16,
+      "text_bytes": 122,
+      "baseline_exact": 76,
+      "acquired_exact": 0,
+      "acquired_answered": 0,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42,
+        43
+      ]
+    },
+    {
+      "environment_program_id": 119,
+      "operations": [
+        "unicode_NFC"
+      ],
+      "configuration": 23,
+      "status": "ambiguous",
+      "remaining_observable_classes": 6,
+      "calls": 4,
+      "cells": 16,
+      "text_bytes": 122,
+      "baseline_exact": 76,
+      "acquired_exact": 0,
+      "acquired_answered": 0,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42,
+        43
+      ]
+    },
+    {
+      "environment_program_id": 143,
+      "operations": [
+        "unicode_NFC"
+      ],
+      "configuration": 47,
+      "status": "ambiguous",
+      "remaining_observable_classes": 6,
+      "calls": 4,
+      "cells": 16,
+      "text_bytes": 122,
+      "baseline_exact": 76,
+      "acquired_exact": 0,
+      "acquired_answered": 0,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42,
+        43
+      ]
+    },
+    {
+      "environment_program_id": 144,
+      "operations": [
+        "casefold"
+      ],
+      "configuration": 0,
+      "status": "provisional",
+      "remaining_observable_classes": 1,
+      "calls": 5,
+      "cells": 16,
+      "text_bytes": 121,
+      "baseline_exact": 55,
+      "acquired_exact": 100,
+      "acquired_answered": 100,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7
+      ]
+    },
+    {
+      "environment_program_id": 151,
+      "operations": [
+        "casefold"
+      ],
+      "configuration": 7,
+      "status": "provisional",
+      "remaining_observable_classes": 1,
+      "calls": 5,
+      "cells": 16,
+      "text_bytes": 121,
+      "baseline_exact": 0,
+      "acquired_exact": 100,
+      "acquired_answered": 100,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7
+      ]
+    },
+    {
+      "environment_program_id": 167,
+      "operations": [
+        "casefold"
+      ],
+      "configuration": 23,
+      "status": "provisional",
+      "remaining_observable_classes": 1,
+      "calls": 5,
+      "cells": 16,
+      "text_bytes": 121,
+      "baseline_exact": 0,
+      "acquired_exact": 100,
+      "acquired_answered": 100,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7
+      ]
+    },
+    {
+      "environment_program_id": 191,
+      "operations": [
+        "casefold"
+      ],
+      "configuration": 47,
+      "status": "provisional",
+      "remaining_observable_classes": 1,
+      "calls": 5,
+      "cells": 16,
+      "text_bytes": 121,
+      "baseline_exact": 0,
+      "acquired_exact": 100,
+      "acquired_answered": 100,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7
+      ]
+    },
+    {
+      "environment_program_id": 192,
+      "operations": [
+        "rstrip"
+      ],
+      "configuration": 0,
+      "status": "provisional",
+      "remaining_observable_classes": 1,
+      "calls": 5,
+      "cells": 16,
+      "text_bytes": 121,
+      "baseline_exact": 76,
+      "acquired_exact": 100,
+      "acquired_answered": 100,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7
+      ]
+    },
+    {
+      "environment_program_id": 199,
+      "operations": [
+        "rstrip"
+      ],
+      "configuration": 7,
+      "status": "ambiguous",
+      "remaining_observable_classes": 6,
+      "calls": 4,
+      "cells": 16,
+      "text_bytes": 122,
+      "baseline_exact": 100,
+      "acquired_exact": 0,
+      "acquired_answered": 0,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42,
+        43
+      ]
+    },
+    {
+      "environment_program_id": 215,
+      "operations": [
+        "rstrip"
+      ],
+      "configuration": 23,
+      "status": "ambiguous",
+      "remaining_observable_classes": 6,
+      "calls": 4,
+      "cells": 16,
+      "text_bytes": 122,
+      "baseline_exact": 100,
+      "acquired_exact": 0,
+      "acquired_answered": 0,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42,
+        43
+      ]
+    },
+    {
+      "environment_program_id": 239,
+      "operations": [
+        "rstrip"
+      ],
+      "configuration": 47,
+      "status": "ambiguous",
+      "remaining_observable_classes": 6,
+      "calls": 4,
+      "cells": 16,
+      "text_bytes": 122,
+      "baseline_exact": 100,
+      "acquired_exact": 0,
+      "acquired_answered": 0,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42,
+        43
+      ]
+    },
+    {
+      "environment_program_id": 240,
+      "operations": [
+        "collapse_spaces"
+      ],
+      "configuration": 0,
+      "status": "provisional",
+      "remaining_observable_classes": 1,
+      "calls": 5,
+      "cells": 16,
+      "text_bytes": 121,
+      "baseline_exact": 50,
+      "acquired_exact": 100,
+      "acquired_answered": 100,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7
+      ]
+    },
+    {
+      "environment_program_id": 247,
+      "operations": [
+        "collapse_spaces"
+      ],
+      "configuration": 7,
+      "status": "ambiguous",
+      "remaining_observable_classes": 6,
+      "calls": 4,
+      "cells": 16,
+      "text_bytes": 122,
+      "baseline_exact": 63,
+      "acquired_exact": 0,
+      "acquired_answered": 0,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42,
+        43
+      ]
+    },
+    {
+      "environment_program_id": 263,
+      "operations": [
+        "collapse_spaces"
+      ],
+      "configuration": 23,
+      "status": "ambiguous",
+      "remaining_observable_classes": 6,
+      "calls": 4,
+      "cells": 16,
+      "text_bytes": 122,
+      "baseline_exact": 63,
+      "acquired_exact": 0,
+      "acquired_answered": 0,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42,
+        43
+      ]
+    },
+    {
+      "environment_program_id": 287,
+      "operations": [
+        "collapse_spaces"
+      ],
+      "configuration": 47,
+      "status": "ambiguous",
+      "remaining_observable_classes": 6,
+      "calls": 4,
+      "cells": 16,
+      "text_bytes": 122,
+      "baseline_exact": 63,
+      "acquired_exact": 0,
+      "acquired_answered": 0,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42,
+        43
+      ]
+    },
+    {
+      "environment_program_id": 288,
+      "operations": [
+        "decimal_comma"
+      ],
+      "configuration": 0,
+      "status": "provisional",
+      "remaining_observable_classes": 1,
+      "calls": 7,
+      "cells": 23,
+      "text_bytes": 144,
+      "baseline_exact": 60,
+      "acquired_exact": 100,
+      "acquired_answered": 100,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42
+      ]
+    },
+    {
+      "environment_program_id": 295,
+      "operations": [
+        "decimal_comma"
+      ],
+      "configuration": 7,
+      "status": "provisional",
+      "remaining_observable_classes": 1,
+      "calls": 7,
+      "cells": 23,
+      "text_bytes": 144,
+      "baseline_exact": 60,
+      "acquired_exact": 100,
+      "acquired_answered": 100,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42
+      ]
+    },
+    {
+      "environment_program_id": 311,
+      "operations": [
+        "decimal_comma"
+      ],
+      "configuration": 23,
+      "status": "provisional",
+      "remaining_observable_classes": 1,
+      "calls": 7,
+      "cells": 23,
+      "text_bytes": 144,
+      "baseline_exact": 60,
+      "acquired_exact": 100,
+      "acquired_answered": 100,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42
+      ]
+    },
+    {
+      "environment_program_id": 335,
+      "operations": [
+        "decimal_comma"
+      ],
+      "configuration": 47,
+      "status": "provisional",
+      "remaining_observable_classes": 1,
+      "calls": 7,
+      "cells": 23,
+      "text_bytes": 144,
+      "baseline_exact": 60,
+      "acquired_exact": 100,
+      "acquired_answered": 100,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42
+      ]
+    },
+    {
+      "environment_program_id": 336,
+      "operations": [
+        "boolean_normalization"
+      ],
+      "configuration": 0,
+      "status": "ambiguous",
+      "remaining_observable_classes": 5,
+      "calls": 4,
+      "cells": 16,
+      "text_bytes": 122,
+      "baseline_exact": 50,
+      "acquired_exact": 0,
+      "acquired_answered": 0,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42,
+        43
+      ]
+    },
+    {
+      "environment_program_id": 343,
+      "operations": [
+        "boolean_normalization"
+      ],
+      "configuration": 7,
+      "status": "ambiguous",
+      "remaining_observable_classes": 6,
+      "calls": 4,
+      "cells": 16,
+      "text_bytes": 122,
+      "baseline_exact": 50,
+      "acquired_exact": 0,
+      "acquired_answered": 0,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42,
+        43
+      ]
+    },
+    {
+      "environment_program_id": 359,
+      "operations": [
+        "boolean_normalization"
+      ],
+      "configuration": 23,
+      "status": "ambiguous",
+      "remaining_observable_classes": 6,
+      "calls": 4,
+      "cells": 16,
+      "text_bytes": 122,
+      "baseline_exact": 50,
+      "acquired_exact": 0,
+      "acquired_answered": 0,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42,
+        43
+      ]
+    },
+    {
+      "environment_program_id": 383,
+      "operations": [
+        "boolean_normalization"
+      ],
+      "configuration": 47,
+      "status": "ambiguous",
+      "remaining_observable_classes": 6,
+      "calls": 4,
+      "cells": 16,
+      "text_bytes": 122,
+      "baseline_exact": 50,
+      "acquired_exact": 0,
+      "acquired_answered": 0,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42,
+        43
+      ]
+    },
+    {
+      "environment_program_id": 384,
+      "operations": [
+        "truncate_16"
+      ],
+      "configuration": 0,
+      "status": "provisional",
+      "remaining_observable_classes": 1,
+      "calls": 8,
+      "cells": 24,
+      "text_bytes": 176,
+      "baseline_exact": 39,
+      "acquired_exact": 100,
+      "acquired_answered": 100,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42,
+        43
+      ]
+    },
+    {
+      "environment_program_id": 391,
+      "operations": [
+        "truncate_16"
+      ],
+      "configuration": 7,
+      "status": "provisional",
+      "remaining_observable_classes": 1,
+      "calls": 8,
+      "cells": 24,
+      "text_bytes": 176,
+      "baseline_exact": 39,
+      "acquired_exact": 100,
+      "acquired_answered": 100,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42,
+        43
+      ]
+    },
+    {
+      "environment_program_id": 407,
+      "operations": [
+        "truncate_16"
+      ],
+      "configuration": 23,
+      "status": "provisional",
+      "remaining_observable_classes": 1,
+      "calls": 8,
+      "cells": 24,
+      "text_bytes": 176,
+      "baseline_exact": 39,
+      "acquired_exact": 100,
+      "acquired_answered": 100,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42,
+        43
+      ]
+    },
+    {
+      "environment_program_id": 431,
+      "operations": [
+        "truncate_16"
+      ],
+      "configuration": 47,
+      "status": "provisional",
+      "remaining_observable_classes": 1,
+      "calls": 8,
+      "cells": 24,
+      "text_bytes": 176,
+      "baseline_exact": 39,
+      "acquired_exact": 100,
+      "acquired_answered": 100,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42,
+        43
+      ]
+    },
+    {
+      "environment_program_id": 432,
+      "operations": [
+        "sort_rows"
+      ],
+      "configuration": 0,
+      "status": "provisional",
+      "remaining_observable_classes": 1,
+      "calls": 6,
+      "cells": 19,
+      "text_bytes": 131,
+      "baseline_exact": 50,
+      "acquired_exact": 100,
+      "acquired_answered": 100,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39
+      ]
+    },
+    {
+      "environment_program_id": 439,
+      "operations": [
+        "sort_rows"
+      ],
+      "configuration": 7,
+      "status": "provisional",
+      "remaining_observable_classes": 1,
+      "calls": 6,
+      "cells": 19,
+      "text_bytes": 131,
+      "baseline_exact": 50,
+      "acquired_exact": 100,
+      "acquired_answered": 100,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39
+      ]
+    },
+    {
+      "environment_program_id": 455,
+      "operations": [
+        "sort_rows"
+      ],
+      "configuration": 23,
+      "status": "provisional",
+      "remaining_observable_classes": 1,
+      "calls": 6,
+      "cells": 19,
+      "text_bytes": 131,
+      "baseline_exact": 50,
+      "acquired_exact": 100,
+      "acquired_answered": 100,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39
+      ]
+    },
+    {
+      "environment_program_id": 479,
+      "operations": [
+        "sort_rows"
+      ],
+      "configuration": 47,
+      "status": "provisional",
+      "remaining_observable_classes": 1,
+      "calls": 6,
+      "cells": 19,
+      "text_bytes": 131,
+      "baseline_exact": 50,
+      "acquired_exact": 100,
+      "acquired_answered": 100,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39
+      ]
+    },
+    {
+      "environment_program_id": 480,
+      "operations": [
+        "remove_empty_rows"
+      ],
+      "configuration": 0,
+      "status": "provisional",
+      "remaining_observable_classes": 1,
+      "calls": 6,
+      "cells": 19,
+      "text_bytes": 131,
+      "baseline_exact": 98,
+      "acquired_exact": 100,
+      "acquired_answered": 100,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39
+      ]
+    },
+    {
+      "environment_program_id": 487,
+      "operations": [
+        "remove_empty_rows"
+      ],
+      "configuration": 7,
+      "status": "provisional",
+      "remaining_observable_classes": 1,
+      "calls": 6,
+      "cells": 19,
+      "text_bytes": 131,
+      "baseline_exact": 98,
+      "acquired_exact": 100,
+      "acquired_answered": 100,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39
+      ]
+    },
+    {
+      "environment_program_id": 503,
+      "operations": [
+        "remove_empty_rows"
+      ],
+      "configuration": 23,
+      "status": "provisional",
+      "remaining_observable_classes": 1,
+      "calls": 6,
+      "cells": 19,
+      "text_bytes": 131,
+      "baseline_exact": 98,
+      "acquired_exact": 100,
+      "acquired_answered": 100,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39
+      ]
+    },
+    {
+      "environment_program_id": 527,
+      "operations": [
+        "remove_empty_rows"
+      ],
+      "configuration": 47,
+      "status": "provisional",
+      "remaining_observable_classes": 1,
+      "calls": 6,
+      "cells": 19,
+      "text_bytes": 131,
+      "baseline_exact": 98,
+      "acquired_exact": 100,
+      "acquired_answered": 100,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39
+      ]
+    },
+    {
+      "environment_program_id": 528,
+      "operations": [
+        "deduplicate_rows"
+      ],
+      "configuration": 0,
+      "status": "ambiguous",
+      "remaining_observable_classes": 5,
+      "calls": 4,
+      "cells": 16,
+      "text_bytes": 122,
+      "baseline_exact": 98,
+      "acquired_exact": 0,
+      "acquired_answered": 0,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42,
+        43
+      ]
+    },
+    {
+      "environment_program_id": 535,
+      "operations": [
+        "deduplicate_rows"
+      ],
+      "configuration": 7,
+      "status": "ambiguous",
+      "remaining_observable_classes": 6,
+      "calls": 4,
+      "cells": 16,
+      "text_bytes": 122,
+      "baseline_exact": 98,
+      "acquired_exact": 0,
+      "acquired_answered": 0,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42,
+        43
+      ]
+    },
+    {
+      "environment_program_id": 551,
+      "operations": [
+        "deduplicate_rows"
+      ],
+      "configuration": 23,
+      "status": "ambiguous",
+      "remaining_observable_classes": 6,
+      "calls": 4,
+      "cells": 16,
+      "text_bytes": 122,
+      "baseline_exact": 98,
+      "acquired_exact": 0,
+      "acquired_answered": 0,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42,
+        43
+      ]
+    },
+    {
+      "environment_program_id": 575,
+      "operations": [
+        "deduplicate_rows"
+      ],
+      "configuration": 47,
+      "status": "ambiguous",
+      "remaining_observable_classes": 6,
+      "calls": 4,
+      "cells": 16,
+      "text_bytes": 122,
+      "baseline_exact": 98,
+      "acquired_exact": 0,
+      "acquired_answered": 0,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42,
+        43
+      ]
+    },
+    {
+      "environment_program_id": 576,
+      "operations": [
+        "drop_empty_columns"
+      ],
+      "configuration": 0,
+      "status": "ambiguous",
+      "remaining_observable_classes": 5,
+      "calls": 4,
+      "cells": 16,
+      "text_bytes": 122,
+      "baseline_exact": 96,
+      "acquired_exact": 0,
+      "acquired_answered": 0,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42,
+        43
+      ]
+    },
+    {
+      "environment_program_id": 583,
+      "operations": [
+        "drop_empty_columns"
+      ],
+      "configuration": 7,
+      "status": "ambiguous",
+      "remaining_observable_classes": 6,
+      "calls": 4,
+      "cells": 16,
+      "text_bytes": 122,
+      "baseline_exact": 96,
+      "acquired_exact": 0,
+      "acquired_answered": 0,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42,
+        43
+      ]
+    },
+    {
+      "environment_program_id": 599,
+      "operations": [
+        "drop_empty_columns"
+      ],
+      "configuration": 23,
+      "status": "ambiguous",
+      "remaining_observable_classes": 6,
+      "calls": 4,
+      "cells": 16,
+      "text_bytes": 122,
+      "baseline_exact": 96,
+      "acquired_exact": 0,
+      "acquired_answered": 0,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42,
+        43
+      ]
+    },
+    {
+      "environment_program_id": 623,
+      "operations": [
+        "drop_empty_columns"
+      ],
+      "configuration": 47,
+      "status": "ambiguous",
+      "remaining_observable_classes": 6,
+      "calls": 4,
+      "cells": 16,
+      "text_bytes": 122,
+      "baseline_exact": 96,
+      "acquired_exact": 0,
+      "acquired_answered": 0,
+      "evaluation_cases": 100,
+      "selected_test_ids": [
+        7,
+        39,
+        42,
+        43
+      ]
+    }
+  ]
+}
