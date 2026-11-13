@@ -1,0 +1,68 @@
+{
+  "experiment": "independent_verification_inputs",
+  "preparation_only": true,
+  "evaluation_executed": false,
+  "environment_seed": 126001,
+  "evaluation_seed": 126002,
+  "environment_count": 92,
+  "evaluation_tables": 200,
+  "fixed_discovery_sequence": [
+    463,
+    399,
+    0
+  ],
+  "learning_inputs": "unchanged_from_v3",
+  "arms": [
+    "original_fixed_verification",
+    "independent_checks_10_seeds"
+  ],
+  "independent_checks_selected_using_tool_feedback": false,
+  "independent_checks_selected_using_surviving_hypotheses": false,
+  "check_values_informed_by_known_primitives": true,
+  "verification_calls_per_environment": 2,
+  "verification_cells_per_environment": 8,
+  "verification_maximum_text_bytes": 128,
+  "total_budget": {
+    "calls": 8,
+    "cells": 24,
+    "input_text_utf8_bytes": 512
+  },
+  "candidate_family": "unchanged_up_to_two_operations",
+  "reserved_sequences_excluded_from": [
+    "autonomous_lab\\data\\csv_composition_01\\protocol.json",
+    "autonomous_lab\\data\\csv_transfer_01\\environments.json"
+  ],
+  "absence_from_all_historical_experiments_verified": false,
+  "extra_operation_definition": "rotate_columns_left moves the first cell of each row to the end before CSV rendering",
+  "out_of_family_status_requires_behavioral_witness": true,
+  "three_operations_may_match_shorter_programs": true,
+  "primary_metrics": [
+    "accepted_environments_with_evaluation_errors",
+    "errors_among_answered_queries",
+    "correct_answers_lost_to_abstention"
+  ],
+  "secondary_metrics": [
+    "coverage_by_group",
+    "actual_calls_cells_bytes",
+    "offline_computation_time",
+    "persistence",
+    "variation_across_check_seeds"
+  ],
+  "evaluation_feedback_used_for_selection": false,
+  "ten_check_seeds_are_not_ten_independent_behavior_benchmarks": true,
+  "neural_training": false,
+  "dependencies_sha256": {
+    "autonomous_lab\\data\\csv_composition_01\\protocol.json": "77d975781bbb3ada6a753129d65f6530849e94340fa40a91ba1328c780d4a320",
+    "autonomous_lab\\data\\csv_transfer_01\\environments.json": "bac0567e9b820ff1008e8e565664af75d8ceeb98acf20440e4a6b5b28bd8daf4",
+    "autonomous_lab\\data\\csv_counterexamples_01\\probes.json": "246e15f6f2b33bdfff8230b8029e1a80d2d71debf3f1b639cae19076bbee977d",
+    "autonomous_lab\\evaluate_csv_generated_transfer.py": "88fc345b957185b8424998b3c58b0e541b21c9ba7e754249c1ce01bc07a4102a",
+    "autonomous_lab\\csv_environment.py": "e2ff17fd45020087476a22ef6c07236313f5507166198ad6302e60acc5c786fa",
+    "autonomous_lab\\csv_policy_behaviors.py": "dc83a241ce6121dd300ca9e73a9d4be789ebda80b308103ae561a5456cec6cf9",
+    "C:\\Users\\m7\\ssm_jepa\\autonomous_lab\\prepare_csv_independent_checks.py": "34b0ac98f264b88676891764f34ab67a9269b1fcf610baddd16e516bb6a4b943"
+  },
+  "prepared_files_sha256": {
+    "environments.json": "20d2b1a13632af768b4a55ba9d58046df44cc32aacd330842b683322cefe4640",
+    "check_banks.json": "483bfcd503c7f237d4d2d52b079d7c7c6f6ef7df19c22f1249d4ea6a4abe8f52",
+    "evaluation_cases.json": "3b38fd375c0db57998f647fc1231a8aaeb524cfab0235b655afb06c62b4b27c6"
+  }
+}
