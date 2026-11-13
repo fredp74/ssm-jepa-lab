@@ -1,0 +1,491 @@
+import argparse
+import copy
+import hashlib
+import json
+import math
+import signal
+import time
+from pathlib import Path
+
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+from ssm_par import SSMEnc
+
+
+class LanguageModel(nn.Module):
+    def __init__(self, width=256, layers=6, state=4):
+        super().__init__()
+        self.emb = nn.Embedding(256, width)
+        self.enc = SSMEnc(
+            width, width, depth=layers, slow=True, par=True, n=state
+        )
+        self.head = nn.Linear(width, 256)
+
+    def encode(self, tokens):
+        return self.enc(self.emb(tokens))
+
+    def forward(self, tokens):
+        return self.head(self.encode(tokens))
+
+    def step(self, token, states=None):
+        x = self.enc.p(self.emb(token))
+        updated = []
+        for index, block in enumerate(self.enc.blocks):
+            residual = x
+            u, gate = block.inp(block.norm(x)).chunk(2, -1)
+            u = F.silu(u)
+            dt = F.softplus(block.dt(u))
+            h = (
+                torch.zeros(
+                    u.size(0), block.d, block.n,
+                    device=u.device, dtype=u.dtype,
+                )
+                if states is None else states[index]
+            )
+            decay = torch.exp(
+                dt.unsqueeze(-1) * -torch.exp(block.A_log)
+            )
+            h = (
+                decay * h
+                + dt.unsqueeze(-1)
+                * block.B(u).unsqueeze(1)
+                * u.unsqueeze(-1)
+            )
+            y = (
+                h * block.C(u).unsqueeze(1)
+            ).sum(-1) + u * block.D
+            x = residual + block.out(y * F.silu(gate))
+            updated.append(h)
+        return self.head(self.enc.norm(x)), updated
+
+
+def load(path):
+    return torch.load(
+        path, map_location="cpu", weights_only=True
+    )
+
+
+def save(path, value):
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_name(path.name + ".tmp")
+    torch.save(value, temporary)
+    temporary.replace(path)
+
+
+def digest(path):
+    result = hashlib.sha256()
+    with Path(path).open("rb") as stream:
+        for block in iter(lambda: stream.read(1024 * 1024), b""):
+            result.update(block)
+    return result.hexdigest()
+
+
+def dataset(path, length):
+    path = Path(path).resolve()
+    if path.suffix.lower() == ".pt":
+        data = load(path)
+        if not isinstance(data, torch.Tensor) or data.ndim != 1:
+            raise ValueError("Le .pt doit contenir un tenseur 1D.")
+        if (
+            data.is_floating_point()
+            or data.min().item() < 0
+            or data.max().item() > 255
+        ):
+            raise ValueError("Octets entiers attendus dans [0,255].")
+        data = data.to(torch.uint8)
+    else:
+        data = torch.tensor(
+            list(path.read_bytes()), dtype=torch.uint8
+        )
+
+    holdout = (
+        500_000 if len(data) >= 1_000_000 else len(data) // 5
+    )
+    cut = len(data) - holdout
+    if min(cut, holdout) < length + 1:
+        raise ValueError(
+            f"Texte trop court : au moins "
+            f"{5 * (length + 1)} octets conseilles."
+        )
+    return data, cut, {
+        "path": str(path),
+        "sha256": digest(path),
+        "train_end": cut,
+        "bytes": len(data),
+    }
+
+
+def sample(data, count, length, generator):
+    starts = torch.randint(
+        0, len(data) - length, (count,), generator=generator
+    )
+    return torch.stack([
+        data[i:i + length + 1] for i in starts.tolist()
+    ])
+
+
+def construct(state):
+    if state.get("format") != "ssm-jepa-language-v1":
+        raise ValueError("Checkpoint incompatible.")
+
+    model = LanguageModel(**state["architecture"])
+    model.load_state_dict(state["model"], strict=True)
+    width = state["architecture"]["width"]
+    predictor = nn.Sequential(
+        nn.Linear(width, width),
+        nn.GELU(),
+        nn.Linear(width, width),
+    )
+    predictor.load_state_dict(state["predictor"])
+    teacher = copy.deepcopy(model).eval().requires_grad_(False)
+    teacher.load_state_dict(state["teacher"])
+
+    optimizer = torch.optim.AdamW(
+        list(model.parameters()) + list(predictor.parameters()),
+        lr=state["lr"],
+        weight_decay=0.01,
+    )
+    optimizer.load_state_dict(state["optimizer"])
+    generator = torch.Generator().set_state(state["generator"])
+    return model, teacher, predictor, optimizer, generator
+
+
+def snapshot(state, model, teacher, predictor, optimizer, generator):
+    state.update(
+        model=model.state_dict(),
+        teacher=teacher.state_dict(),
+        predictor=predictor.state_dict(),
+        optimizer=optimizer.state_dict(),
+        generator=generator.get_state(),
+    )
+
+
+def initialize(args):
+    if args.run.exists():
+        raise ValueError("Checkpoint destination deja present.")
+
+    torch.manual_seed(args.seed)
+    architecture = {"width": 256, "layers": 6, "state": 4}
+    model = LanguageModel(**architecture)
+    if not getattr(args, "from_scratch", False):
+        model.load_state_dict(load(args.checkpoint), strict=True)
+    teacher = copy.deepcopy(model).eval().requires_grad_(False)
+    predictor = nn.Sequential(
+        nn.Linear(256, 256), nn.GELU(), nn.Linear(256, 256)
+    )
+    optimizer = torch.optim.AdamW(
+        list(model.parameters()) + list(predictor.parameters()),
+        lr=args.lr,
+        weight_decay=0.01,
+    )
+    generator = torch.Generator().manual_seed(args.seed)
+    data, cut, metadata = dataset(args.data, 256)
+    memory = sample(data[:cut], 256, 256, generator)
+
+    state = {
+        "format": "ssm-jepa-language-v1",
+        "architecture": architecture,
+        "length": 256,
+        "block": 32,
+        "latent_weight": 0.1,
+        "ema": 0.99,
+        "lr": args.lr,
+        "step": 0,
+        "seed": args.seed,
+        "active_data": metadata,
+        "initial_checkpoint_sha256": (
+            None if getattr(args, "from_scratch", False)
+            else digest(args.checkpoint)
+        ),
+        "memory": memory,
+        "protected_memory": 128,
+        "memory_seen": 128,
+        "history": [],
+        "objective": "JEPA-inspired future-block EMA prediction",
+    }
+    snapshot(
+        state, model, teacher, predictor, optimizer, generator
+    )
+    save(args.run, state)
+    print(
+        f"Modele initialise : {args.run} | "
+        f"{sum(p.numel() for p in model.parameters()):,} parametres"
+    )
+
+
+def train(args):
+    state = load(args.run)
+    model, teacher, predictor, optimizer, generator = construct(state)
+    selected = (
+        args.data if args.data
+        else Path(state["active_data"]["path"])
+    )
+    data, cut, metadata = dataset(selected, state["length"])
+    if args.data is None and metadata != state["active_data"]:
+        raise ValueError(
+            "Donnees modifiees : utiliser --data explicitement."
+        )
+
+    state["active_data"] = metadata
+    state["history"].append({
+        "start_step": state["step"],
+        "data": metadata,
+        "requested_steps": args.steps,
+    })
+    stopped = [False]
+    old_handler = signal.signal(
+        signal.SIGINT,
+        lambda *unused: stopped.__setitem__(0, True),
+    )
+    model.train()
+    predictor.train()
+    started = time.perf_counter()
+
+    try:
+        for local_step in range(args.steps):
+            if stopped[0]:
+                break
+
+            incoming = sample(
+                data[:cut], 4, state["length"], generator
+            )
+            indices = torch.randint(
+                len(state["memory"]), (2,), generator=generator
+            )
+            batch = torch.cat([
+                incoming, state["memory"][indices]
+            ]).long()
+            tokens = batch[:, :-1]
+            hidden = model.encode(tokens)
+            lm = F.cross_entropy(
+                model.head(hidden).reshape(-1, 256),
+                batch[:, 1:].reshape(-1),
+            )
+
+            block = state["block"]
+            width = state["architecture"]["width"]
+            with torch.no_grad():
+                targets = teacher.encode(tokens).reshape(
+                    tokens.size(0), -1, block, width
+                ).mean(2)[:, 1:]
+
+            predicted = predictor(
+                hidden[:, block - 1:state["length"] - block:block]
+            )
+            latent = F.mse_loss(
+                F.layer_norm(predicted, (width,)),
+                F.layer_norm(targets, (width,)),
+            )
+            loss = lm + state["latent_weight"] * latent
+            if not torch.isfinite(loss).item():
+                raise RuntimeError(
+                    "Perte non finie; dernier checkpoint conserve."
+                )
+
+            optimizer.zero_grad(set_to_none=True)
+            loss.backward()
+            parameters = (
+                list(model.parameters())
+                + list(predictor.parameters())
+            )
+            nn.utils.clip_grad_norm_(
+                parameters, 1.0, error_if_nonfinite=True
+            )
+            optimizer.step()
+
+            with torch.no_grad():
+                for target, source in zip(
+                    teacher.parameters(), model.parameters()
+                ):
+                    target.mul_(state["ema"]).add_(
+                        source, alpha=1 - state["ema"]
+                    )
+
+            # 128 fenetres initiales protegees et 128 en reservoir.
+            state["memory_seen"] += 1
+            slot = torch.randint(
+                state["memory_seen"], (1,), generator=generator
+            ).item()
+            if slot < 128:
+                state["memory"][128 + slot] = incoming[0]
+
+            state["step"] += 1
+            if (
+                state["step"] % 25 == 0
+                or local_step == args.steps - 1
+                or stopped[0]
+            ):
+                print(
+                    f"pas={state['step']} | "
+                    f"LM={lm.item() / math.log(2):.4f} bpb | "
+                    f"latent={latent.item():.4f} | "
+                    f"{time.perf_counter() - started:.1f} s",
+                    flush=True,
+                )
+
+            if state["step"] % 100 == 0:
+                snapshot(
+                    state, model, teacher, predictor,
+                    optimizer, generator,
+                )
+                save(args.run, state)
+
+        snapshot(
+            state, model, teacher, predictor, optimizer, generator
+        )
+        save(args.run, state)
+    finally:
+        signal.signal(signal.SIGINT, old_handler)
+
+    print(f"Sauvegarde : {args.run} | pas={state['step']}")
+
+
+@torch.no_grad()
+def evaluate(args):
+    state = load(args.run)
+    model = LanguageModel(**state["architecture"])
+    model.load_state_dict(state["model"])
+    model.eval()
+    path = (
+        args.data if args.data
+        else Path(state["active_data"]["path"])
+    )
+    length = state["length"]
+    data, cut, metadata = dataset(path, length)
+    if args.data is None and metadata != state["active_data"]:
+        raise ValueError("Donnees modifiees depuis l'entrainement.")
+
+    last = len(data) - length - 1
+    starts = [
+        cut + (last - cut) * i // max(1, args.samples - 1)
+        for i in range(args.samples)
+    ]
+    total = 0.0
+    for offset in range(0, len(starts), 4):
+        batch = torch.stack([
+            data[i:i + length + 1]
+            for i in starts[offset:offset + 4]
+        ]).long()
+        total += F.cross_entropy(
+            model(batch[:, :-1]).reshape(-1, 256),
+            batch[:, 1:].reshape(-1),
+            reduction="sum",
+        ).item()
+
+    print(json.dumps({
+        "step": state["step"],
+        "data": metadata,
+        "windows": args.samples,
+        "bpb": total / (args.samples * length * math.log(2)),
+    }, indent=2))
+
+
+@torch.no_grad()
+def generate_text(model, prompt, count, temperature, topk, seed):
+    model.eval()
+    states = None
+    for token in prompt.encode("utf-8"):
+        logits, states = model.step(torch.tensor([token]), states)
+
+    generator = torch.Generator().manual_seed(seed)
+    generated = []
+    for _ in range(count):
+        scores = logits[0]
+        if temperature == 0:
+            token = scores.argmax().item()
+        else:
+            values, indices = torch.topk(
+                scores / temperature, topk
+            )
+            selected = torch.multinomial(
+                values.softmax(-1), 1, generator=generator
+            )
+            token = indices[selected].item()
+        generated.append(token)
+        logits, states = model.step(
+            torch.tensor([token]), states
+        )
+    return bytes(generated).decode("utf-8", errors="replace")
+
+
+def generate(args):
+    state = load(args.run)
+    model = LanguageModel(**state["architecture"])
+    model.load_state_dict(state["model"])
+    print(args.prompt + generate_text(
+        model, args.prompt, args.bytes,
+        args.temperature, args.topk, args.seed,
+    ))
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="SSM-JEPA: train, resume, evaluate, generate"
+    )
+    parser.add_argument("--threads", type=int, default=8)
+    sub = parser.add_subparsers(dest="command", required=True)
+
+    for command in ("init", "train", "eval", "generate"):
+        child = sub.add_parser(command)
+        child.add_argument("--run", type=Path, required=True)
+
+        if command == "init":
+            child.add_argument(
+                "--checkpoint", type=Path,
+                default=Path("lm_SSM-n4_A.pt"),
+            )
+            child.add_argument(
+                "--data", type=Path, default=Path("dataA.pt")
+            )
+            child.add_argument("--lr", type=float, default=1e-5)
+            child.add_argument("--seed", type=int, default=150001)
+            child.add_argument("--from-scratch", action="store_true")
+        elif command == "train":
+            child.add_argument("--data", type=Path)
+            child.add_argument("--steps", type=int, default=500)
+        elif command == "eval":
+            child.add_argument("--data", type=Path)
+            child.add_argument("--samples", type=int, default=64)
+        else:
+            child.add_argument("--prompt", required=True)
+            child.add_argument("--bytes", type=int, default=256)
+            child.add_argument(
+                "--temperature", type=float, default=0.8
+            )
+            child.add_argument("--topk", type=int, default=40)
+            child.add_argument("--seed", type=int, default=42)
+
+    args = parser.parse_args()
+    if (
+        args.threads < 1
+        or getattr(args, "steps", 1) < 1
+        or getattr(args, "samples", 1) < 1
+    ):
+        parser.error("Valeurs positives attendues.")
+    if args.command == "init" and (
+        not math.isfinite(args.lr) or args.lr <= 0
+    ):
+        parser.error("Taux d'apprentissage positif attendu.")
+    if args.command == "generate" and (
+        not args.prompt
+        or args.bytes < 0
+        or not math.isfinite(args.temperature)
+        or args.temperature < 0
+        or not 1 <= args.topk <= 256
+    ):
+        parser.error("Parametres de generation invalides.")
+
+    torch.set_num_threads(args.threads)
+    {
+        "init": initialize,
+        "train": train,
+        "eval": evaluate,
+        "generate": generate,
+    }[args.command](args)
+
+
+if __name__ == "__main__":
+    main()

@@ -1,134 +1,143 @@
-﻿# SSM-JEPA Lab
+﻿# SSM-JEPA Language Model
 
-Experimental sequence-model research in Python and PyTorch:
-SSMs, GRUs, Transformers, JEPA objectives, continual learning,
-and instruction following.
+A small, runnable language model built with selective state-space layers
+and a JEPA-inspired latent prediction objective.
 
-## Why
+The project focuses on one implementation: training, checkpoint recovery,
+recurrent text generation and continued learning from new text.
 
-Study how small sequence models learn new tasks while retaining
-previous capabilities. Experiments cover replay, forgetting,
-copying, field extraction, and code recall across conversation turns.
+## Status
 
-## Current assistant
+The current model has approximately 1.8 million language-model parameters,
+plus a training-time latent predictor and EMA teacher.
 
-The current reference checkpoint is v09, using a GRU with causal
-sliding-window attention.
+It generates text, but the current locally trained checkpoint does not
+yet produce consistently coherent language. This is an experimental
+foundation for a larger language model, not a finished conversational
+assistant.
 
-The assistant is trained on constrained synthetic tasks with French
-instructions. It is not a general-purpose conversational model.
+## Architecture
 
-- Copy a character sequence.
-- Extract a named field.
-- Recall a code from conversation history.
-- Replace a previously supplied code.
-- Answer INCONNU when no code is available.
+- Byte vocabulary: 256 values, without an external tokenizer.
+- Width: 256.
+- Six selective SSM blocks with state dimension four.
+- Next-byte language-model head.
+- Predictor for representations of future 32-byte blocks.
+- Teacher updated by exponential moving average.
+- Combined loss: next-byte cross-entropy plus 0.1 times latent loss.
 
-Chat uses conversation history without updating model weights.
-The v10 experiment adds training focused on longer copies.
+The latent objective is inspired by JEPA; this is not a reproduction of
+a canonical JEPA architecture.
 
-## Repository layout
-
-- Root Python scripts: model experiments, benchmarks, and diagnostics.
-- build/assistant_v*.py: versioned assistant implementations and trainers.
-- build/instructions_*/: synthetic datasets and evaluation cases.
-- CSV files: experiment results.
-- HANDOFF.md: development notes.
-
-Despite its name, build/ contains Python source files.
+Training uses parallel sequence processing. Generation carries the SSM
+states forward one byte at a time.
 
 ## Requirements
 
-Python and PyTorch are required for the assistant.
-Other research scripts may have additional dependencies.
+Python 3.10 or newer and PyTorch 2.6 or newer.
 
-The development setup used Windows PowerShell and Python 3.13.
-A complete dependency specification has not yet been established.
+Development has been exercised on CPU, including Windows PowerShell.
 
-## Local chat
+Install dependencies:
 
-A trained checkpoint must already be available locally.
-From the repository root:
+    python -m pip install -r requirements.txt
 
-```powershell
-Set-Location .\build
-python .\assistant_v04.py chat --run .\runs\assistant_update_v09.pt --temperature 0 --bytes 96
-```
+For a CPU-only PyTorch installation, use the appropriate official PyTorch
+installation command for your platform.
 
-Example conversation:
+## Train from scratch
 
-```text
-Vous > Retiens ce code : ab3. Reponds seulement OK.
-Assistant > OK
-Vous > Remplace ce code par x7q. Reponds seulement OK.
-Assistant > OK
-Vous > Quel code viens-je de donner ? Reponds seulement avec ce code.
-Assistant > x7q
-```
+Provide a UTF-8 plain-text corpus, for example data/train.txt.
+The file must be large enough for training and a reserved evaluation
+partition; at least 1,285 bytes are needed with the current context length.
+Useful language learning requires substantially more data and training.
 
-Commands:
-- /reset clears conversation history.
-- /quit exits the chat.
+    python ssm_jepa.py init --from-scratch --data data/train.txt --run runs/model.pt --lr 0.0001
+    python ssm_jepa.py train --run runs/model.pt --steps 500
+    python ssm_jepa.py eval --run runs/model.pt
 
-## Evaluation
+The learning rate is configurable at initialization. It is stored with
+the optimizer in the checkpoint.
 
-From build/, with the checkpoint and dataset available:
+## Initialize from compatible pretrained weights
 
-```powershell
-python .\assistant_v09.py eval --run .\runs\assistant_update_v09.pt --data .\instructions_v09\test.jsonl --generate --limit-per-task 16 --history-controls
-```
+For users who already have the original SSM language-model weights:
 
-Evaluate language-model retention separately:
+    python ssm_jepa.py init --checkpoint lm_SSM-n4_A.pt --data dataA.pt --run runs/model.pt --lr 0.00001
 
-```powershell
-python .\assistant_v04.py eval-lm --run .\runs\assistant_update_v09.pt --samples 200
-```
+Initialization requires an exact architecture match. Existing destination
+checkpoints are not overwritten.
 
-### Observed results
+Weights and corpora are not distributed in this repository.
 
-On the 292-case v09 validation set:
+## Generate text
 
-| Task | v09 | v10 |
-|---|---:|---:|
-| Copy, 2-6 characters | 80/80 | 76/80 |
-| Copy, 7-8 characters | 26/32 | 29/32 |
-| Field extraction | 64/64 | 63/64 |
-| Code recall | 48/48 | 47/48 |
-| Code replacement | 48/48 | 48/48 |
-| Missing-code response | 20/20 | 20/20 |
-| Total | 286/292 | 283/292 |
+    python ssm_jepa.py generate --run runs/model.pt --prompt "The man looked at " --bytes 500 --temperature 0.7
 
-A successful case requires exact answers and the end marker
-at every assistant turn.
+Use temperature 0 for greedy generation. Generation continues the prompt;
+the model has not been trained as an instruction-following assistant.
 
-v09 remains the reference checkpoint. v10 improves longer copies
-but loses accuracy on other tasks.
+## Resume training
 
-These results describe a small synthetic validation set.
-That set informed the v10 training changes, so it is not an
-independent final benchmark.
+    python ssm_jepa.py train --run runs/model.pt --steps 500
 
-A separate 228-case validation set was generated for comparison;
-its results are not included here yet.
+The checkpoint contains model weights, teacher, predictor, optimizer,
+sampling-generator state, replay memory and training history.
 
-## Known limitations
+Training saves every 100 steps and at the end. Ctrl+C requests a stop
+after the current step and saves. A crash or forced process termination
+can lose work since the last completed save.
 
-- Evaluation covers a limited set of instruction templates.
-- Longer copies remain less reliable.
-- Training new tasks can degrade previous capabilities.
-- Recall is bounded by the conversation context.
-- Codes of two characters were omitted from the new validation
-  because too few unused combinations remained.
-- Checkpoints, downloaded corpora, and runtime logs are excluded
-  from Git. Cloning alone does not provide a runnable trained model.
-- The repository is an experimental workspace; a complete
-  end-to-end reproduction guide is still being developed.
+## Learn from new text
 
----
+    python ssm_jepa.py train --run runs/model.pt --data data/new_text.txt --steps 500
 
-A research project by [Algotradingresearch.com](https://algotradingresearch.com).
+This updates model parameters using self-supervised prediction.
+It does not automatically train on generated answers.
 
-## Research results
+Each batch combines four incoming windows and two replay windows.
+Half of the 256-window memory remains anchored to the initial corpus;
+the other half is updated as a reservoir of sampled incoming windows.
 
-See [V13 experiment: repeated-character training](docs/v13-results.md)
-for the three-seed comparison, final evaluation results, and limitations.
+Replay mitigates forgetting; it does not guarantee retention.
+
+## Data and evaluation
+
+Input can be a raw text file or a .pt file containing a one-dimensional
+integer tensor with values in [0,255].
+
+For corpora of at least one million bytes, the final 500,000 bytes are
+reserved for evaluation. Smaller corpora reserve the final fifth.
+
+The context length is 256 bytes. Evaluation reports bits per byte
+on fixed windows in the reserved partition; lower is better.
+
+    python ssm_jepa.py eval --run runs/model.pt --samples 256
+    python ssm_jepa.py eval --run runs/model.pt --data data/another_corpus.txt --samples 256
+
+Different corpora or evaluation settings must not be compared as if they
+were the same benchmark. Evaluation loss alone does not establish coherent
+generation or comprehension.
+
+## Tests
+
+    python -m unittest discover -s tests -v
+
+Tests cover recurrent/parallel agreement, causality, exact continuation,
+protected replay memory, new-data training, checkpoint persistence,
+interruption handling and initialization without pretrained weights.
+
+## Files
+
+- ssm_jepa.py: model, training, evaluation and generation.
+- ssm_par.py: selective SSM layers and parallel scan.
+- tests/test_ssm_jepa.py: functional tests.
+- requirements.txt: dependencies.
+
+Local datasets and checkpoints are excluded from Git.
+Earlier experiments remain available in Git history.
+
+## Contributing
+
+See CONTRIBUTING.md. Contributions should directly improve the language
+model, its training system, data pipeline or evaluation.

@@ -1,42 +1,33 @@
-﻿# Python
-__pycache__/
+﻿__pycache__/
 *.py[cod]
 .venv/
 venv/
-
-# Secrets et configuration locale
 .env
 .env.*
 !.env.example
 *.pem
 *.key
 
-# Sauvegardes et donnees binaires
+# Local model weights and binary data
 *.pt
 *.pth
 *.ckpt
 *.bin
 *.safetensors
 *.zip
+*.b64
+*.tmp
 
-# Donnees telechargees et sorties d'experiences
-text8
-corpus_C_gutenberg/
-lm_*/
+# Local training data and outputs
+data/
 runs/
+logs/
 *.log
+dataC_manifest.json
+cleanup_plan.json
 
-# Systeme et editeurs
-.DS_Store
-Thumbs.db
+# Editors and operating systems
 .vscode/
 .idea/
-
-*.b64
-
-# Generated rule-ranking datasets
-/autonomous_lab/data/rule_ranking_01/*.jsonl
-# Generated CSV candidate artifacts
-/autonomous_lab/data/csv_skill_acquisition_01/programs.json
-/autonomous_lab/data/csv_skill_acquisition_01/observable_classes.json
-/autonomous_lab/data/csv_skill_acquisition_01/persistence_check.json
+.DS_Store
+Thumbs.db
