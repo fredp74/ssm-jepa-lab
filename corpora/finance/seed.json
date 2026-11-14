@@ -1,0 +1,122 @@
+[
+  {
+    "id": "seed-statements",
+    "group": "statements",
+    "split": "train",
+    "title": "Reading financial statements",
+    "published": "2026-11-14",
+    "period": "Timeless educational concepts; fictional examples, no observed market period",
+    "units": "USD millions where specified; otherwise ratios and percent",
+    "rights": "CC0-1.0",
+    "rights_basis": "New project-authored educational prose dedicated under CC0; reference pages are not copied or relicensed.",
+    "references": [
+      {
+        "url": "https://www.sec.gov/about/reports-publications/investorpubsbegfinstmtguide",
+        "accessed": "2026-11-14",
+        "role": "Conceptual reference, not source text"
+      }
+    ],
+    "kind": "original educational prose; synthetic examples",
+    "text": "A balance sheet describes assets, liabilities and equity at a particular date. The accounting identity is assets = liabilities + equity. An income statement describes revenue and expenses over a reporting period. A cash flow statement explains cash movements over a period. These statements answer different questions and should be read together.\nRevenue is not necessarily cash collected. A customer may buy on credit, creating a receivable. Depreciation reduces accounting profit without a matching current cash payment. Purchasing equipment uses cash but does not normally become an immediate expense for its entire cost. Reported profit therefore differs from operating cash flow.\nAlways preserve the reporting date, currency, scale and consolidation scope. A table stated in USD millions must not be interpreted as individual dollars. Compare a quarterly flow with another quarterly flow, and distinguish period-end balances from period averages. Notes may reveal accounting policies, commitments and unusual items that a headline number misses."
+  },
+  {
+    "id": "seed-margins",
+    "group": "margins",
+    "split": "train",
+    "title": "Margins and cash generation",
+    "published": "2026-11-14",
+    "period": "Timeless educational concepts; fictional examples, no observed market period",
+    "units": "USD millions where specified; otherwise ratios and percent",
+    "rights": "CC0-1.0",
+    "rights_basis": "New project-authored educational prose dedicated under CC0; reference pages are not copied or relicensed.",
+    "references": [
+      {
+        "url": "https://www.sec.gov/about/reports-publications/investorpubsbegfinstmtguide",
+        "accessed": "2026-11-14",
+        "role": "Conceptual reference, not source text"
+      }
+    ],
+    "kind": "original educational prose; synthetic examples",
+    "text": "Gross profit equals revenue minus cost of goods sold. Gross margin divides gross profit by revenue. Operating margin divides operating income by revenue. Net margin divides net income by revenue. These measures use different numerators and should not be substituted for each other.\nFor a fictional annual example, revenue is USD 200 million and cost of goods sold is USD 120 million. Gross profit is USD 80 million and gross margin is 40 percent. If operating income is USD 30 million, operating margin is 15 percent. These figures illustrate arithmetic and describe no actual company.\nA simplified free cash flow measure subtracts capital expenditure from operating cash flow. Analysts must state their exact definition because published free cash flow measures vary. A positive accounting margin does not guarantee positive cash generation. Receivables, inventories, supplier payments and capital spending can change cash needs. Assess repeated cash generation across periods rather than treating one strong period as permanent."
+  },
+  {
+    "id": "seed-valuation",
+    "group": "valuation",
+    "split": "train",
+    "title": "Valuation assumptions",
+    "published": "2026-11-14",
+    "period": "Timeless educational concepts; fictional examples, no observed market period",
+    "units": "USD millions where specified; otherwise ratios and percent",
+    "rights": "CC0-1.0",
+    "rights_basis": "New project-authored educational prose dedicated under CC0; reference pages are not copied or relicensed.",
+    "references": [
+      {
+        "url": "https://www.sec.gov/about/reports-publications/investorpubsbegfinstmtguide",
+        "accessed": "2026-11-14",
+        "role": "Conceptual reference, not source text"
+      }
+    ],
+    "kind": "original educational prose; synthetic examples",
+    "text": "A valuation connects expected future cash flows with a required return. For a single cash flow received one year from now, present value equals cash flow divided by one plus the discount rate. Holding the cash flow fixed, a higher positive discount rate reduces present value. A change in the assumed cash flow can offset this effect.\nDistinguish enterprise value from equity value. A simplified bridge subtracts debt and adds excess cash to enterprise value to estimate equity value. The bridge may also require other claims and non-operating assets. State which adjustments are included before dividing equity value by diluted shares.\nA valuation is conditional on assumptions about revenue, margins, investment, financing and risk. Report a range of scenarios and identify which assumptions dominate the result. Do not present an estimated fair value as an observed market fact or guaranteed future price. Historical profitability alone does not prove that a business can reinvest at attractive returns indefinitely."
+  },
+  {
+    "id": "seed-rates",
+    "group": "rates",
+    "split": "train",
+    "title": "Interest rates and scenarios",
+    "published": "2026-11-14",
+    "period": "Timeless educational concepts; fictional examples, no observed market period",
+    "units": "USD millions where specified; otherwise ratios and percent",
+    "rights": "CC0-1.0",
+    "rights_basis": "New project-authored educational prose dedicated under CC0; reference pages are not copied or relicensed.",
+    "references": [
+      {
+        "url": "https://www.federalreserve.gov/aboutthefed/fedexplained/monetary-policy.htm",
+        "accessed": "2026-11-14",
+        "role": "Conceptual reference, not source text"
+      }
+    ],
+    "kind": "original educational prose; synthetic examples",
+    "text": "Monetary policy influences financial conditions, borrowing costs and economic activity. Transmission is uncertain and takes time. A policy announcement can affect expectations before its full effect appears in realized inflation or output. Separate the announcement date, the effective date and the reporting period of an economic release.\nA fixed-rate bond promises specified payments, subject to default and contract terms. When the discount rates applied to those unchanged payments rise, their present value falls. Credit spreads can move independently of government yields. Duration is a local sensitivity estimate and does not describe every nonlinear price change.\nAn analyst can examine a hypothetical higher-rate scenario without claiming it will occur. Specify the size of the rate change, the horizon and the exposures affected. A company with floating-rate debt may face higher interest expense, while other business effects depend on demand, pricing and funding conditions. Label scenarios as assumptions and use only information available at the stated analysis cutoff."
+  },
+  {
+    "id": "seed-liquidity",
+    "group": "liquidity",
+    "split": "validation",
+    "title": "Liquidity and working capital",
+    "published": "2026-11-14",
+    "period": "Timeless educational concepts; fictional examples, no observed market period",
+    "units": "USD millions where specified; otherwise ratios and percent",
+    "rights": "CC0-1.0",
+    "rights_basis": "New project-authored educational prose dedicated under CC0; reference pages are not copied or relicensed.",
+    "references": [
+      {
+        "url": "https://www.sec.gov/about/reports-publications/investorpubsbegfinstmtguide",
+        "accessed": "2026-11-14",
+        "role": "Conceptual reference, not source text"
+      }
+    ],
+    "kind": "original educational prose; synthetic examples",
+    "text": "Liquidity concerns the ability to meet obligations when they fall due. Current assets and current liabilities are balance-sheet categories. The current ratio divides current assets by current liabilities, provided the denominator is positive. A high ratio does not automatically imply strong liquidity: inventory may be difficult to sell and receivables may be overdue.\nIn a fictional balance sheet, current assets are USD 90 million and current liabilities are USD 60 million. The current ratio is 1.5 times. If much of the current assets consists of slow-moving inventory, the ratio alone may overstate readily available resources. Review cash balances, credit facilities and the timing of payments.\nWorking capital definitions differ across applications. State whether cash and debt are excluded. A growing business may report profit while requiring cash to finance receivables and inventory. Compare balances across consistent dates and investigate seasonality. A single ratio is an input to an analysis, not a complete assessment of financial resilience."
+  },
+  {
+    "id": "seed-risk",
+    "group": "risk",
+    "split": "validation",
+    "title": "Portfolio evidence and risk",
+    "published": "2026-11-14",
+    "period": "Timeless educational concepts; fictional examples, no observed market period",
+    "units": "USD millions where specified; otherwise ratios and percent",
+    "rights": "CC0-1.0",
+    "rights_basis": "New project-authored educational prose dedicated under CC0; reference pages are not copied or relicensed.",
+    "references": [
+      {
+        "url": "https://www.federalreserve.gov/aboutthefed/fedexplained/monetary-policy.htm",
+        "accessed": "2026-11-14",
+        "role": "Conceptual reference, not source text"
+      }
+    ],
+    "kind": "original educational prose; synthetic examples",
+    "text": "Diversification depends on joint outcomes, not merely on the number of holdings. Positions exposed to the same economic driver can fall together. Historical correlations are estimates and may change during stress. Describe concentration by issuer, sector, geography and relevant economic exposure.\nA historical market test must respect the time at which information became available. A report about a fiscal year may be published months after that year ends. Using its contents before publication creates look-ahead bias. Later revisions to economic statistics can also create leakage if the analyst treats revised data as contemporaneous observations.\nReport transaction costs, turnover, sample dates and the selection process when evaluating a trading hypothesis. Selecting the best result from many variants can exaggerate apparent evidence. A language-model loss measured on held-out prose is not a portfolio return or a market forecasting score. Distinguish quantitative evidence, business fundamentals and macro scenarios, and explain conflicts rather than manufacturing agreement."
+  }
+]
